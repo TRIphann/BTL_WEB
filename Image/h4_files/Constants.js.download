@@ -1,0 +1,60 @@
+junoApp.constant('config', {
+     //OSS_API_HOST: 'http://localhost:8090',
+    // OSS_API_HOST: 'https://test.juno.vn/oss-api',
+    //OSS_API_HOST: 'https://apiex.juno.vn/oss-pos-gate-1',
+    OSS_API_HOST: 'https://api.westyle.vn',
+    // DEFAULT_REDIRECT_URL: 'https://juno-2.myharavan.com',
+    DEFAULT_REDIRECT_URL: 'https://juno.vn',
+    KHTT_LIST: [
+        {
+            level: 1,
+            name: 'Thành viện mới',
+            from: 0,
+            target: 999999,
+            convert: 0,
+            extraUpLevel: 0,
+            extraBuyInBD: 0,
+            buyOffer: 0
+        },
+        {
+            level: 2,
+            name: 'Bạc',
+            from: 1000000,
+            target: 1999999,
+            convert: 4000,
+            extraUpLevel: 100,
+            extraBuyInBD: 2,
+            buyOffer: 5
+        },
+        {
+            level: 3,
+            name: 'Vàng',
+            from: 2000000,
+            target: 3999999,
+            convert: 4000,
+            extraUpLevel: 200,
+            extraBuyInBD: 2,
+            buyOffer: 10
+        },
+        {
+            level: 3,
+            name: 'Kim cương',
+            from: 4000000,
+            target: 5999999,
+            convert: 4000,
+            extraUpLevel: 300,
+            extraBuyInBD: 2,
+            buyOffer: 15
+        },
+        {
+            level: 3,
+            name: 'Bạch kim',
+            from: 6000000,
+            target: 99999999,
+            convert: 4000,
+            extraUpLevel: 500,
+            extraBuyInBD: 2,
+            buyOffer: 15
+        }
+    ]
+});

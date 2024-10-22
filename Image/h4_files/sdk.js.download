@@ -1,0 +1,12 @@
+window.addEventListener("message", onMessage, false);
+
+function onMessage(event) {
+    // Check sender origin to be trusted
+    // if (event.origin !== "http://example.com") return;
+
+    var data = event.data;
+
+    if (typeof(window[data.func]) == "function") {
+        window[data.func].call(null, data.message);
+    }
+}

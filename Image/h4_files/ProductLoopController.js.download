@@ -1,0 +1,410 @@
+junoApp.controller("ProductLoopController", function($scope, $timeout,$compile) {
+
+  $scope.product =  {};
+  $scope.variants = [];
+  $scope.colorSelected = '';
+  $scope.sizeSelected = '';
+	
+	$scope.hideVariants = [];
+	
+  $scope.loadVariants = function(url) {
+		$timeout(function() {
+		var pro = $("#" + url).val()
+
+		var data = JSON.parse(pro).product;
+			
+    //var proUrl = 'https://juno-2.myharavan.com'+ url + '.js';
+    //$.ajax({
+     // url: proUrl,
+     // async: true,
+      //success: function(data) {
+      //  $timeout(function() {
+          $scope.product = data;
+					var hideColors = [];
+					
+					var tags = data.tags;
+					for(var i = 0; i < tags.length; ++i) {
+						var tag = tags[i];
+						if(tag.indexOf('hide:') != -1) {
+							hideColors.push(tag.split(':')[1])
+						}
+						if(tag.indexOf('hide_size:') != -1) {
+							var infoHide = tag.split(':')[1];
+							var infoSize = infoHide.split('#')[0]
+							var infoColor = infoHide.split('#')[1]
+							for(var j = 0; j < $scope.product.variants.length; j++) {
+								var __variant = $scope.product.variants[j];
+								if (__variant.title.includes(infoSize)  && __variant.title.includes(infoColor)){
+									$scope.hideVariants.push(__variant)
+								}
+							}
+							
+						}
+					}
+		
+					var options = [];
+					//var colorIdx = 0;
+					for(var i = 0; i < $scope.product.options.length; ++i) {
+						//if($scope.product.options[i] === 'Màu sắc') {
+						//	colorIdx = i;
+						//}
+						var option = {name: $scope.product.options[i], values: []}
+						for(var j = 0; j < $scope.product.variants.length; ++j) {
+							var vari = $scope.product.variants[j];
+							var opt = vari.options[i];
+							if(option.values.indexOf(opt) == -1) {
+								option.values.push(opt);
+							}
+						}
+						options.push(option)
+					}
+		
+				$scope.product.options = options
+		
+					/*var optionColor = {values: []}
+					for(var i = 0; i < $scope.product.variants.length; ++i) {
+						var vari = $scope.product.variants[i];
+						for(var j = 0; j < vari.options.length; ++j) {
+							var opt = vari.options[j];
+							if(j === colorIdx) {
+								if(optionColor.values.indexOf(color) == -1) {
+									optionColor.values.push(color)
+								}
+							}
+						}
+						var color = vari.options[colorIdx];
+						
+					}*/
+					
+          var optionColor = $scope.reverseOption($scope.product.options)[0]
+          for(var i = 0; i < optionColor.values.length; ++i) {
+            var color = optionColor.values[i];
+						if(hideColors.indexOf(color) != -1)
+							continue;
+						
+            $scope.variants[color] = {variants: [], image: '', images:[], image_color: ''}
+            for(var j = 0; j < $scope.product.variants.length; ++j) {
+              var variant = $scope.product.variants[j]
+              $scope.product.sku = variant.sku
+
+							if (variant.options.indexOf(color) != -1) {
+								
+								if(variant.inventory_quantity <= window.shop.limitVariant){
+									continue;
+								}
+								
+								/*
+								if(variant.inventory_quantity < 10){
+									continue;
+								}	
+								*/
+								if(variant.featured_image) {
+									$scope.variants[color].image = variant.featured_image.src;
+								} else {
+									var colorTemp = $scope.removeAccents(color).toLowerCase();
+									colorTemp.replace(/ /g, "-");
+									$scope.variants[color].image = "/color_" + colorTemp;
+								}
+								
+                $scope.variants[color].variants.push(variant);
+								
+              }
+            }
+						
+						if($scope.variants[color].variants.length == 0) {
+							delete $scope.variants[color];
+							continue
+						}
+						
+						
+						
+            var tmp  = $scope.variants[color].image.split("/");
+            if (tmp[tmp.length - 1].split("_")[0] == 'color'){
+              var shortNameColor = tmp[tmp.length - 1].split("_")[1];
+            } else {
+              var shortNameColor = tmp[tmp.length - 1].split("_")[0];
+            }
+						
+						shortNameColor += "_" + $scope.product.sku.toLowerCase()
+							
+            for(var k = 0; k < $scope.product.images.length; ++k) {
+              var image = $scope.product.images[k];
+							var shortNameColor1 = shortNameColor.replace(/-/g, "_")
+							
+
+              if(image.indexOf(shortNameColor) == 47 || image.indexOf(shortNameColor1) == 47) {
+                $scope.variants[color].images.push(image);
+                
+              } 
+							if(image.indexOf('color_' + shortNameColor) != -1 || image.indexOf('color_' + shortNameColor1) != -1) {
+                  $scope.variants[color].image_color = image;
+              }
+							
+            }      
+          }
+					
+					var options = $scope.product.options;
+					for(var i = 0; i < options.length; ++i) {
+						var option = options[i];
+						var values = [];
+						for(var j = 0; j < option.values.length; ++j) {
+							var value = option.values[j];
+							if(hideColors.indexOf(value) == -1) {
+								if(option.name === "Màu sắc") {
+									if($scope.variants[value]) {
+										values.push(value);
+									}
+								} else {
+									values.push(value);
+								}
+							}
+						}
+						option.values = values;
+					}
+					
+					$scope.product.options = options;
+			
+        //}, 100)
+      //}
+    //});
+		}, 100);
+  }
+	
+	$scope.removeAccents = function(str) {
+			var AccentsMap = [
+				"aàảãáạăằẳẵắặâầẩẫấậ",
+				"AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬ",
+				"dđ", "DĐ",
+				"eèẻẽéẹêềểễếệ",
+				"EÈẺẼÉẸÊỀỂỄẾỆ",
+				"iìỉĩíị",
+				"IÌỈĨÍỊ",
+				"oòỏõóọôồổỗốộơờởỡớợ",
+				"OÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢ",
+				"uùủũúụưừửữứự",
+				"UÙỦŨÚỤƯỪỬỮỨỰ",
+				"yỳỷỹýỵ",
+				"YỲỶỸÝỴ"    
+			];
+			for (var i=0; i<AccentsMap.length; i++) {
+				var re = new RegExp('[' + AccentsMap[i].substr(1) + ']', 'g');
+				var char = AccentsMap[i][0];
+				str = str.replace(re, char);
+			}
+			return str;
+		}
+	
+  $scope.getProduct = function(idx) {
+    return $scope.products[parseInt(idx)]
+  }
+
+  $scope.selectColor = function(color, index) {
+		console.log('color',$scope.variants)
+		
+		$('.size').removeClass('show-size')
+		$('.size').addClass('hide-size')
+		$timeout(function(){
+			$('#img-loop' + '-' + index).attr('src', $scope.variants[color].images[0]);
+    	$('#img-hover' + '-' + index).attr('src', $scope.variants[color].images[1]);
+    	$scope.colorSelected = color;
+		}, 50)
+		
+		for (var i=0; i< $scope.variants[color].variants.length; i++) {
+				var variant = $scope.variants[color].variants[i];
+			
+				$('.size.'+variant.option1).removeClass('hide-size')
+				$('.size.'+variant.option1).addClass('show-size')
+			
+			
+			for (var j=0; j< $scope.hideVariants.length; j++) {
+					var hideVariant = $scope.hideVariants[j];
+					if (variant.barcode == hideVariant.barcode){
+						console.log('hideVariant',hideVariant);
+						$('.size.'+hideVariant.option1).removeClass('show-size')
+						$('.size.'+hideVariant.option1).addClass('hide-size')
+					}
+			}
+		}
+		
+		
+  }  
+
+  $scope.selectSize = function(size, index) {
+    $scope.sizeSelected = size;
+  } 
+
+  $scope.getVariant = function(color) {
+    return $scope.variants[color];
+  }
+  $scope.reverseOption = function(items) {
+    if(items == null)
+      return [];
+    if(items[0].name == 'Kích thước')
+      return items.slice().reverse(); // Create a copy of the array and reverse the order of the items
+    else
+      return items;
+  }
+  $scope.buyNowHome = function() {
+    if ($scope.colorSelected){
+      var variant = $scope.getVariant($scope.colorSelected);
+      for (var i = 0; i < variant.variants.length ; i++ ) {
+        var item = variant.variants[i];
+				if (item.option1 == $scope.colorSelected || item.option1 == $scope.sizeSelected){
+					let p_id = item.barcode;
+					let	p_pri = item.price/100;
+					let	p_dsc = item.compare_at_price/100 - item.price/100;
+					if (p_dsc < 0) {
+						p_dsc = 0;
+					}
+					if (sessionStorage.getItem('statusCustomer')){
+
+						hoian.signal(hoian.event_add_to_cart,{
+							p_id: p_id,
+							u_id : sessionStorage.getItem('statusCustomer').toString(),
+							p_pri: p_pri.toString(),
+							p_dsc: p_dsc.toString(),
+							p_qu: 1
+						});
+					} else {
+						hoian.signal(hoian.event_add_to_cart,{
+							p_id: p_id,
+							p_pri: p_pri.toString(),
+							p_dsc: p_dsc.toString(),
+							p_qu: 1
+						});
+					}
+
+
+					if ($('.title').text().includes(' Mới')){
+						try {
+							analytics.identify({
+								jn_cate: "JN_Hàng mới",
+								jn_zone: "Hàng mới",
+								jn_action: "Click",
+								jn_d_position: "Mua nhanh",
+								jn_e_action: "Hàng mới_Click_Mua nhanh",
+								jn_e_label: 'Mua nhanh',
+								jn_stid: _stid // đọc Cookie name trên home page _stid
+							});
+						} catch (err) {
+							console.log(err)
+						}
+					}
+					if ($('.title').text().includes('Giày')){
+						try {
+							analytics.identify({
+								jn_cate: "JN_Giày",
+								jn_zone: "Giày",
+								jn_action: "Click",
+								jn_d_position: "Mua nhanh",
+								jn_e_action: "Giày_Click_Mua nhanh",
+								jn_e_label: 'Mua nhanh',
+								jn_stid: _stid // đọc Cookie name trên home page _stid
+							});
+						} catch (err) {
+							console.log(err)
+						}
+					}
+
+					if ($('.title').text().includes('Túi')){
+						try {
+							analytics.identify({
+								jn_cate: "JN_Túi",
+								jn_zone: "Túi",
+								jn_action: "Click",
+								jn_d_position: "Mua nhanh",
+								jn_e_action: "Túi_Click_Mua nhanh",
+								jn_e_label: 'Mua nhanh',
+								jn_stid: _stid // đọc Cookie name trên home page _stid
+							});
+						} catch (err) {
+							console.log(err)
+						}
+					}
+
+					if ($('.title').text().includes('Phụ kiện')){
+						try {
+							analytics.identify({
+								jn_cate: "JN_Phụ kiện",
+								jn_zone: "Phụ kiện",
+								jn_action: "Click",
+								jn_d_position: "Mua nhanh",
+								jn_e_action: "Phụ kiện_Click_Mua nhanh",
+								jn_e_label: 'Mua nhanh',
+								jn_stid: _stid // đọc Cookie name trên home page _stid
+							});
+						} catch (err) {
+							console.log(err)
+						}
+					}
+
+					if ($('.title').text().includes('sale')){
+						try {
+							analytics.identify({
+								jn_cate: "JN_Sale",
+								jn_zone: "Sale",
+								jn_action: "Click",
+								jn_d_position: "Mua nhanh",
+								jn_e_action: "Sale_Click_Mua nhanh",
+								jn_e_label: $(".sort-by option:checked").text(),
+								jn_stid: _stid // đọc Cookie name trên home page _stid
+							});
+						} catch (err) {
+							console.log(err)
+						}
+					}
+					
+					
+					$.ajax({
+						type: 'POST',
+						url: '/cart/add.js',
+						async: true,
+						data: 'quantity=' + 1 + '&id=' + item.id,
+						success: function(result){
+							console.log('resultttttttttttt',result)
+
+							window.location.href = '/cart'
+						}
+					});
+				}
+
+      } 
+    } else {
+      swal({
+        type: 'error',
+        text: 'Vui lòng chọn size hoặc màu mà bạn thích. Xin cảm ơn. '
+      });
+    }
+  }
+
+
+	$scope.likeProduct = function(productId, customerId, customerPhone) {
+		var url = 'https://apiex.juno.vn/oss-pos-gate-1/hrv/wishlist/7';
+
+		$.ajax({
+			url : url,
+			data : {params: JSON.stringify({
+				customerPhone: customerPhone,
+				customerId: customerId,
+				productId: productId
+			})},
+			type : "GET",
+			success: function(data){
+				console.log('data',data)
+			}
+		});
+
+
+	} 
+})
+
+junoApp.filter("reverse", function(){
+  return function(items){
+    if(items == null)
+      return [];
+    if(items[0].name == 'Kích thước')
+      return items.slice().reverse(); // Create a copy of the array and reverse the order of the items
+    else
+      return items;
+  };
+});

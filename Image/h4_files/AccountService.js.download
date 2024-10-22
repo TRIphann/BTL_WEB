@@ -1,0 +1,105 @@
+junoApp.factory('accountService', function(config, $timeout) {
+
+    function checkToken(accessToken, callback) {
+        var urlSendOtp = config.OSS_API_HOST + '/auth/token/check_token';
+        $.ajax({
+            url: urlSendOtp,
+            type: "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("Authorization", accessToken);
+            },
+            error: function(xhr) {
+                callback(false)
+            }
+        }).done(function (data) {
+            callback(true)
+        });
+    }
+
+    function getCustomerInfo(accessToken, success, errorCB) {
+        var urlCustomer = config.OSS_API_HOST + '/hrv/token/customer';
+        $.ajax({
+            url : urlCustomer,
+            type : "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader("Authorization", accessToken);
+            },
+            processData: false,
+            crossDomain: true,
+            success: function(data){
+                $timeout(function () {
+                    success(data)
+                }, 100);
+            },
+            error: function(response, status, error) {
+                $timeout(function () {
+                    errorCB(response.status)
+                }, 100);
+            }
+        });
+    }
+
+    function getCustomerOrders(accessToken, success) {
+        var urlOrders = config.OSS_API_HOST + '/hrv/v2/token/customer/orders?page=0&limit=9999';
+        $.ajax({
+            url: urlOrders,
+            type: "GET",
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", accessToken);
+            },
+            processData: false,
+            crossDomain: true,
+            success: function (data) {
+                $timeout(function () {
+                    success(data)
+                }, 100);
+            }
+        });
+    }
+
+    function findLevelByAmount(amount) {
+        for(var i = 0 ; i < config.KHTT_LIST.length; ++i) {
+            var level = config.KHTT_LIST[i];
+            if(amount >= level.from && amount <= level.target) {
+                return level;
+            }
+        }
+    }
+
+    function changePassword(accessToken, pass, newPass, confirmNewPass, success, error) {
+        var urlOrders = config.OSS_API_HOST + '/auth/token/change_password';
+        $.ajax({
+            url: urlOrders,
+            type: 'POST',
+            data: {
+                oldPassword: pass,
+                password: newPass,
+                confirmPassword: confirmNewPass
+            },
+            beforeSend: function (request) {
+                request.setRequestHeader("Authorization", accessToken);
+            },
+            error: function (xhr) {
+                $timeout(function () {
+                    if (error != null) {
+                        error(xhr.status)
+                    }
+                }, 100);
+            }
+        }).done(function(resp) {
+            $timeout(function () {
+                if(success != null) {
+                    success(resp)
+                }
+            }, 100);
+        });
+    }
+
+    return {
+        checkToken: checkToken,
+        findLevelByAmount: findLevelByAmount,
+        getCustomerInfo: getCustomerInfo,
+        getCustomerOrders: getCustomerOrders,
+        changePassword: changePassword
+    }
+});

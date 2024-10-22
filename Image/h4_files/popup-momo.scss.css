@@ -1,0 +1,161 @@
+.momo-heading {
+  text-transform: uppercase;
+  color: #D82D8B;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.32px; }
+  .momo-heading-sub {
+    color: #979797;
+    font-weight: 400;
+    margin-bottom: 22px; }
+  .momo-heading:hover, .momo-heading:focus {
+    color: #D82D8B; }
+
+.momo-close {
+  top: 8px !important; }
+
+#momo_connect ul.momo-listing {
+  margin-top: 14px; }
+  #momo_connect ul.momo-listing li {
+    align-items: center; }
+    #momo_connect ul.momo-listing li .momo-listing-detail {
+      width: calc(100% - 140px); }
+      #momo_connect ul.momo-listing li .momo-listing-detail.actived {
+        width: calc(100% - 40px); }
+    #momo_connect ul.momo-listing li a.active_now {
+      color: #000;
+      font-size: 12px;
+      line-height: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 105px;
+      text-align: right; }
+
+#connect_momo_payment > div {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 100%; }
+  #connect_momo_payment > div .modal-content {
+    width: 100%; }
+
+.momo_step_1 {
+  margin: 0 0 20px; }
+
+.momo_prerogative, .momo_not_found {
+  display: none; }
+
+button.momo_button {
+  margin-top: 30px;
+  background: #000;
+  width: 100%;
+  color: #fff;
+  padding: 8px;
+  position: relative; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spinner {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.momo_step_1 form button.momo_button.loading {
+  font-size: 0;
+  height: 42px; }
+  .momo_step_1 form button.momo_button.loading::after {
+    content: '';
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #d82d8b;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 0px;
+    left: calc((100% - 40px)/2);
+    z-index: 0;
+    opacity: 1; }
+
+.momo-listing li {
+  display: -webkit-flex;
+  display: flex; }
+  .momo-listing li.clone {
+    display: none; }
+
+span.momo-listing-icon {
+  display: inline-block;
+  width: 28px;
+  margin-right: 9px; }
+
+.momo-listing-detail strong {
+  font-size: 12px;
+  color: #000;
+  line-height: 20px; }
+
+.momo-listing-detail p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #000; }
+
+button.momo_button + #skip {
+  margin-top: 5px;
+  background: #E8E8E8;
+  color: #000; }
+
+.lable-recapcha {
+  margin: 15px 0 0;
+  font-size: 11px;
+  color: #979797; }
+  .lable-recapcha a {
+    color: #D82D8B; }
+
+.momo_prerogative.open_actived {
+  display: block; }
+  .momo_prerogative.open_actived #active_now, .momo_prerogative.open_actived #skip {
+    display: none; }
+
+.momo_prerogative.open_not_active {
+  display: block; }
+  .momo_prerogative.open_not_active #continue_shopping {
+    display: none; }
+
+.momo_not_found.open {
+  display: block; }
+
+#cartformpage #momo_connect {
+  padding: 10px;
+  background: #fff;
+  position: relative; }
+  #cartformpage #momo_connect + .boxRightCart {
+    padding: 20px !important;
+    margin-top: 15px; }
+  #cartformpage #momo_connect:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f2f2f2;
+    z-index: 1; }
+  #cartformpage #momo_connect a.momo-heading {
+    display: block;
+    background: #fff;
+    padding: 10px; }
+  #cartformpage #momo_connect > * {
+    position: relative;
+    z-index: 2; }
+  #cartformpage #momo_connect ul.momo-listing {
+    margin: 0;
+    background: #fff;
+    padding: 0 10px 0 5px; }
+
+.product-action-bottom {
+  z-index: 999 !important; }
