@@ -29,8 +29,12 @@
         </script>
     </head>
 <body>
-        <div class="1">
-            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="top-bar">
+            <img src="Image/header-red.webp" alt="Top Bar Image">
+        </div>
+        <div class="navbar" id="navbar">
+            <nav>
                 <ul class="navbar_img">
                     <a href="./index.html"><img src="./Image/logo-svg.svg" alt="" ></a>
                 </ul>
@@ -176,6 +180,7 @@
                     <i class="fa-solid fa-bag-shopping" id="shoppingcart" style="color: #000000;"></i>
                 </ul>
             </nav>
+        </div>
             <div class="h1">
                 <img src="./Image/h1.webp" alt="" class="h1_image_1">
                 <img src="./Image/h12.webp" alt="" class="h1_image_1">
@@ -203,27 +208,27 @@
             </script>
             <script>
                 window.onscroll = function() {
-                  var whiteBar = document.getElementById('.navbar');
-                  var redBarHeight = document.querySelector('.header-red').offsetHeight;
+                var whiteBar = document.getElementById('.navbar');
+                var redBarHeight = document.querySelector('.header-red').offsetHeight;
             
-                  if (window.pageYOffset > redBarHeight) {
+                if (window.pageYOffset > redBarHeight) {
                     if (!whiteBar.classList.contains('fixed')) {
-                      whiteBar.classList.add('fixed');
-                      setTimeout(function() {
+                    whiteBar.classList.add('fixed');
+                    setTimeout(function() {
                         whiteBar.classList.add('show');
-                      }, 100); // Hiệu ứng trượt xuống sau một khoảng thời gian ngắn
+                    }, 100); // Hiệu ứng trượt xuống sau một khoảng thời gian ngắn
                     }
-                  } else {
+                } else {
                     if (whiteBar.classList.contains('show')) {
-                      whiteBar.classList.remove('show');
-                      setTimeout(function() {
+                    whiteBar.classList.remove('show');
+                    setTimeout(function() {
                         whiteBar.classList.remove('fixed');
-                      }, 300); // Trễ một chút để hoàn tất hiệu ứng trượt trước khi loại bỏ class
+                    }, 300); // Trễ một chút để hoàn tất hiệu ứng trượt trước khi loại bỏ class
                     }
-                  }
+                }
                 };
             </script>
-    
+
             <div class="h2">
                 <h3>HÀNG MỚI VỀ</h3>
                 <p>Các sản phẩm bắt nhịp quốc tế, nàng thời thượng không nên bỏ lỡ</p>
@@ -338,9 +343,9 @@
                             <p style="font-weight: bold; font-size: 20px;" id="video_information1">SUMMER TASTE</p>
                             <P style="font-size: 18px;" id="video_information2">
                                 Những chiếc túi kem thời trang, đầy cảm hứng từ nhiều sắc màu ngọt ngào và xu hướng thời trang hè 2021, SUMMER TASTE COLLECTION
-                                 là sự kết hợp mới nhất của JUNO & Miu Lê để mang đến t
-                                 hông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệ
-                                 m & hương vị mùa hè khi đang độ rực rỡ nhất.
+                                là sự kết hợp mới nhất của JUNO & Miu Lê để mang đến t
+                                hông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệ
+                                m & hương vị mùa hè khi đang độ rực rỡ nhất.
                             </P>
                         </div>
                     </div>
@@ -353,7 +358,7 @@
                         var slides = document.getElementsByClassName("video");
                         for (i = 0; i < slides.length; i++) 
                         {
-                          slides[i].style.display = "none";
+                        slides[i].style.display = "none";
                         }
                         slideIndex++;
                         if(slideIndex > slides.length) 
@@ -362,8 +367,8 @@
                         }
                         slides[slideIndex-1].style.display = "block";
                         setTimeout(showSlides, 20000);
-                      }
-                      document.addEventListener("DOMContentLoaded", function() {
+                    }
+                    document.addEventListener("DOMContentLoaded", function() {
                     });
                 </script>
                 <div class="khamphangay">
@@ -545,9 +550,8 @@
                 </div>
             </div>
         </div>
-    </header>
-    
-    
+    </div>
+    <script src="javaScript.js"></script> <!-- Liên kết đến file JavaScript -->
     <!-- <div class="shopping">
         <p>GIỎ HÀNG</p>
         <p>Bạn đang có 0 sản phẩm trong giỏ hàng.</p>
