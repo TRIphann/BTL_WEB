@@ -7,36 +7,55 @@
 
 body
 {
-    font-family: Arial, sans-serif;
     background-color: #FFFFFF;
     font-family: 'MuliDisplayVN', sans-serif;
     text-decoration: color(black black black black);
     display: flex;
     justify-content: space-around;
 }
+.top-bar{
+    background-color: #d32f2f;
+    width: 100%;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+}
+.top-bar img{
+    margin-left: 0;
+    height: 31.5px;
 
-.header-red {
-    background-color: #D32F2F;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
- }
+}
 .navbar 
 {
-
-    position: fixed;
+    /*position: relative; /* Đặt vị trí của navbar ban đầu là tương đối 
+    display: flex; /* Sử dụng flexbox để bố trí 
+    justify-content: space-around; /* Phân phối không gian đều giữa các phần tử 
+    padding: 20px 60px; /* Padding trên dưới và bên trái, phải 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng cho navbar 
+    height: 60px; /* Chiều cao của navbar 
+    background-color: #FFFFFF; /* Màu nền trắng cho navbar 
+    transition: all 0.3s; */
+    position: absolute;
     top: 0px;
     left: 0px;
     right: 0px;
     display: flex;
-    justify-content: space-around;
     padding-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     height: 60px;
     z-index: 999;
-    background-color: #FFFFFF; 
+    background-color: #FFFFFF;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng chuyển động */
+    transform: translateY(-100%); /* Ban đầu ẩn ngoài màn hình */
+    opacity: 1; /* Ban đầu ẩn */
+}
+.navbar img
+{
+    width: 100px;
+    height: 100px;
+    padding-bottom: 80px;
 }
 
 .navbar.fixed {
@@ -46,21 +65,38 @@ body
     right: 0;
     transform: translateY(-100%); /* Trượt thanh trắng lên */
     opacity: 0; /* Ban đầu ẩn khi chưa cuộn */
+    
   }
-
-  .navbar.show {
+.navbar.show {
     transform: translateY(0); /* Trượt xuống khi cuộn */
     opacity: 1; /* Hiển thị thanh trắng */
     z-index: 999;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
-  }
+}
+.navbar_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-grow: 1;
+    padding-left: 20px;
+}
 
+.navbar_list_ {
+    margin-left: 30px;
+    padding-left: 20px;
+    list-style: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
 
-.navbar img
-{
-    width: 100px;
-    height: 100px;
-    padding-bottom: 80px;
+.navbar_list_ a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navbar_list 
