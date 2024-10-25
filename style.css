@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+* {
+    box-sizing: border-box;
+}
 
 body
 {
@@ -13,6 +16,7 @@ body
     display: flex;
     justify-content: space-around;
 }
+/* Thanh màu đỏ */
 .top-bar{
     background-color: #d32f2f;
     width: 100%;
@@ -25,54 +29,40 @@ body
     height: 31.5px;
 
 }
+/* Thanh chứa logo, hàng mới, sản phảm... */
 .navbar 
 {
-    /*position: relative; /* Đặt vị trí của navbar ban đầu là tương đối 
-    display: flex; /* Sử dụng flexbox để bố trí 
-    justify-content: space-around; /* Phân phối không gian đều giữa các phần tử 
-    padding: 20px 60px; /* Padding trên dưới và bên trái, phải 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Bóng cho navbar 
-    height: 60px; /* Chiều cao của navbar 
-    background-color: #FFFFFF; /* Màu nền trắng cho navbar 
-    transition: all 0.3s; */
     position: absolute;
-    top: 0px;
+    top: 88px;
     left: 0px;
     right: 0px;
     display: flex;
-    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px ;
     padding-left: 60px;
     padding-right: 60px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    height: 60px;
+    height: 56.5px;
     z-index: 999;
-    background-color: #FFFFFF;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng chuyển động */
-    transform: translateY(-100%); /* Ban đầu ẩn ngoài màn hình */
-    opacity: 1; /* Ban đầu ẩn */
+    background-color: #ffffff;
+    transition: transform 0s ease, opacity 0s ease; /* Hiệu ứng chuyển động */
+    transform: translateY(-100%); 
+    opacity: 1; 
 }
-.navbar img
+/* Logo */
+.navbar_img
 {
-    width: 100px;
+    display: flex;
+    align-items: center;
+}
+.navbar_img img {
+    margin-top: 42px;
+    margin-left: 10px;
+    width: 85px;
     height: 100px;
-    padding-bottom: 80px;
 }
-
-.navbar.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(-100%); /* Trượt thanh trắng lên */
-    opacity: 0; /* Ban đầu ẩn khi chưa cuộn */
-    
-  }
-.navbar.show {
-    transform: translateY(0); /* Trượt xuống khi cuộn */
-    opacity: 1; /* Hiển thị thanh trắng */
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
-}
+/* Mục hàng mới, sản phảm,... */
 .navbar_list {
     display: flex;
     justify-content: space-around;
@@ -85,11 +75,11 @@ body
 }
 
 .navbar_list_ {
+    display: flex;
     margin-left: 30px;
     padding-left: 20px;
     list-style: none;
     font-size: 14px;
-    font-weight: bold;
     text-transform: uppercase;
     color: #000;
 }
@@ -117,7 +107,21 @@ body
 {
     text-decoration: none;
 }
-
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%); /* Trượt thanh trắng lên */
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
+  }
+.navbar.show {
+    transform: translateY(0); /* Trượt xuống khi cuộn */
+    opacity: 1; /* Hiển thị thanh trắng */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
+}s
 .sanpham_list_
 {
     display: flex;
