@@ -1,7 +1,11 @@
+
 *
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+* {
     box-sizing: border-box;
 }
 
@@ -13,30 +17,80 @@ body
     display: flex;
     justify-content: space-around;
 }
+/* Thanh màu đỏ */
+.top-bar{
+    background-color: #d32f2f;
+    width: 100%;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+}
+.top-bar img{
+    margin-left: 0;
+    height: 31.5px;
 
-.header-red {
-    background-color: #D32F2F;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
- }
-
+}
+/* Thanh chứa logo, hàng mới, sản phảm... */
 .navbar 
 {
-
-    position: fixed;
-    top: 0px;
+    position: absolute;
+    top: 88px;
     left: 0px;
     right: 0px;
     display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px ;
     padding-left: 60px;
     padding-right: 60px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    height: 60px;
+    height: 56.5px;
     z-index: 999;
-    background-color: #FFFFFF; 
+    background-color: #ffffff;
+    transition: transform 0s ease, opacity 0s ease; /* Hiệu ứng chuyển động */
+    transform: translateY(-100%); 
+    opacity: 1; 
+}
+/* Logo */
+.navbar_img
+{
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Dịch chuyển qua phải */
+}
+.navbar_img img {
+    width: 85px;
+    height: 100px;
+    padding-bottom: 13.5px;
+}
+/* Mục hàng mới, sản phảm,... */
+.navbar_list {
+    display: flex;
+    flex-grow: 1;
+    justify-content:center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.navbar_list_ {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0 20px;
+    margin-top: -18px;
+}
+.navbar_list_a{
+    font-weight: bold;
+}
+
+.navbar_list_ a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .navbar.fixed {
@@ -45,43 +99,15 @@ body
     left: 0;
     right: 0;
     transform: translateY(-100%); /* Trượt thanh trắng lên */
-    opacity: 0; /* Ban đầu ẩn khi chưa cuộn */
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
   }
-
-  .navbar.show {
+.navbar.show {
     transform: translateY(0); /* Trượt xuống khi cuộn */
     opacity: 1; /* Hiển thị thanh trắng */
     z-index: 999;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
-  }
-
-
-.navbar img
-{
-    width: 100px;
-    height: 100px;
-    padding-bottom: 80px;
-}
-
-.navbar_list 
-{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-}
-
-.navbar_list_ 
-{
-    margin-left: 30px;
-    padding-left: 20px;
-    list-style: none;
-}
-
-.navbar_list_ a 
-{
-    text-decoration: none;
-}
-
+}s
 .sanpham_list_
 {
     display: flex;

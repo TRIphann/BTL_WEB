@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    
     <script>
         $(document).ready(function(){
             $(".sanpham_list_").hide();
@@ -17,23 +18,19 @@
                 $(".sanpham_list_").show();
                 $(".sanpham_list_information").show();
             });
-
     
             $(".sanpham, .sanpham_list_").mouseleave(function(){
                 $(".sanpham_list_").hide();
                 $(".sanpham_list_information").hide();
-
-                
             });
         });
     </script>
 </head>
 <body>
     <div class="1">
-        <div class="header-red">
-            <!-- Nội dung của thanh màu đỏ -->
-            Miễn phí giao hàng đơn từ 300k
-          </div>
+        <div class="top-bar">
+            <img src="Image/header-red.webp" alt="Top Bar Image">
+        </div>
         <nav class="navbar">
             <ul class="navbar_img">
                 <a href="./index.html"><img src="./Image/logo-svg.svg" alt="" ></a>
@@ -163,13 +160,13 @@
                     </div>
                 </li>
                 <li class="navbar_list_">
-                    <a href="./saleduongsinh/saleduongsinh.html" style="color: #F40000;">SIÊU SALE DƯỠNG SINH</a>
+                    <a class=navbar_list_a href="./saleduongsinh/saleduongsinh.html" style="color: #F40000;">SALE THƯƠNG THƯƠNG</a>
                 </li>
                 <li class="navbar_list_">
-                    <a href="./saledonggiatu99k/saledongiatu99k.html" style="color: #F40000;">SALE QUẦN ÁO TỪ 99K</a>
+                    <a class=navbar_list_a href="./saledonggiatu99k/saledongiatu99k.html" style="color: #F40000;">QUẦN ÁO SALE UPTO 50%</a>
                 </li>
                 <li class="navbar_list_">
-                    <a href="./showroom/showroom.html"  style="color: #252A2B;">SHOWROOM</a>
+                    <a class=navbar_list_a href="./showroom/showroom.html"  style="color: #F40000;">SALE HAPPY FRIDAY</a>
                 </li>
             </ul>
             <ul class="navbar_input">
