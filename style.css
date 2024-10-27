@@ -72,7 +72,7 @@ body
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 5px;
+    margin-left: 55px;
 }
 
 .navbar_list_ {
@@ -81,7 +81,7 @@ body
     font-size: 13px;
     text-transform: uppercase;
     color: #000;
-    margin: 0 20px;
+    margin:  0 20px;
     margin-top: -18px;
 }
 .navbar_list_a{
@@ -107,7 +107,8 @@ body
     opacity: 1; /* Hiển thị thanh trắng */
     z-index: 999;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
-}.sanpham_list_
+}
+.sanpham_list_
 {
     display: flex;
     justify-content: space-around;
