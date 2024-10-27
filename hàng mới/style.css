@@ -160,14 +160,10 @@ body
     font-size: 15px;
     
 }
-
-
-
-
-
 .h2 img 
 {
     max-width: 100%;
+    
 }
 
 .h2,.h3,.h4,.h5,.h6
@@ -184,7 +180,30 @@ body
 {
     position: relative;
     margin-left: 40px;
+    object-fit: cover; 
 }
+.image img {
+    
+        width: 300px; /* Thay đổi giá trị 300px thành kích thước mong muốn */
+    
+}
+.container {
+    display: flex; /* Biến container thành một flex container */
+  }
+.right-images {
+
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột có kích thước bằng nhau */
+  grid-template-rows: repeat(2, 1fr); /* Tạo 2 hàng có kích thước bằng nhau */
+}
+  }
+  .left-images {
+    flex: 0.3;
+    max-width: 50%;
+
+  }
+  
 
 .image_after
 {
@@ -201,7 +220,6 @@ body
 .h2_information 
 {
     text-align: center;
-    
     font-size: 13px;
 
 }
@@ -550,9 +568,3 @@ body
     right: 20px;
     cursor: pointer;
 }
-
-
-
-
-
-
