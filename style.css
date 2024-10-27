@@ -107,8 +107,7 @@ body
     opacity: 1; /* Hiển thị thanh trắng */
     z-index: 999;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
-}s
-.sanpham_list_
+}.sanpham_list_
 {
     display: flex;
     justify-content: space-around;
