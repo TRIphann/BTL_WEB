@@ -1,15 +1,14 @@
-// Lấy navbar
-const navbar = document.getElementById("navbar");
+window.onscroll = function() {scrollFunction()};
 
-// Lưu vị trí ban đầu của navbar
-const sticky = navbar.offsetTop;
+var navbar = document.querySelector('.navbar');
+var sticky = navbar.offsetTop;
 
-// Thêm sự kiện cuộn để thay đổi lớp của navbar
-window.onscroll = function() {
-    // Kiểm tra xem cuộn xuống có vượt quá vị trí ban đầu của navbar hay không
-    if (window.pageYOffset > sticky + navbar.offsetHeight) {
-        navbar.classList.add("fixed", "show"); // Thêm lớp fixed và show khi cuộn xuống
+function scrollFunction() {
+    if (window.pageYOffset > sticky) {
+        navbar.classList.add('fixed');
+        navbar.classList.add('show');
     } else {
-        navbar.classList.remove("fixed", "show"); // Xóa lớp fixed và show khi cuộn lên
+        navbar.classList.remove('fixed');
+        navbar.classList.remove('show');
     }
-};
+}
