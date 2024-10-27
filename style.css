@@ -83,6 +83,7 @@ body
     color: #000;
     margin:  0 20px;
     margin-top: -18px;
+    position: relative; /* Thêm để định vị gạch chân chính xác */
 }
 .navbar_list_a{
     font-weight: bold;
@@ -90,36 +91,64 @@ body
 
 .navbar_list_ a {
     text-decoration: none;
-    color: inherit;
+}
+.navbar .navbar_list .navbar_list_ {
+    position: relative; /* Để pseudo-element được căn cứ theo phần tử này */
+}
+/*
+.navbar .navbar_list .navbar_list_:hover::after {
+    content: ""; /* Tạo nội dung trống cho pseudo-element 
+    position: absolute; /* Đặt vị trí tuyệt đối 
+    left: 50%; /* Căn trái 
+    transform: translateX(-50%); /* Dịch chuyển để căn giữa 
+    width: calc(100% + 10px); /* Độ rộng lớn hơn 10px so với text 
+    bottom: 0; /* Căn dưới
+    top: 34p
+    height: 0.1px; /* Độ cao của border 
+    background-color: rgb(0, 0, 0); /* Màu sắc của border 
+} */
+.navbar {
+    overflow: visible; /* Cho phép phần tử con của navbar hiển thị ra ngoài */
 }
 
-.navbar.fixed {
-    position: fixed;
-    top: 0;
+.navbar .navbar_list .navbar_list_:hover::before {
+    content: "";
+    position: absolute;
+    top: 34px; /* Đẩy nền trắng xuống dưới navbar */
     left: 0;
     right: 0;
-    transform: translateY(-100%); /* Trượt thanh trắng lên */
-    opacity: 1;
-    transition: transform 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
-  }
-.navbar.show {
-    transform: translateY(0); /* Trượt xuống khi cuộn */
-    opacity: 1; /* Hiển thị thanh trắng */
-    z-index: 999;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
+    width: 1537px;
+    margin-left: -400px;
+
+    height: 3px; /* Đặt chiều cao của nền trắng */
+    background-color: #ffffff; /* Màu nền đỏ khi hover */
+    z-index: -1; /* Đặt pseudo-element này phía sau nội dung */
 }
+.navbar .navbar_list .navbar_list_:hover::after {
+    content: ""; /* Tạo nội dung trống cho pseudo-element */
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    left: 50%; /* Căn trái */
+    transform: translateX(-50%); /* Căn giữa */
+    width: calc(100% + 10px); /* Độ rộng của đường gạch chân */
+    bottom: 0; /* Căn dưới so với chữ */
+    top: 36px;
+    height: 1px; /* Độ cao của border */
+    background-color: rgb(0, 0, 0); /* Màu sắc của border */
+}
+
+
 .sanpham_list_
 {
     display: flex;
     justify-content: space-around;
     position: fixed;
-    top: 15px;
-    width: 1600px;
-    margin-left: -450px;
+    top: 13px;
+    width: 1522px;
+    margin-left: -560px;
     height: 1000px;
     margin-top: 23px;
     letter-spacing: 0.5px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding-left: 150px;
     padding-top: 60px;
     padding-right: 400px;
@@ -148,11 +177,6 @@ body
     position: absolute;
     margin-top: 670px;
     display: none;
-}
-
-.navbar .navbar_list .navbar_list_:hover 
-{
-    border-bottom: 1px solid black;
 }
 
 .sanpham_list_ a:hover
@@ -826,4 +850,19 @@ body
     left: -20px;
     font-size: 20px;
     cursor: pointer;
+}
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%); /* Trượt thanh trắng lên */
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
+  }
+.navbar.show {
+    transform: translateY(0); /* Trượt xuống khi cuộn */
+    opacity: 1; /* Hiển thị thanh trắng */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
 }
