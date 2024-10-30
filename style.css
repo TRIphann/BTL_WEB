@@ -95,18 +95,6 @@ body
 .navbar .navbar_list .navbar_list_ {
     position: relative; /* Để pseudo-element được căn cứ theo phần tử này */
 }
-/*
-.navbar .navbar_list .navbar_list_:hover::after {
-    content: ""; /* Tạo nội dung trống cho pseudo-element 
-    position: absolute; /* Đặt vị trí tuyệt đối 
-    left: 50%; /* Căn trái 
-    transform: translateX(-50%); /* Dịch chuyển để căn giữa 
-    width: calc(100% + 10px); /* Độ rộng lớn hơn 10px so với text 
-    bottom: 0; /* Căn dưới
-    top: 34p
-    height: 0.1px; /* Độ cao của border 
-    background-color: rgb(0, 0, 0); /* Màu sắc của border 
-} */
 .navbar {
     overflow: visible; /* Cho phép phần tử con của navbar hiển thị ra ngoài */
 }
@@ -135,17 +123,20 @@ body
     height: 1px; /* Độ cao của border */
     background-color: rgb(0, 0, 0); /* Màu sắc của border */
 }
-
-
+.navbar .navbar_list .navbar_list_:hover::before,
+.navbar .navbar_list .navbar_list_:hover::after {
+    content: none;
+}
 .sanpham_list_
 {
     display: flex;
     justify-content: space-around;
     position: fixed;
     top: 13px;
-    width: 1522px;
-    margin-left: -560px;
-    height: 1000px;
+    left: 0;
+    right: 0;
+    width: 1519.5px;
+    height: 100vh;
     margin-top: 23px;
     letter-spacing: 0.5px;
     background-color: #ffffff;
