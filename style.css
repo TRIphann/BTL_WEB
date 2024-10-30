@@ -99,29 +99,6 @@ body
     overflow: visible; /* Cho phép phần tử con của navbar hiển thị ra ngoài */
 }
 
-/*.navbar .navbar_list .navbar_list_:hover::before {
-    content: "";
-    position: absolute;
-    top: 34px; /* Đẩy nền trắng xuống dưới navbar 
-    left: 0;
-    right: 0;
-    width: 1520px;
-    margin-left: -409px;
-    height: 3px; /* Đặt chiều cao của nền trắng 
-    background-color: #ffffff; /* Màu nền đỏ khi hover 
-    z-index: -1; /* Đặt pseudo-element này phía sau nội dung 
-}
-.navbar .navbar_list .navbar_list_:hover::after {
-    content: ""; /* Tạo nội dung trống cho pseudo-element 
-    position: absolute; /* Đặt vị trí tuyệt đối 
-    left: 50%;  /*Căn trái 
-    transform: translateX(-50%); /* Căn giữa 
-    width: calc(100% + 10px);  /*Độ rộng của đường gạch chân 
-    bottom: 0;  /*Căn dưới so với chữ 
-    top: 36px;
-    height: 1px; /* Độ cao của border 
-    background-color: rgb(0, 0, 0); /* Màu sắc của border 
-}*/
 .navbar .navbar_list .navbar_list_:hover::before {
     content: "";
     position: fixed; /* Đặt vị trí cố định cho toàn màn hình */
@@ -138,9 +115,9 @@ body
     position: absolute;
     left: 50%; /* Đặt ở giữa phần tử */
     transform: translateX(-50%); /* Căn giữa pseudo-element */
-    width: 100%; /* Gạch chân khớp với độ rộng của mục */
-    top: 32px;
-    height: 1px;
+    width: 120%; /* Gạch chân khớp với độ rộng của mục */
+    top: 37px;
+    height: 0.1px;
     background-color: rgb(0, 0, 0); /* Màu sắc của border */
 }
 
@@ -218,17 +195,6 @@ body
 {
     max-width: 100%;
 }
-
-/* .h1 #icon_next
-{
-    cursor: pointer;
-    padding-top: 350px;
-    z-index: 1;
-    position: absolute;
-    padding-left: 40px;
-} */
-
-
 .h1
 {
     position: relative;
@@ -236,71 +202,33 @@ body
     width: 100%;
     /* animation: slide 30s infinite alternate; */
 } 
-
 .h1 img 
 {
     width: 100%;
 }
 
 
-.h2
-{
+
+.h2 {
     padding-left: 100px;
     padding-right: 100px;
-    margin-top: 150px;
+    margin-top: 53px;
     padding-bottom: 100px;
 }
-
-.h2 img 
-{
-    max-width: 100%;
-}
-
-
-.h2 .h2_image li
-{
-    list-style-type: none;
-    padding-left: 20px;
-    font-size: 15px;
-}
-
-.h2 .h2_image
-{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-}
-
-.image 
-{
-    position: relative;
-}
-
-.image_after
-{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: none;
-}
-
-.image:hover .image_after 
-{
-    display: block;
-}
-
 .h2 h3 
+{
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.h2 p 
 {
     margin-bottom: 5px;
     text-align: center;
 }
-
-.h2 p 
-{
-    margin-bottom: 10px;
-    text-align: center;
+.h2 .h2_a{
+    font-size: 18px;
 }
-
 .h2 .xemtatca
 {
     margin-top: 50px;
@@ -325,6 +253,155 @@ body
     margin-top: 10px ;
     border: 1.3px solid gray;
 }
+
+.h2 img {
+    max-width: 100%;
+}
+
+.h2 .h2_image {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 29px;
+}
+
+.h2 .h2_image li {
+    list-style-type: none;
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.product {
+    position: relative;
+    text-align: center;
+}
+
+/* "Hàng Mới" Tag */
+.new_tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* Image hover effect */
+.image {
+    position: relative;
+    cursor: pointer;
+}
+
+.image_after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+}
+
+.image:hover .image_after {
+    display: block;
+}
+
+.product_code {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* Product Information */
+.h2_information {
+    margin-top: 10px;
+}
+
+.h2_information p {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.h2_information b {
+    font-size: 18px;
+}
+
+/* Color options */
+.product-block {
+    position: relative;
+    width: 250px;
+}
+
+.product-img {
+    position: relative;
+}
+
+.product-detail {
+    text-align: center;
+    margin-top: 10px;
+}
+.pro-name{
+    font-size: 14px;
+}
+.pro-price {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hover-content {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.color-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-img:hover {
+    transform: scale(1.1);
+}
+
+.buy-now-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.new-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF5733;
+    color: #fff;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+
+
 
 .h3 img
 {
