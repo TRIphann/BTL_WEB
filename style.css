@@ -99,34 +99,51 @@ body
     overflow: visible; /* Cho phép phần tử con của navbar hiển thị ra ngoài */
 }
 
-.navbar .navbar_list .navbar_list_:hover::before {
+/*.navbar .navbar_list .navbar_list_:hover::before {
     content: "";
     position: absolute;
-    top: 34px; /* Đẩy nền trắng xuống dưới navbar */
+    top: 34px; /* Đẩy nền trắng xuống dưới navbar 
     left: 0;
     right: 0;
-    width: 1537px;
-    margin-left: -400px;
-
-    height: 3px; /* Đặt chiều cao của nền trắng */
-    background-color: #ffffff; /* Màu nền đỏ khi hover */
-    z-index: -1; /* Đặt pseudo-element này phía sau nội dung */
+    width: 1520px;
+    margin-left: -409px;
+    height: 3px; /* Đặt chiều cao của nền trắng 
+    background-color: #ffffff; /* Màu nền đỏ khi hover 
+    z-index: -1; /* Đặt pseudo-element này phía sau nội dung 
 }
 .navbar .navbar_list .navbar_list_:hover::after {
-    content: ""; /* Tạo nội dung trống cho pseudo-element */
-    position: absolute; /* Đặt vị trí tuyệt đối */
-    left: 50%; /* Căn trái */
-    transform: translateX(-50%); /* Căn giữa */
-    width: calc(100% + 10px); /* Độ rộng của đường gạch chân */
-    bottom: 0; /* Căn dưới so với chữ */
+    content: ""; /* Tạo nội dung trống cho pseudo-element 
+    position: absolute; /* Đặt vị trí tuyệt đối 
+    left: 50%;  /*Căn trái 
+    transform: translateX(-50%); /* Căn giữa 
+    width: calc(100% + 10px);  /*Độ rộng của đường gạch chân 
+    bottom: 0;  /*Căn dưới so với chữ 
     top: 36px;
-    height: 1px; /* Độ cao của border */
+    height: 1px; /* Độ cao của border 
+    background-color: rgb(0, 0, 0); /* Màu sắc của border 
+}*/
+.navbar .navbar_list .navbar_list_:hover::before {
+    content: "";
+    position: fixed; /* Đặt vị trí cố định cho toàn màn hình */
+    top: 56px; /* Khoảng cách từ trên xuống để căn dưới navbar */
+    left: 0; /* Căn bên trái của màn hình */
+    width: 98.9vw; /* Độ rộng khớp với chiều ngang của màn hình */
+    height: 3px;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.navbar .navbar_list .navbar_list_:hover::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Đặt ở giữa phần tử */
+    transform: translateX(-50%); /* Căn giữa pseudo-element */
+    width: 100%; /* Gạch chân khớp với độ rộng của mục */
+    top: 32px;
+    height: 1px;
     background-color: rgb(0, 0, 0); /* Màu sắc của border */
 }
-.navbar .navbar_list .navbar_list_:hover::before,
-.navbar .navbar_list .navbar_list_:hover::after {
-    content: none;
-}
+
 .sanpham_list_
 {
     display: flex;
