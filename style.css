@@ -207,6 +207,64 @@ body
     width: 100%;
 }
 
+.sectionFlashSale {
+    padding: 20px 0;
+    background-color: #ffffff;
+  }
+  
+  .heading-title {
+    margin-bottom: 20px;
+  }
+  
+  .mainCountDown {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .titleFlashSale {
+    display: inline-block;
+    margin-right: 10px;
+    color: #000;
+  }
+  
+  .countdown {
+    display: inline-flex;
+    gap: 10px;
+  }
+  
+  .count-box {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 50px;
+  }
+  
+  .banner-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .animateBanner {
+    flex: 1;
+    max-width: 33%;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  
+  
+
+
+
 
 
 .h2 {
