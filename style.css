@@ -207,133 +207,6 @@ body
     width: 100%;
 }
 
-.sectionFlashSale {
-    text-align: center;
-    padding: 25px 15px;
-}
-
-.titleFlashSale {
-    font-size: 25px;
-    font-weight: 900;
-    margin: 0;
-}
-
-.countdown span {
-    margin: 0 3px;
-    background: black;
-    color: white;
-    padding: 10px 5px;
-    display: inline-block;
-}
-
-.banner-row {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.animateBanner {
-    flex: 1;
-    max-width: 33%;
-    text-align: center;
-    margin: 0 -26px;
-}
-
-.banner-img {
-    width: 87.75%;
-    height: auto;
-}
-
-.product-slider {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 88%;
-    margin: 0 auto;
-}
-
-.products {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.product-card {
-    width: 254px;
-    background-color: #ffffff;
-    text-align: center;
-    margin: 0 5px;
-    position: relative;
-}
-
-.flash-sale {
-    position: absolute;
-    top: 9px;
-    right: 9px;
-    background-color: red;
-    color: white;
-    padding: 3px 8px;
-    font-size: 9.5px;
-    border-radius: 5px;
-}
-
-.product-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.product-name {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #333;
-}
-
-.product-price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.left-arrow {
-    left: 0;
-}
-
-.right-arrow {
-    right: 0;
-}
-
-.view-all {
-    margin-top: 20px;
-}
-
-.view-all a {
-    font-size: 16px;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #333;
-    padding-bottom: 2px;
-}
-
-.view-all a:hover {
-    color: #000000;
-    border-color: #000000;
-}
-
-
 
 .h2 {
     padding-left: 100px;
@@ -341,18 +214,16 @@ body
     margin-top: 53px;
     padding-bottom: 100px;
 }
-.h2 h3 
-{
+.h2 h3 {
     font-size: 20px;
     margin-bottom: 5px;
     text-align: center;
 }
-.h2 p 
-{
+.h2 p {
     margin-bottom: 5px;
     text-align: center;
 }
-.h2 .h2_a{
+.h2 .h2_a {
     font-size: 18px;
 }
 .h2 .xemtatca
@@ -382,6 +253,7 @@ body
 
 .h2 img {
     max-width: 100%;
+    height: auto;
 }
 
 .h2 .h2_image {
@@ -392,138 +264,119 @@ body
 
 .h2 .h2_image li {
     list-style-type: none;
-    padding-left: 20px;
+    width: 25%; /* Đảm bảo mỗi sản phẩm chiếm 22% độ rộng */
+    text-align: center;
     font-size: 13px;
+    margin-bottom: 30px;
 }
 
-.product {
-    position: relative;
+.product-block {
     text-align: center;
 }
 
-/* "Hàng Mới" Tag */
-.new_tag {
+/*THÊM*/
+.product-img {
+    position: relative;
+    overflow: hidden;
+}
+.product-img .img-loop {
+    transition: opacity 0.3s ease;
+}
+.product-img .img-hover {
+    display: none;
+}
+
+.product-img:hover .img-loop {
+    display: none;
+}
+
+.product-img:hover .img-hover {
+    display: block;
+}
+.new-tag {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: red;
     color: white;
     padding: 5px 10px;
     font-size: 12px;
-    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
-
-/* Image hover effect */
-.image {
-    position: relative;
-    cursor: pointer;
+.product-block:hover .new-tag {
+    opacity: 1;
 }
-
-.image_after {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Overlay chứa các thông tin khi hover */
+.hover-overlay {
     display: none;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
 }
-
-.image:hover .image_after {
+.product-block:hover .hover-overlay {
     display: block;
 }
 
-.product_code {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 3px 8px;
-    font-size: 12px;
-    border-radius: 3px;
+/* Định dạng các ô màu sắc */
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
 }
 
-/* Product Information */
+.color-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.color-circle.white { background-color: #ffffff; }
+.color-circle.black { background-color: #000000; }
+.color-circle.brown { background-color: #a52a2a; }
+
+
+/* Nút "Mua Ngay" */
+.buy-now {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+/*THÊM*/
+
+.product-img img {
+    width: 320px;
+    height: auto;
+    object-fit: cover;
+}
+
 .h2_information {
     margin-top: 10px;
 }
 
-.h2_information p {
-    margin: 5px 0;
-    font-weight: normal;
-}
-
-.h2_information b {
-    font-size: 18px;
-}
-
-/* Color options */
-.product-block {
-    position: relative;
-    width: 250px;
-}
-
-.product-img {
-    position: relative;
-}
-
-.product-detail {
-    text-align: center;
-    margin-top: 10px;
-}
-.pro-name{
+.pro-name {
     font-size: 14px;
+    color: rgb(0, 0, 0);
+    margin: 10px 0;
 }
+
 .pro-price {
-    color: #000000;
     font-size: 14px;
     font-weight: bold;
+    color: #000000;
 }
 
-.hover-content {
-    text-align: center;
-    margin-top: 10px;
-}
 
-.color-options {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.color-img {
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.color-img:hover {
-    transform: scale(1.1);
-}
-
-.buy-now-button {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #000;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.new-label {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #FF5733;
-    color: #fff;
-    padding: 5px 8px;
-    font-size: 12px;
-    border-radius: 3px;
-    font-weight: bold;
-}
 
 
 
