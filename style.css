@@ -207,61 +207,173 @@ body
     width: 100%;
 }
 
-.sectionFlashSale {
-    padding: 20px 0;
-    background-color: #ffffff;
-  }
-  
-  .heading-title {
-    margin-bottom: 20px;
-  }
-  
-  .mainCountDown {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .titleFlashSale {
-    display: inline-block;
-    margin-right: 10px;
-    color: #000;
-  }
-  
-  .countdown {
-    display: inline-flex;
-    gap: 10px;
-  }
-  
-  .count-box {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    min-width: 50px;
-  }
-  
-  .banner-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .animateBanner {
-    flex: 1;
-    max-width: 33%;
-  }
-  
-  .banner-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  
-  
-  
+.container-fluid.text-center {
+    line-height: 1.4; /* Đặt chiều cao dòng */
+    font-size: 14px; /* Kích thước chữ */
+    color: #252a2b; /* Màu chữ */
+    box-sizing: border-box; /* Đặt cách tính chiều rộng và chiều cao */
+    font-family: 'MuliDisplayVN', sans-serif; /* Font chữ */
+    margin: 0; /* Không có margin */
+    padding: 25px 15px; /* Padding trên dưới và trái phải */
+    text-align: center; /* Căn giữa nội dung */
+    position: relative; /* Đặt vị trí tương đối cho phần tử */
+    width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
+}
+
+.container-fluid.text-center .row {
+    margin: 0; /* Xóa margin cho hàng */
+}
+
+.container-fluid.text-center img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của phần tử cha */
+    height: auto; /* Giữ tỷ lệ chiều cao của hình ảnh */
+}
+
+.countdown {
+    font-size: 20px; /* Kích thước đồng hồ đếm ngược */
+    margin: 15px 0; /* Khoảng cách trên và dưới đồng hồ đếm ngược */
+}
+
+.titleFlashSale {
+    font-size: 24px; /* Kích thước tiêu đề lớn hơn */
+    margin: 10px 0; /* Khoảng cách trên và dưới tiêu đề */
+}
+
+.row {
+    display: flex; /* Dùng flexbox để sắp xếp các cột */
+    justify-content: center; /* Căn giữa các cột */
+}
+
+
+
+.col-xs-12.col-sm-12 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Tắt hiệu ứng highlight khi chạm */
+    -webkit-text-size-adjust: none; /* Tắt tự động điều chỉnh kích thước chữ trên thiết bị di động */
+    line-height: 1.4; /* Đặt chiều cao dòng */
+    font-size: 14px; /* Kích thước chữ */
+    color: #252a2b; /* Màu chữ */
+    -webkit-font-smoothing: antialiased; /* Làm mịn chữ */
+    text-rendering: optimizeLegibility; /* Tối ưu hóa khả năng đọc của chữ */
+    box-sizing: border-box; /* Đặt cách tính chiều rộng và chiều cao */
+    font-family: 'MuliDisplayVN', sans-serif; /* Font chữ */
+    margin: 0; /* Không có margin */
+    position: relative; /* Đặt vị trí tương đối cho phần tử */
+    min-height: 1px; /* Chiều cao tối thiểu */
+    float: left; /* Đặt phần tử vào bên trái */
+    width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
+    margin-top: 15px; /* Khoảng cách phía trên */
+    padding: 0; /* Không có padding */
+}
+
+/* Responsive design */
+@media (min-width: 576px) {
+    .col-sm-12 {
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng cho thiết bị nhỏ hơn */
+    }
+}
+
+@media (min-width: 768px) {
+    .col-xs-12 {
+        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng cho thiết bị nhỏ hơn */
+    }
+}
+
+.owl-carousel .owl-item {
+    position: relative; /* Đặt vị trí tương đối để xử lý các phần tử con */
+    display: block; /* Hiển thị như một block để đảm bảo kích thước đúng */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
+    margin: 0; /* Không có margin */
+    padding: 0; /* Không có padding */
+}
+
+.product-block {
+    background-color: #fff; /* Màu nền trắng cho khối sản phẩm */
+    border: 1px solid #e0e0e0; /* Đường viền nhẹ quanh sản phẩm */
+    border-radius: 5px; /* Bo góc nhẹ cho sản phẩm */
+    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển tiếp cho đổ bóng */
+}
+
+.product-block:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
+}
+
+.product-img {
+    position: relative; /* Để xử lý các hình ảnh */
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+}
+
+.product-img img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của phần tử cha */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    display: block; /* Hiển thị như một block */
+}
+
+.pro-name {
+    font-size: 16px; /* Kích thước chữ cho tên sản phẩm */
+    color: #252a2b; /* Màu chữ cho tên sản phẩm */
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+.pro-price {
+    font-size: 18px; /* Kích thước chữ cho giá sản phẩm */
+    color: #ff5733; /* Màu chữ cho giá (có thể là màu nổi bật) */
+    text-align: center; /* Căn giữa văn bản */
+    margin: 10px 0; /* Khoảng cách trên và dưới */
+}
+
+.variantColor {
+    text-align: center; /* Căn giữa danh sách màu sắc */
+    margin-top: 10px; /* Khoảng cách phía trên */
+}
+
+.variantColor ul {
+    list-style-type: none; /* Xóa dấu đầu dòng cho danh sách */
+    padding: 0; /* Không có padding */
+    display: inline-block; /* Hiển thị danh sách inline */
+}
+
+.variantColor li {
+    display: inline; /* Hiển thị các mục trong danh sách như inline */
+    margin: 0 5px; /* Khoảng cách giữa các màu */
+}
+
+.variantColor img {
+    width: 30px; /* Chiều rộng cho hình ảnh màu sắc */
+    height: auto; /* Tự động điều chỉnh chiều cao */
+    border: 1px solid transparent; /* Đường viền mặc định cho hình ảnh */
+    border-radius: 3px; /* Bo góc cho hình ảnh */
+    transition: border-color 0.2s; /* Hiệu ứng chuyển tiếp cho đường viền */
+}
+
+.variantColor li:hover img {
+    border-color: #ff5733; /* Đổi màu đường viền khi hover */
+}
+
+.actionLoop {
+    text-align: center; /* Căn giữa nút hành động */
+    margin-top: 15px; /* Khoảng cách phía trên */
+}
+
+.actionLoop a {
+    display: inline-block; /* Hiển thị nút dưới dạng block để dễ dàng điều chỉnh */
+    padding: 10px 20px; /* Padding cho nút */
+    background-color: #ff5733; /* Màu nền cho nút */
+    color: #fff; /* Màu chữ trắng cho nút */
+    border-radius: 5px; /* Bo góc cho nút */
+    text-decoration: none; /* Không có gạch chân */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+}
+
+.actionLoop a:hover {
+    background-color: #e55a2e; /* Đổi màu nền khi hover */
+}
+
+
+
+
 
 
 
