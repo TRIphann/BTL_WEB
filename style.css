@@ -718,7 +718,11 @@ body
     font-size: 18px;
     text-align: center;
 }
-
+.h6_title_list p{ /*chu @juno*/
+    margin-top: -17px;
+    font-size: 20px;
+    margin-bottom: -15px;
+}
 .h6 .h6_title 
 {
     display: flex;
@@ -735,16 +739,21 @@ body
     width: 500px;
     padding-left: 30px;
 }
-
-.h6 .h6_title .h6_hr1
-{
+.h6_hr1, .h6_hr2 {
+    border: none; /* Xóa viền mặc định */
+    height: 1px; /* Chiều cao của thanh hr */
+    background-color: rgb(206, 205, 205); /* Màu sắc thanh hr */
+}
+.h6_hr1 {
     margin-left: 50px;
+    margin-top: 20px;
 }
 
-.h6 .h6_title .h6_hr2
-{
+.h6_hr2 {
     margin-right: 50px;
+    margin-top: 20px;
 }
+
 
 .h6 .h6_image
 {
@@ -771,13 +780,14 @@ body
     padding-left: 40px;
     padding-right: 40px;
 }
-
-.h6 .hr6 
-{
-    margin-left: 10px;
-    margin-top: 50px;
+.hr6 {
+  width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
+  height: 0.5px; /* Độ dày 0.5 pixel */
+  border: none; /* Không có viền */
+  background-color: #e7e4e4; /* Màu xám nhạt */
+  margin-top: 50px; /* Cách các phần tử khác 20px ở trên và dưới, căn giữa */
+  margin-bottom: 5px;
 }
-
 .h7 img 
 {
     width: calc(100% - 120px);
@@ -786,12 +796,10 @@ body
 .h7 ul
 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-right: 10px;
 }
 
 .h7 ul li 
@@ -810,12 +818,25 @@ body
     width: 400px;
 }
 
-.h7 .h7_1 .h7_11
+.h7 .h7_1 .h7_1_1 p
 {
-    margin-bottom: 10px;
+    margin-top: 2px;
+    margin-bottom: 5px;
     text-decoration-color: #eee;
     font-size: 15px;
 }
+.h7 .h7_1 .h7_1_2 p
+{
+    margin-top: 2px;
+    margin-bottom: 5px;
+    text-decoration-color: #eee;
+    font-size: 15px;
+}
+.h7_1_2{
+    padding-top: 25px;
+}
+
+
 
 .h7 .h7_2 .h7_22
 {
@@ -827,16 +848,27 @@ body
 {
     margin-top: 10px;
     font-size: 15px;
+    color: grey;
+}
+.h7_22_information:hover{
+    color: black;
+    cursor: pointer;
 }
 
 .h7 .h7_2 img
 {
     width: 400px;
 }
+.fa-play {
+  color: gray; /* Đặt màu thành xám */
+  font-size: 5px; /* Điều chỉnh kích thước */
+  margin-left: 5px; /* Tạo khoảng cách với nội dung */
+  vertical-align:auto;
+}
 
 .h7 .h7_3 .h7_33
 {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     font-size: 15px ;
 }
 
@@ -845,29 +877,39 @@ body
     width: 400px;
 }
 
-.h7 .h7_3 .h7_33_information li
-{
+.h7_33_information {
+    display: flex; /* Hiển thị theo hàng ngang */
+    list-style-type: none; /* Xóa dấu đầu dòng */
+    padding: 0; /* Xóa khoảng cách mặc định */
+    margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
+}
+.h7_33_information:hover{
+    color: black;
     cursor: pointer;
-    
 }
 
-.h7 .h7_3 .h7_33_information
-{
-    margin-top: 10px;
-    margin-left: -75px;
-    margin-right: -55px;
+.h7_33_information li {
+    margin-right: 30px;/*khoang cách giữa các biểu tượng*/
+    margin-top: -30px;
+    margin-left: -40px;
+    font-size: 20px;
+   
+}
+
+.h7_33_information li:last-child {
+    margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
 }
 
 .h8 
 {
-    margin-top: 100px;
+    margin-top: 40px;
     text-align: center;
 
 }
 .h8 .h8_1 ul
 {
     display: flex;
-    background-color: rgb(247, 242, 242);
+    background-color: rgb(245, 245, 245);
     width: 1500px;
     height: 70px;
 }
@@ -875,7 +917,7 @@ body
 .h8 .h8_1 ul li 
 {
     list-style-type: none;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .h8 .h8_1 .h8_1_1 
@@ -892,7 +934,7 @@ body
 
 .h8 .h8_1 ul li p 
 {
-    font-size: 15px;
+    font-size: 13px;
 } 
 
 .h8 .h8_1 ul li i 
@@ -911,23 +953,25 @@ body
 .h8 .h8_2
 {
     display: inline-flex;
-    margin-top: 40px;
-    width: 1500px;
+    margin-top: 20px;
+    width: 1300px;
 }
 
-.h8 .h8_2 .h8_2_1
-{
-    display: flex;
-    float: left;
-    margin-left: 100px;
-    font-size: 13px;
+
+.h8_2_1 {
+    display: flex; /* Hiển thị theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 15px 0;
+    margin-top: -50px;
+}
+.h8_2_1 i {
+    margin-right: 4px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+.fa-chevron-down{
+    font-size: 10px;
 }
 
-.h8 .h8_2 .h8_2_1 p 
-{
-    padding-left: 7px;
-    font-size: 13px;
-}
+
 
 .h8 .h8_2 .h8_2_2
 {
@@ -941,11 +985,14 @@ body
 .h8 .h8_2 .h8_2_2 img
 {
     padding-left: 90px;
+    width: 100px;
 }
 
 .h8 .h8_2 .h8_2_2 p 
 {
-    margin-left: 50px;
+    margin-top: 2.5px;
+    margin-left: 10px;
+    font-size: 15px;
 }
 
 .return a
