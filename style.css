@@ -207,176 +207,180 @@ body
     width: 100%;
 }
 
-.container-fluid.text-center {
-    line-height: 1.4; /* Đặt chiều cao dòng */
-    font-size: 14px; /* Kích thước chữ */
-    color: #252a2b; /* Màu chữ */
-    box-sizing: border-box; /* Đặt cách tính chiều rộng và chiều cao */
-    font-family: 'MuliDisplayVN', sans-serif; /* Font chữ */
-    margin: 0; /* Không có margin */
-    padding: 25px 15px; /* Padding trên dưới và trái phải */
-    text-align: center; /* Căn giữa nội dung */
-    position: relative; /* Đặt vị trí tương đối cho phần tử */
-    width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
+.sectionFlashSale {
+    display: flex; /* Chuyển sang layout Flexbox */
+    justify-content: space-around; /* Căn giữa các banner theo chiều ngang với khoảng cách đều nhau */
+    align-items: center; /* Căn giữa các banner theo chiều dọc */
+    padding: 25px 15px; /* Thêm padding chung cho section */
+    flex: 1;
 }
 
-.container-fluid.text-center .row {
-    margin: 0; /* Xóa margin cho hàng */
-}
-
-.container-fluid.text-center img {
-    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của phần tử cha */
-    height: auto; /* Giữ tỷ lệ chiều cao của hình ảnh */
-}
-
-.countdown {
-    font-size: 20px; /* Kích thước đồng hồ đếm ngược */
-    margin: 15px 0; /* Khoảng cách trên và dưới đồng hồ đếm ngược */
+.sectionFlashSale .heading-title.text-center {
+    text-align: center; /* Căn giữa tiêu đề */
+    margin: 5px 0; /* Khoảng cách trên và dưới */
 }
 
 .titleFlashSale {
-    font-size: 24px; /* Kích thước tiêu đề lớn hơn */
-    margin: 10px 0; /* Khoảng cách trên và dưới tiêu đề */
+    font-size: 25px; /* Kích thước chữ tiêu đề */
+    font-weight: 900; /* Chữ đậm */
+    margin: 0; /* Xóa margin */
+    display: block; /* Hiển thị block */
 }
 
-.row {
-    display: flex; /* Dùng flexbox để sắp xếp các cột */
-    justify-content: center; /* Căn giữa các cột */
+.sectionFlashSale span.lof-clock-detail {
+    display: block; /* Hiển thị block cho đồng hồ đếm ngược */
 }
 
-
-
-.col-xs-12.col-sm-12 {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Tắt hiệu ứng highlight khi chạm */
-    -webkit-text-size-adjust: none; /* Tắt tự động điều chỉnh kích thước chữ trên thiết bị di động */
-    line-height: 1.4; /* Đặt chiều cao dòng */
-    font-size: 14px; /* Kích thước chữ */
-    color: #252a2b; /* Màu chữ */
-    -webkit-font-smoothing: antialiased; /* Làm mịn chữ */
-    text-rendering: optimizeLegibility; /* Tối ưu hóa khả năng đọc của chữ */
-    box-sizing: border-box; /* Đặt cách tính chiều rộng và chiều cao */
-    font-family: 'MuliDisplayVN', sans-serif; /* Font chữ */
-    margin: 0; /* Không có margin */
-    position: relative; /* Đặt vị trí tương đối cho phần tử */
-    min-height: 1px; /* Chiều cao tối thiểu */
-    float: left; /* Đặt phần tử vào bên trái */
-    width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
-    margin-top: 15px; /* Khoảng cách phía trên */
-    padding: 0; /* Không có padding */
+.countdown {
+    margin-right: 5px; /* Khoảng cách bên phải cho đồng hồ đếm ngược */
 }
 
-/* Responsive design */
-@media (min-width: 576px) {
-    .col-sm-12 {
-        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng cho thiết bị nhỏ hơn */
-    }
+.sectionFlashSale .day {
+    display: none; /* Ẩn các ngày */
 }
 
-@media (min-width: 768px) {
-    .col-xs-12 {
-        width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng cho thiết bị nhỏ hơn */
-    }
+.countdown span {
+    margin-left: 7px; /* Khoảng cách bên trái cho các số đếm */
+    background: black; /* Nền đen cho số đếm */
+    color: white; /* Màu chữ trắng */
+    padding: 10px 5px; /* Padding cho số đếm */
+    display: inline-block; /* Hiển thị inline-block */
 }
 
-.owl-carousel .owl-item {
-    position: relative; /* Đặt vị trí tương đối để xử lý các phần tử con */
-    display: block; /* Hiển thị như một block để đảm bảo kích thước đúng */
-    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử cha */
-    margin: 0; /* Không có margin */
-    padding: 0; /* Không có padding */
+.banner-row {
+    display: flex;
+    justify-content: center;
+    padding-left: 69px;
+    padding-right: 69px;
+  }
+  
+  .animateBanner {
+    flex: 1;
+    max-width: 33%;
+    text-align: center;
+    margin: 0 -3px; 
+}
+  
+  .banner-img {
+    width: 96.5%;
+    height: auto;
 }
 
-.product-block {
-    background-color: #fff; /* Màu nền trắng cho khối sản phẩm */
-    border: 1px solid #e0e0e0; /* Đường viền nhẹ quanh sản phẩm */
-    border-radius: 5px; /* Bo góc nhẹ cho sản phẩm */
-    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
-    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển tiếp cho đổ bóng */
+/* Product Slider */
+.product-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-.product-block:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
+.products-container {
+    overflow: hidden;
+    width: 100%;
 }
 
-.product-img {
-    position: relative; /* Để xử lý các hình ảnh */
-    width: 100%; /* Chiếm toàn bộ chiều rộng */
-    overflow: hidden; /* Ẩn các phần tử tràn ra ngoài */
+.products {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
-.product-img img {
-    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng của phần tử cha */
-    height: auto; /* Tự động điều chỉnh chiều cao */
-    display: block; /* Hiển thị như một block */
+/* Product Card */
+.product-card {
+    width: 150px;
+    background-color: #ffffff;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    margin: 0 50px;
 }
 
-.pro-name {
-    font-size: 16px; /* Kích thước chữ cho tên sản phẩm */
-    color: #252a2b; /* Màu chữ cho tên sản phẩm */
-    margin: 10px 0; /* Khoảng cách trên và dưới */
-    text-align: center; /* Căn giữa văn bản */
+.flash-sale {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 5px;
 }
 
-.pro-price {
-    font-size: 18px; /* Kích thước chữ cho giá sản phẩm */
-    color: #ff5733; /* Màu chữ cho giá (có thể là màu nổi bật) */
-    text-align: center; /* Căn giữa văn bản */
-    margin: 10px 0; /* Khoảng cách trên và dưới */
+.product-card img {
+    width: 255px;
+    height: 00px;
+    margin-bottom: 10px;
 }
 
-.variantColor {
-    text-align: center; /* Căn giữa danh sách màu sắc */
-    margin-top: 10px; /* Khoảng cách phía trên */
+.product-name {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
 }
 
-.variantColor ul {
-    list-style-type: none; /* Xóa dấu đầu dòng cho danh sách */
-    padding: 0; /* Không có padding */
-    display: inline-block; /* Hiển thị danh sách inline */
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
 }
 
-.variantColor li {
-    display: inline; /* Hiển thị các mục trong danh sách như inline */
-    margin: 0 5px; /* Khoảng cách giữa các màu */
+/* Arrow Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.variantColor img {
-    width: 30px; /* Chiều rộng cho hình ảnh màu sắc */
-    height: auto; /* Tự động điều chỉnh chiều cao */
-    border: 1px solid transparent; /* Đường viền mặc định cho hình ảnh */
-    border-radius: 3px; /* Bo góc cho hình ảnh */
-    transition: border-color 0.2s; /* Hiệu ứng chuyển tiếp cho đường viền */
+.left-arrow {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
-.variantColor li:hover img {
-    border-color: #ff5733; /* Đổi màu đường viền khi hover */
+.right-arrow {
+    color: #FFF;
+    font-size: 14px;
+    margin: 5px;
+    padding: 4px 7px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
-.actionLoop {
-    text-align: center; /* Căn giữa nút hành động */
-    margin-top: 15px; /* Khoảng cách phía trên */
+.view-all {
+    margin-top: 20px;
 }
 
-.actionLoop a {
-    display: inline-block; /* Hiển thị nút dưới dạng block để dễ dàng điều chỉnh */
-    padding: 10px 20px; /* Padding cho nút */
-    background-color: #ff5733; /* Màu nền cho nút */
-    color: #fff; /* Màu chữ trắng cho nút */
-    border-radius: 5px; /* Bo góc cho nút */
-    text-decoration: none; /* Không có gạch chân */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+.view-all a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
 }
 
-.actionLoop a:hover {
-    background-color: #e55a2e; /* Đổi màu nền khi hover */
+.view-all a:hover {
+    color: #ff0000;
+    border-color: #ff0000;
 }
-
-
-
-
-
-
-
 
 
 .h2 {
