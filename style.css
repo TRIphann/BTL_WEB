@@ -208,80 +208,49 @@ body
 }
 
 .sectionFlashSale {
-    display: flex; /* Chuyển sang layout Flexbox */
-    justify-content: space-around; /* Căn giữa các banner theo chiều ngang với khoảng cách đều nhau */
-    align-items: center; /* Căn giữa các banner theo chiều dọc */
-    padding: 25px 15px; /* Thêm padding chung cho section */
-    flex: 1;
-}
-
-.sectionFlashSale .heading-title.text-center {
-    text-align: center; /* Căn giữa tiêu đề */
-    margin: 5px 0; /* Khoảng cách trên và dưới */
+    text-align: center;
+    padding: 25px 15px;
 }
 
 .titleFlashSale {
-    font-size: 25px; /* Kích thước chữ tiêu đề */
-    font-weight: 900; /* Chữ đậm */
-    margin: 0; /* Xóa margin */
-    display: block; /* Hiển thị block */
-}
-
-.sectionFlashSale span.lof-clock-detail {
-    display: block; /* Hiển thị block cho đồng hồ đếm ngược */
-}
-
-.countdown {
-    margin-right: 5px; /* Khoảng cách bên phải cho đồng hồ đếm ngược */
-}
-
-.sectionFlashSale .day {
-    display: none; /* Ẩn các ngày */
+    font-size: 25px;
+    font-weight: 900;
+    margin: 0;
 }
 
 .countdown span {
-    margin-left: 7px; /* Khoảng cách bên trái cho các số đếm */
-    background: black; /* Nền đen cho số đếm */
-    color: white; /* Màu chữ trắng */
-    padding: 10px 5px; /* Padding cho số đếm */
-    display: inline-block; /* Hiển thị inline-block */
+    margin: 0 3px;
+    background: black;
+    color: white;
+    padding: 10px 5px;
+    display: inline-block;
 }
 
 .banner-row {
     display: flex;
     justify-content: center;
-    padding-left: 69px;
-    padding-right: 69px;
-  }
-  
-  .animateBanner {
+    margin: 10px 0;
+}
+
+.animateBanner {
     flex: 1;
     max-width: 33%;
     text-align: center;
-    margin: 0 -3px; 
+    margin: 0 -26px;
 }
-  
-  .banner-img {
-    width: 96.5%;
+
+.banner-img {
+    width: 87.75%;
     height: auto;
 }
 
-/* Product Slider */
 .product-slider {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    width: 90%;
-    margin-top: 10px;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.products-container {
-    overflow: hidden;
-    width: 100%;
+    width: 88%;
+    margin: 0 auto;
 }
 
 .products {
@@ -289,30 +258,28 @@ body
     transition: transform 0.5s ease;
 }
 
-/* Product Card */
 .product-card {
-    width: 150px;
+    width: 254px;
     background-color: #ffffff;
-    padding: 10px;
-    position: relative;
     text-align: center;
-    margin: 0 50px;
+    margin: 0 5px;
+    position: relative;
 }
 
 .flash-sale {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 9px;
+    right: 9px;
     background-color: red;
     color: white;
     padding: 3px 8px;
-    font-size: 12px;
+    font-size: 9.5px;
     border-radius: 5px;
 }
 
 .product-card img {
-    width: 255px;
-    height: 00px;
+    width: 100%;
+    height: auto;
     margin-bottom: 10px;
 }
 
@@ -328,40 +295,25 @@ body
     color: #333;
 }
 
-/* Arrow Buttons */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 24px;
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     width: 40px;
     height: 40px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .left-arrow {
-    color: #FFF;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 3px;
+    left: 0;
 }
 
 .right-arrow {
-    color: #FFF;
-    font-size: 14px;
-    margin: 5px;
-    padding: 4px 7px;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 3px;
+    right: 0;
 }
 
 .view-all {
@@ -374,13 +326,13 @@ body
     text-decoration: none;
     border-bottom: 1px solid #333;
     padding-bottom: 2px;
-    transition: color 0.3s, border-color 0.3s;
 }
 
 .view-all a:hover {
-    color: #ff0000;
-    border-color: #ff0000;
+    color: #000000;
+    border-color: #000000;
 }
+
 
 
 .h2 {
