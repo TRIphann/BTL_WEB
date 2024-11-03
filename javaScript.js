@@ -33,11 +33,18 @@ document.querySelectorAll('.product-block').forEach(block => {
     const imgHover5 = block.querySelector('.img-hover-5');   // Ảnh 6
     const imgHover6 = block.querySelector('.img-hover-6');   // Ảnh 7
 
-    // Khi di chuột vào product-block, hiển thị ảnh 3
+    let selectedColorIndex = null; // Biến lưu trữ chỉ số ô màu sắc đã chọn
+
+    // Khi di chuột vào product-block, hiển thị ảnh 3 (nếu không có màu nào được chọn)
     block.addEventListener('mouseenter', () => {
-        imgDefault.style.display = 'none';
-        imgHover1.style.display = 'none';
-        imgHover2.style.display = 'block'; // Hiện ảnh 3
+        if (selectedColorIndex === null) {
+            imgDefault.style.display = 'none';
+            imgHover1.style.display = 'none';
+            imgHover2.style.display = 'block'; // Hiện ảnh 3
+        } else {
+            // Hiển thị ảnh tương ứng với ô màu sắc đã chọn
+            updateDisplayedImage();
+        }
     });
 
     // Khi di chuột vào ảnh 1 (ảnh mặc định), hiển thị ảnh 2 và ẩn ảnh khác
@@ -61,7 +68,7 @@ document.querySelectorAll('.product-block').forEach(block => {
         imgHover1.style.display = 'block';
     });
 
-    // Khi rời khỏi product-block, quay lại ảnh mặc định
+    // Khi rời khỏi product-block, kiểm tra trạng thái ô màu sắc đã chọn
     block.addEventListener('mouseleave', () => {
         imgDefault.style.display = 'block';
         imgHover1.style.display = 'none';
@@ -75,6 +82,7 @@ document.querySelectorAll('.product-block').forEach(block => {
     // Xử lý hover vào các tùy chọn màu sắc
     block.querySelectorAll('.color-option').forEach((option, index) => {
         option.addEventListener('mouseenter', () => {
+            selectedColorIndex = index; // Lưu chỉ số ô màu sắc đã chọn
             if (index === 0) { // Màu sắc 1
                 imgHover2.style.display = 'block'; // Hiện ảnh 3
                 imgDefault.style.display = 'none';
@@ -95,18 +103,15 @@ document.querySelectorAll('.product-block').forEach(block => {
         });
 
         option.addEventListener('mouseleave', () => {
-            if (index === 0) { // Màu sắc 1
-                // Khi rời khỏi màu sắc 1 nhưng vẫn trong product-block, vẫn giữ ảnh 3
+            if (selectedColorIndex === 0) { // Màu sắc 1
                 imgHover2.style.display = 'block'; // Giữ ảnh 3
                 imgDefault.style.display = 'none';
                 imgHover1.style.display = 'none';
-            } else if (index === 1) { // Màu sắc 2
-                // Khi rời khỏi màu sắc 2 nhưng vẫn trong product-block
+            } else if (selectedColorIndex === 1) { // Màu sắc 2
                 imgHover3.style.display = 'block'; // Giữ ảnh 4
                 imgDefault.style.display = 'none';
                 imgHover1.style.display = 'none';
-            } else if (index === 2) { // Màu sắc 3
-                // Khi rời khỏi màu sắc 3 nhưng vẫn trong product-block
+            } else if (selectedColorIndex === 2) { // Màu sắc 3
                 imgHover5.style.display = 'block'; // Giữ ảnh 6
                 imgDefault.style.display = 'none'; // Ẩn ảnh 1
                 imgHover1.style.display = 'none'; // Ẩn ảnh 2
@@ -116,6 +121,25 @@ document.querySelectorAll('.product-block').forEach(block => {
             }
         });
     });
+
+    // Hàm cập nhật ảnh hiển thị dựa trên ô màu sắc đã chọn
+    function updateDisplayedImage() {
+        imgDefault.style.display = 'none';
+        imgHover1.style.display = 'none';
+        imgHover2.style.display = 'none';
+        imgHover3.style.display = 'none';
+        imgHover4.style.display = 'none';
+        imgHover5.style.display = 'none';
+        imgHover6.style.display = 'none';
+
+        if (selectedColorIndex === 0) {
+            imgHover2.style.display = 'block'; // Hiện ảnh 3
+        } else if (selectedColorIndex === 1) {
+            imgHover3.style.display = 'block'; // Hiện ảnh 4
+        } else if (selectedColorIndex === 2) {
+            imgHover5.style.display = 'block'; // Hiện ảnh 6
+        }
+    }
 
     // Khi di chuột vào ảnh 4 từ màu sắc 2, hiển thị ảnh 5
     imgHover3.addEventListener('mouseenter', () => {
@@ -145,6 +169,7 @@ document.querySelectorAll('.product-block').forEach(block => {
         }
     });
 });
+
 
 
 
