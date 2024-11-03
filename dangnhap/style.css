@@ -30,9 +30,10 @@ body
 
 .navbar img
 {
-    width: 100px;
+    width: 100x;
     height: 100px;
-    padding-bottom: 80px;
+    padding-bottom: 85px;
+    margin-left: -190px;
 }
 
 .navbar_list 
@@ -40,6 +41,7 @@ body
     display: flex;
     justify-content: space-around;
     position: relative;
+    margin-left: -100px;
 }
 
 .navbar_list_ 
@@ -52,6 +54,7 @@ body
 .navbar_list_ a 
 {
     text-decoration: none;
+    font-size: 13px;
 }
 
 .navbar_list_ a:hover 
@@ -76,20 +79,26 @@ body
 .login h3 
 {
     margin-bottom: 20px;
+    font-weight: lighter;
 }
 
 .login p 
 {
     font-style: italic;
     margin-bottom: 20px;
+    font-size: 15px;
 }
 
 .login input 
 {
+    font-size: 15px;
     width: 100%;
-    border: 2px solid black;
+    border: none;
     height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 13px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(167, 166, 166); /* Chỉ hiển thị viền dưới */
+}
 }
 
 #input_error
@@ -116,15 +125,13 @@ body
     font-weight: bold;
 }
 
-.login .icon
+.img
 {
     margin-bottom: 20px;
+    
 }
 
-.login .icon i 
-{
-    font-size: 25px;
-}
+
 
 .login .dieukhoandichvu
 {
@@ -134,6 +141,7 @@ body
 .login .dieukhoandichvu:hover 
 {
     text-decoration-line: underline;
+}
 }
 
 .h8 
@@ -145,9 +153,10 @@ body
 .h8 .h8_1 ul
 {
     display: flex;
-    background-color: rgb(247, 242, 242);
+    background-color: rgb(237, 236, 236);
     width: 1500px;
     height: 70px;
+    margin-top: 30px;
 }
 
 .h8 .h8_1 ul li 
@@ -164,13 +173,15 @@ body
 
 .h8 .h8_1 .h8_1_2
 {
-    margin-left: 200px;
+    margin-left: 300px;
     position: relative;
+    
 }
 
 .h8 .h8_1 ul li p 
 {
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: lighter;
 } 
 
 .h8 .h8_1 ul li i 
@@ -199,6 +210,7 @@ body
     float: left;
     margin-left: 100px;
     font-size: 13px;
+    margin-top: -10px;
 }
 
 .h8 .h8_2 .h8_2_1 p 
@@ -219,11 +231,17 @@ body
 .h8 .h8_2 .h8_2_2 img
 {
     padding-left: 90px;
+    width: 190px;
+    margin-top: -10px;
 }
 
 .h8 .h8_2 .h8_2_2 p 
 {
     margin-left: 50px;
+}
+.fa-chevron-down{
+    font-size: 8px;
+    font-weight: 300;
 }
 
 
@@ -235,8 +253,7 @@ body
 .h7 ul
 {
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 40px;
@@ -258,26 +275,45 @@ body
 {
     width: 400px;
 }
+.h7_12{
+    margin-top: 30px;
+    font-size: 13px;
+}
 
 .h7 .h7_1 .h7_11
 {
     margin-bottom: 10px;
     text-decoration-color: #eee;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .h7 .h7_2 .h7_22
 {
     margin-bottom: 10px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .h7 .h7_2 .h7_22_information
 {
     margin-top: 10px;
     font-size: 15px;
+    color: gray;
 }
-
+.fa-play{
+    font-size: 5px;/*kích thước nút play*/
+}
+.h7 .h7_2 .h7_22_information i {
+    margin-left: 5px; /* Khoảng cách giữa chữ và biểu tượng */
+}
+.h7 .h7_2 .h7_22_information a:hover {
+    color: rgb(97, 97, 183); /* Màu chữ khi hover */
+}
+.h7 .h7_2 .h7_22_information a:hover i {
+    color: rgb(97, 97, 183); /* Đổi màu biểu tượng khi hover */
+}
+.h7 .h7_2 .h7_22_information a {
+    cursor: pointer; /* Đổi con trỏ thành hình bàn tay khi hover */
+}
 .h7 .h7_2 img
 {
     width: 400px;
@@ -286,7 +322,7 @@ body
 .h7 .h7_3 .h7_33
 {
     margin-bottom: 10px;
-    font-size: 15px ;
+    font-size: 13px ;
 }
 
 .h7 .h7_3 img
