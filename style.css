@@ -777,6 +777,9 @@ body
 .h7_33_information li:last-child {
     margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
 }
+.fa-play{
+    font-size: 5px;
+}
 
 .h8 
 {
