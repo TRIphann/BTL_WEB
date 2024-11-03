@@ -79,6 +79,7 @@ body
 {
     list-style: none;
     line-height: 45px;
+    padding: -20px;/*Khoảng cách giữa các sản phẩm*/
 }
 
 .sanpham_list_ a 
@@ -90,6 +91,7 @@ body
 {
     display: flex;
     flex-direction: column;
+    font-size: 14px;
 }
 
 .sanpham_list_information
