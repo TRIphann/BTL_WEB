@@ -179,22 +179,90 @@ body
 
 .navbar_input
 {
-    margin-top: -px;
+    position: relative;
+    margin-bottom: 20px;/*điều chỉnh thanh tìm kiếm cho nó ở chính giữa*/
+    margin-right: 100px;
+    font-size: 13px;
+   
+    
 }
+
 
 .navbar_input input 
 {
-    font-size: 15px;
-    border: none;
+    font-size: 13px;
+    border: none;/*Không lấy khung tìm kiếm*/
     height: 20px;
-    padding-left: 20px;
     width: 100px;
     margin-top: -30px;
+    padding:  5px;
+    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
+    outline: none; /* Loại bỏ viền khi focus */
+    border-bottom: 1px solid transparent; /* Viền dưới ban đầu */
 }
+.navbar_input input:focus {
+    border-bottom: 1px solid black; /* Hiện viền dưới khi nhấp vào */
+    background-color: #f9f9f9; /* Có thể thay đổi màu nền khi focus */
+}
+.navbar_input.active input {
+    opacity: 1; /* Hiện input khi active */
+    pointer-events: auto; /* Cho phép nhập liệu */
+}
+.navbar_input input:hover {
+  border-bottom: 0.5px solid black;
+  width: 130px;
+  padding: 0 15px;
+
+  transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
+}
+
+  .navbar_input:hover input::placeholder {
+    color: transparent; /* Ẩn placeholder khi hover */
+  }
+  .navbar_input.active input {
+    opacity: 1; /* Hiện input khi nhấn */
+    pointer-events: auto; /* Cho phép nhập */
+  }
+  .navbar_input::before,
+.navbar_input::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0.5px; /* Độ dày của viền */
+    background-color: black; /* Màu viền */
+    transition: width 0.3s ease-in-out; /* Hiệu ứng chuyển động cho chiều rộng */
+}
+
+.navbar_input::before {
+    left: 50%; /* Đặt ở giữa */
+    width: 0; /* Bắt đầu với chiều rộng bằng 0 */
+}
+
+.navbar_input::after {
+    left: 50%; /* Đặt ở giữa */
+    width: 0; /* Bắt đầu với chiều rộng bằng 0 */
+}
+
+.navbar_input.active::before {
+    width: 50%; /* Kéo dài sang bên trái */
+    transform: translateX(-100%); /* Di chuyển sang trái */
+}
+
+.navbar_input.active::after {
+    width: 50%; /* Kéo dài sang bên phải */
+    transform: translateX(100%); /* Di chuyển sang phải */
+}
+
+  
+
+  
 
 .navbar_user #shoppingcart
 {
     cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 13px;
+    margin-right: 20px;
 }
 
 
