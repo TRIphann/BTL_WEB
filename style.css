@@ -272,17 +272,20 @@ body
 
 .product-block {
     text-align: center;
+    position: relative;
+    width: 320px;
+    margin: 4px;
 }
-
-/*THÊM*/
 .product-img {
     position: relative;
     overflow: hidden;
 }
 .product-img .img-loop {
+    width: 100%;
     transition: opacity 0.3s ease;
 }
 .product-img .img-hover {
+    width: 100%;
     display: none;
 }
 
@@ -293,7 +296,7 @@ body
 .product-img:hover .img-hover {
     display: block;
 }
-.new-tag {
+.hang-moi {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -302,48 +305,34 @@ body
     padding: 5px 10px;
     font-size: 12px;
     opacity: 0;
-    transition: opacity 0.3s ease;
 }
-.product-block:hover .new-tag {
+.product-block:hover .hang-moi {
     opacity: 1;
 }
-/* Overlay chứa các thông tin khi hover */
-.hover-overlay {
+.pro-options {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 10px;
     text-align: center;
 }
-.product-block:hover .hover-overlay {
+.product-block:hover .pro-options {
     display: block;
 }
-
-/* Định dạng các ô màu sắc */
-.color-options {
+/* Color Options */
+.pro-colors {
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-top: 10px;
 }
-
-.color-circle {
-    width: 15px;
-    height: 15px;
+.color-option {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: inline-block;
 }
 
-.color-circle.white { background-color: #ffffff; }
-.color-circle.black { background-color: #000000; }
-.color-circle.brown { background-color: #a52a2a; }
-
-
-/* Nút "Mua Ngay" */
-.buy-now {
+/* Buy Now Button */
+.btn-buy {
     margin-top: 15px;
     padding: 8px 16px;
     background-color: black;
