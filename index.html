@@ -232,19 +232,23 @@
                 <li>
                     <div class="product-block">
                         <div class="product-img">
-                            <img src="Image/h2_files/TXNBH1.webp" alt="Ảnh 1" class="img-loop">
-                            <img src="Image/h2_files/TXNBH2.jpeg" alt="Ảnh 2" class="img-hover">
+                            <img src="Image/h2_files/TXNBH1.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="Image/h2_files/TXNBH2.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="Image/h2_files/TXNBH3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="Image/h2_files/TXNBH4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="Image/h2_files/TXNBH5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
                             <span class="hang-moi">Hàng Mới</span>
                         </div>
+                        <div>
                         <div class="h2_information">
                             <p class="pro-name">Túi Xách Nhỏ Bear Hug</p>
                             <p class="pro-price"><b>849,000<u>đ</u></b></p>
                         </div>
                         <div class="pro-options">
                             <div class="pro-colors">
-                                <img src="Image/h2_files/TXNBH3.webp" alt="Màu sắc 1" class="color-option">
-                                <img src="Image/h2_files/TXNBH4.webp" alt="Màu sắc 2" class="color-option">
-                                <img src="Image/h2_files/TXNBH5.jpeg" alt="Màu sắc 3" class="color-option">
+                                <img src="Image/h2_files/TXNBHW.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="Image/h2_files/TXNBHB.webp" alt="Màu sắc 2" class="color-option">
+                                <img src="Image/h2_files/TXNBHBR.jpeg" alt="Màu sắc 3" class="color-option">
                             </div>
                             <button class="btn-buy">Mua Ngay</button>
                         </div>
@@ -297,6 +301,44 @@
             </div>
         </div>
         
+        <script>
+            const colorOptions = document.querySelectorAll('.color-option');
+        
+            colorOptions.forEach((option, index) => {
+                option.addEventListener('mouseenter', () => {
+                    // Đặt tất cả các ảnh về trạng thái ban đầu
+                    const imgDefault = option.closest('.product-block').querySelector('.img-default');
+                    const imgHover1 = option.closest('.product-block').querySelector('.img-hover-1');
+                    const imgHover2 = option.closest('.product-block').querySelector('.img-hover-2');
+                    const imgHover3 = option.closest('.product-block').querySelector('.img-hover-3');
+        
+                    imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
+                    imgHover1.style.display = 'none';   // Ẩn ảnh hover thứ nhất
+                    imgHover2.style.display = 'none';   // Ẩn ảnh hover thứ hai
+                    imgHover3.style.display = 'none';   // Ẩn ảnh hover thứ ba
+        
+                    // Nếu hover vào tùy chọn thứ hai thì hiện ảnh số 4
+                    if (index === 1) {
+                        imgHover3.style.display = 'block';
+                    } else {
+                        imgDefault.style.display = 'block'; // Hiển thị ảnh mặc định nếu không phải tùy chọn thứ hai
+                    }
+        
+                    // Xóa lớp 'active' từ tất cả các lựa chọn
+                    colorOptions.forEach(opt => opt.classList.remove('active'));
+                    // Thêm lớp 'active' cho lựa chọn đang được hover
+                    option.classList.add('active');
+                });
+        
+                option.addEventListener('mouseleave', () => {
+                    const imgDefault = option.closest('.product-block').querySelector('.img-default');
+                    const imgHover3 = option.closest('.product-block').querySelector('.img-hover-3');
+        
+                    imgDefault.style.display = 'block'; // Hiển thị ảnh mặc định khi rời chuột khỏi tùy chọn
+                    imgHover3.style.display = 'none';    // Ẩn ảnh 4 khi chuột không còn hover
+                });
+            });
+        </script>
         <div class="h3">
             <hr class="hr3">
             <div class="h3_hr">
