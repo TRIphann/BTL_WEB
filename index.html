@@ -267,12 +267,27 @@
                     <div class="product-block">
                         <div class="product-img">
                             <picture>
-                                <img class="img-loop" src="Image/h2_files/GCGQMJ1.webp" alt="Túi Xách Nhỏ Bear Hug">
+                                <img src="Image/h2_files/GCGQMJ1.webp" alt="Ảnh 1" class="img-loop img-default">
+                                <img src="Image/h2_files/GCGQMJ2.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                                <img src="Image/h2_files/GCGQMJ3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                                <img src="Image/h2_files/GCGQMJ4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                                <img src="Image/h2_files/GCGQMJ5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                                <img src="Image/h2_files/GCGQMJ6.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                                <img src="Image/h2_files/GCGQMJ7.webp" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
+                                <span class="hang-moi">Hàng Mới</span>
                             </picture>
                         </div>
                         <div class="product-detail">
                             <p class="pro-name">Giày Cao Gót Quai Mary Jane</p>
                             <p class="pro-price"><b>549,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="Image/h2_files/GCGQMJBR.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="Image/h2_files/GCGQMJB.webp" alt="Màu sắc 2" class="color-option">
+                                <img src="Image/h2_files/GCGQMJW.webp" alt="Màu sắc 3" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
                         </div>
                     </div>
                 </li>
@@ -280,14 +295,84 @@
                     <div class="product-block">
                         <div class="product-img">
                             <picture>
-                                <img class="img-loop" src="Image/h2_files/BBH1.webp" alt="Túi Xách Nhỏ Bear Hug">
+                                <img src="Image/h2_files/BBH1.webp" alt="Ảnh 1" class="img-loop img-default">
+                                <img src="Image/h2_files/BBH2.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                                <img src="Image/h2_files/BBH3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                                <img src="Image/h2_files/BBH4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                                <img src="Image/h2_files/BBH5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
                             </picture>
                         </div>
                         <div class="product-detail">
                             <p class="pro-name">Balo Bear Hug</p>
                             <p class="pro-price"><b>899,000<u>đ</u></b></p>
                         </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="Image/h2_files/BBHO.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="Image/h2_files/BBHB.webp" alt="Màu sắc 2" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
                     </div>
+                    <script>
+                        document.querySelectorAll('.product-block').forEach(block => {
+                            const imgDefault = block.querySelector('.img-default'); // Ảnh mặc định
+                            const imgHover1 = block.querySelectorAll('.img-hover-1'); // Ảnh cho màu 1
+                            const imgHover2 = block.querySelectorAll('.img-hover-2'); // Ảnh cho màu 2
+                    
+                            let selectedColorIndex = null; // Biến lưu trữ chỉ số màu sắc đã chọn
+                    
+                            // Hàm ẩn tất cả các hình ảnh
+                            function hideAllImages() {
+                                imgDefault.style.display = 'none';
+                                imgHover1.forEach(img => img.style.display = 'none'); // Ẩn tất cả ảnh cho màu 1
+                                imgHover2.forEach(img => img.style.display = 'none'); // Ẩn tất cả ảnh cho màu 2
+                            }
+                    
+                            // Hàm hiển thị hình ảnh dựa trên chỉ số màu sắc
+                            function showImages(index) {
+                                hideAllImages();
+                                if (index === 0) {
+                                    imgHover1.forEach(img => img.style.display = 'block'); // Hiện tất cả ảnh cho màu 1
+                                } else if (index === 1) {
+                                    imgHover2.forEach(img => img.style.display = 'block'); // Hiện tất cả ảnh cho màu 2
+                                }
+                            }
+                    
+                            // Khi di chuột vào product-block
+                            block.addEventListener('mouseenter', () => {
+                                if (selectedColorIndex === null) {
+                                    imgDefault.style.display = 'block'; // Hiện ảnh mặc định
+                                } else {
+                                    showImages(selectedColorIndex); // Hiện ảnh tương ứng nếu đã chọn màu
+                                }
+                            });
+                    
+                            // Khi rời khỏi product-block
+                            block.addEventListener('mouseleave', () => {
+                                hideAllImages(); // Ẩn tất cả ảnh hover
+                                imgDefault.style.display = 'block'; // Hiện ảnh mặc định
+                            });
+                    
+                            // Xử lý hover vào các tùy chọn màu sắc
+                            block.querySelectorAll('.color-option').forEach((option, index) => {
+                                option.addEventListener('mouseenter', () => {
+                                    selectedColorIndex = index; // Lưu chỉ số ô màu sắc đã chọn
+                                    imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
+                                    showImages(index); // Hiện ảnh tương ứng
+                                });
+                    
+                                option.addEventListener('mouseleave', () => {
+                                    if (selectedColorIndex !== null) {
+                                        showImages(selectedColorIndex); // Giữ ảnh đã chọn
+                                    } else {
+                                        imgDefault.style.display = 'block'; // Hiện ảnh mặc định nếu không có lựa chọn
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    
                 </li>
                 <li>
                     <div class="product-block">
