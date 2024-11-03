@@ -265,21 +265,35 @@ body
     margin-right: 20px;
 }
 
-
-.h1 img
-{
-    max-width: 100%;
-}
 .h1
 {
     position: relative;
     display: flex;
     width: 100%;
-    /* animation: slide 30s infinite alternate; */
 } 
 .h1 img 
 {
     width: 100%;
+    display: block; /* Ngăn ngừa khoảng trống dưới ảnh */
+}
+  
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-weight: lighter;
+    line-height: 100;
+    transform: translateY(-50%);
+    font-size: 60px;
+    color: #333;
+    cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
 }
 
 
@@ -985,17 +999,16 @@ body
 .user 
 {
     padding-left: 30px;
-    padding-top: 50px;
     border: 1px solid black;
-    padding-right: 20px;
     width: 600px;
     background-color: white;
     height: 100%;
-    position: absolute;
-    /* top: 60px; */
-    right: -100px;
     z-index: 1000;
+    position: fixed; /* Đặt div cố định trên màn hình */
+    top: 20px; /* Cách mép trên 20px */
+    right: 20px; /* Cách mép phải 20px */
 }
+
 
 
 .giohang 
