@@ -47,10 +47,10 @@ document.querySelectorAll('.product-block').forEach(block => {
     // Khi di chuột vào product-block
     block.addEventListener('mouseenter', () => {
         if (selectedColorIndex === null) {
-            imgDefault.style.display = 'none'; // Hide default image
-            imgHover2.style.display = 'block'; // Hiện ảnh 3
+            imgDefault.style.display = 'block'; // Hiện ảnh mặc định
+            imgHover1.style.display = 'none'; // Ẩn ảnh 2
         } else {
-            showImage(selectedColorIndex);
+            showImage(selectedColorIndex); // Hiện ảnh tương ứng nếu đã chọn màu
         }
     });
 
@@ -77,24 +77,32 @@ document.querySelectorAll('.product-block').forEach(block => {
         });
     });
 
-    // Xử lý hover cho các ảnh
+    // Khi di chuột vào Ảnh 1 (imgDefault) sẽ hiển thị Ảnh 2 (imgHover1) nếu chưa chọn màu
     imgDefault.addEventListener('mouseenter', () => {
-        imgDefault.style.display = 'none';
-        imgHover1.style.display = 'block'; // Hiện ảnh 2
-    });
-
-    imgHover1.addEventListener('mouseleave', (event) => {
-        if (event.relatedTarget && block.contains(event.relatedTarget)) {
-            imgHover1.style.display = 'none';
-            imgHover2.style.display = 'block'; // Hiện ảnh 3 khi rời khỏi ảnh 2
+        if (selectedColorIndex === null) {
+            imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
+            imgHover1.style.display = 'block'; // Hiện ảnh 2
         }
     });
 
+    // Khi rời khỏi Ảnh 2 (imgHover1)
+    imgHover1.addEventListener('mouseleave', (event) => {
+        if (event.relatedTarget && block.contains(event.relatedTarget)) {
+            imgHover1.style.display = 'none'; // Ẩn ảnh 2
+            imgHover2.style.display = 'block'; // Hiện ảnh 3 khi di chuyển chuột ra khỏi ảnh 2
+        } else {
+            // Nếu rời khỏi cả product-block thì hiện ảnh mặc định
+            imgDefault.style.display = 'block'; // Hiện ảnh mặc định
+        }
+    });
+
+    // Khi di chuột vào ảnh 3 (imgHover2)
     imgHover2.addEventListener('mouseenter', () => {
         imgHover2.style.display = 'none';
         imgHover1.style.display = 'block'; // Hiện ảnh 2 khi vào ảnh 3
     });
 
+    // Xử lý các sự kiện hover cho các ảnh khác...
     imgHover3.addEventListener('mouseenter', () => {
         imgHover3.style.display = 'none';
         imgHover4.style.display = 'block'; // Hiện ảnh 5
@@ -119,5 +127,16 @@ document.querySelectorAll('.product-block').forEach(block => {
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
