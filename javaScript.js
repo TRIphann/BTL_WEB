@@ -25,70 +25,140 @@ function scrollFunction() {
 
 
 document.querySelectorAll('.product-block').forEach(block => {
-    const imgDefault = block.querySelector('.img-default');
-    const imgHover1 = block.querySelector('.img-hover-1');
-    const imgHover2 = block.querySelector('.img-hover-2');
-    const imgHover3 = block.querySelector('.img-hover-3'); // Ảnh số 4
-    const imgHover4 = block.querySelector('.img-hover-4'); // Ảnh số 5
+    const imgDefault = block.querySelector('.img-default'); // Ảnh 1
+    const imgHover1 = block.querySelector('.img-hover-1');   // Ảnh 2
+    const imgHover2 = block.querySelector('.img-hover-2');   // Ảnh 3
+    const imgHover3 = block.querySelector('.img-hover-3');   // Ảnh 4
+    const imgHover4 = block.querySelector('.img-hover-4');   // Ảnh 5
+    const imgHover5 = block.querySelector('.img-hover-5');   // Ảnh 6
+    const imgHover6 = block.querySelector('.img-hover-6');   // Ảnh 7
 
-    // Hiển thị ảnh thứ 2 khi di chuột vào `product-img`
-    block.querySelector('.product-img').addEventListener('mouseenter', () => {
+    // Khi di chuột vào product-block, hiển thị ảnh 3
+    block.addEventListener('mouseenter', () => {
+        imgDefault.style.display = 'none';
+        imgHover1.style.display = 'none';
+        imgHover2.style.display = 'block'; // Hiện ảnh 3
+    });
+
+    // Khi di chuột vào ảnh 1 (ảnh mặc định), hiển thị ảnh 2 và ẩn ảnh khác
+    imgDefault.addEventListener('mouseenter', () => {
         imgDefault.style.display = 'none';
         imgHover1.style.display = 'block';
         imgHover2.style.display = 'none';
-        imgHover3.style.display = 'none';
-        imgHover4.style.display = 'none';
     });
 
-    // Khi rời khỏi imgHover1, hiển thị ảnh thứ ba
+    // Khi rời khỏi ảnh 2 nhưng vẫn trong product-block, quay lại ảnh 3
     imgHover1.addEventListener('mouseleave', (event) => {
         if (event.relatedTarget && block.contains(event.relatedTarget)) {
             imgHover1.style.display = 'none';
-            imgHover2.style.display = 'block';
+            imgHover2.style.display = 'block'; // Quay lại ảnh 3
         }
     });
 
-    // Hiển thị ảnh thứ 5 khi di chuột vào ảnh 4
-    imgHover3.addEventListener('mouseenter', () => {
-        imgHover4.style.display = 'block';
+    // Khi di chuột vào ảnh 3, hiển thị ảnh 2
+    imgHover2.addEventListener('mouseenter', () => {
+        imgHover2.style.display = 'none';
+        imgHover1.style.display = 'block';
     });
 
-    imgHover3.addEventListener('mouseleave', () => {
-        imgHover4.style.display = 'none';
-    });
-
-    // Quay lại ảnh mặc định khi rời khỏi product-block
+    // Khi rời khỏi product-block, quay lại ảnh mặc định
     block.addEventListener('mouseleave', () => {
         imgDefault.style.display = 'block';
         imgHover1.style.display = 'none';
         imgHover2.style.display = 'none';
         imgHover3.style.display = 'none';
         imgHover4.style.display = 'none';
+        imgHover5.style.display = 'none';
+        imgHover6.style.display = 'none';
     });
-});
 
-// Xử lý hover vào các tùy chọn màu
-document.querySelectorAll('.color-option').forEach((option, index) => {
-    option.addEventListener('mouseenter', () => {
-        const productBlock = option.closest('.product-block');
-        
-        // Kiểm tra nếu là màu thứ hai
-        if (index === 1) {
-            const imgHover3 = productBlock.querySelector('.img-hover-3');
-            imgHover3.style.display = 'block'; // Hiển thị ảnh 4 khi hover vào màu 2
+    // Xử lý hover vào các tùy chọn màu sắc
+    block.querySelectorAll('.color-option').forEach((option, index) => {
+        option.addEventListener('mouseenter', () => {
+            if (index === 0) { // Màu sắc 1
+                imgHover2.style.display = 'block'; // Hiện ảnh 3
+                imgDefault.style.display = 'none';
+                imgHover1.style.display = 'none';
+            } else if (index === 1) { // Màu sắc 2
+                imgHover3.style.display = 'block'; // Hiện ảnh 4
+                imgDefault.style.display = 'none';
+                imgHover1.style.display = 'none';
+                imgHover2.style.display = 'none';
+            } else if (index === 2) { // Màu sắc 3
+                imgHover5.style.display = 'block'; // Hiện ảnh 6
+                imgDefault.style.display = 'none';
+                imgHover1.style.display = 'none';
+                imgHover2.style.display = 'none';
+                imgHover3.style.display = 'none';
+                imgHover4.style.display = 'none';
+            }
+        });
+
+        option.addEventListener('mouseleave', () => {
+            if (index === 0) { // Màu sắc 1
+                // Khi rời khỏi màu sắc 1 nhưng vẫn trong product-block, vẫn giữ ảnh 3
+                imgHover2.style.display = 'block'; // Giữ ảnh 3
+                imgDefault.style.display = 'none';
+                imgHover1.style.display = 'none';
+            } else if (index === 1) { // Màu sắc 2
+                // Khi rời khỏi màu sắc 2 nhưng vẫn trong product-block
+                imgHover3.style.display = 'block'; // Giữ ảnh 4
+                imgDefault.style.display = 'none';
+                imgHover1.style.display = 'none';
+            } else if (index === 2) { // Màu sắc 3
+                // Khi rời khỏi màu sắc 3 nhưng vẫn trong product-block
+                imgHover5.style.display = 'block'; // Giữ ảnh 6
+                imgDefault.style.display = 'none'; // Ẩn ảnh 1
+                imgHover1.style.display = 'none'; // Ẩn ảnh 2
+                imgHover2.style.display = 'none'; // Ẩn ảnh 3
+                imgHover3.style.display = 'none'; // Ẩn ảnh 4
+                imgHover4.style.display = 'none'; // Ẩn ảnh 5
+            }
+        });
+    });
+
+    // Khi di chuột vào ảnh 4 từ màu sắc 2, hiển thị ảnh 5
+    imgHover3.addEventListener('mouseenter', () => {
+        imgHover3.style.display = 'none';
+        imgHover4.style.display = 'block';
+    });
+
+    // Khi rời khỏi ảnh 5 nhưng vẫn trong product-block, quay lại ảnh 4
+    imgHover4.addEventListener('mouseleave', (event) => {
+        if (event.relatedTarget && block.contains(event.relatedTarget)) {
+            imgHover4.style.display = 'none';
+            imgHover3.style.display = 'block';
         }
     });
 
-    option.addEventListener('mouseleave', () => {
-        const productBlock = option.closest('.product-block');
-        
-        // Kiểm tra nếu là màu thứ hai
-        if (index === 1) {
-            const imgHover3 = productBlock.querySelector('.img-hover-3');
-            imgHover3.style.display = 'none'; // Ẩn ảnh 4 khi chuột rời khỏi màu 2
+    // Khi di chuột vào ảnh 6 từ màu sắc 3, hiển thị ảnh 7
+    imgHover5.addEventListener('mouseenter', () => {
+        imgHover5.style.display = 'none';
+        imgHover6.style.display = 'block';
+    });
+
+    // Khi rời khỏi ảnh 7 nhưng vẫn trong product-block, quay lại ảnh 6
+    imgHover6.addEventListener('mouseleave', (event) => {
+        if (event.relatedTarget && block.contains(event.relatedTarget)) {
+            imgHover6.style.display = 'none';
+            imgHover5.style.display = 'block';
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
