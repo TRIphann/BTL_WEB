@@ -144,17 +144,24 @@ body
 {
     list-style: none;
     line-height: 45px;
+    padding: -20px;
 }
 
 .sanpham_list_ a 
 {
     color: black;
+    text-transform: capitalize;/*chữ cái đầu viết hoa còn lại viết thường*/
 }
 
 .sanpham_list
 {
     display: flex;
     flex-direction: column;
+    
+    
+}
+.sanpham_list_{
+    font-size: 14px;
 }
 
 .sanpham_list_information
