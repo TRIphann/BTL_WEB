@@ -14,6 +14,9 @@ function scrollFunction() {
 }
 
 
+
+
+
 document.querySelectorAll('.product-block').forEach(block => {
     const imgDefault = block.querySelector('.img-default'); // Ảnh 1
     const imgHover1 = block.querySelector('.img-hover-1');   // Ảnh 2
@@ -127,19 +130,3 @@ document.querySelectorAll('.product-block').forEach(block => {
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
