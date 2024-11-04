@@ -601,7 +601,7 @@ body
 
 .h5 h3
 {
-    margin-top: 150px;
+    margin-top: 20px;
 }
 .h5 .hr5 
 {
@@ -619,9 +619,9 @@ body
 
 .h5 .h5_image
 {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+    padding-left: 47px;
+    padding-right: 47px;
+    margin-top: 26px;
     display: flex;
     justify-content: space-around;
 }
@@ -639,13 +639,14 @@ body
 .h5 .h5_image li
 {
     list-style-type: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .h5 .h5_image .h5_information
 {
-    margin-top: 10px;
+    font-size: 13px;
+    margin-top: 45px;
 }
 
 
@@ -660,7 +661,6 @@ body
 
 .h6 .h6_title_list
 {
-    margin-top: -20px;
     font-size: 18px;
     text-align: center;
 }
@@ -694,13 +694,13 @@ body
 }
 .h6_hr1 {
     margin-left: 50px;
-    margin-top: 20px;
+    margin-top: 40px;
     
 }
 
 .h6_hr2 {
     margin-right: 50px;
-    margin-top: 20px;
+    margin-top: 40px;
     
 }
 
