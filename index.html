@@ -314,65 +314,6 @@
                             <button class="btn-buy">Mua Ngay</button>
                         </div>
                     </div>
-                    <script>
-                        document.querySelectorAll('.product-block').forEach(block => {
-                            const imgDefault = block.querySelector('.img-default'); // Ảnh mặc định
-                            const imgHover1 = block.querySelectorAll('.img-hover-1'); // Ảnh cho màu 1
-                            const imgHover2 = block.querySelectorAll('.img-hover-2'); // Ảnh cho màu 2
-                    
-                            let selectedColorIndex = null; // Biến lưu trữ chỉ số màu sắc đã chọn
-                    
-                            // Hàm ẩn tất cả các hình ảnh
-                            function hideAllImages() {
-                                imgDefault.style.display = 'none';
-                                imgHover1.forEach(img => img.style.display = 'none'); // Ẩn tất cả ảnh cho màu 1
-                                imgHover2.forEach(img => img.style.display = 'none'); // Ẩn tất cả ảnh cho màu 2
-                            }
-                    
-                            // Hàm hiển thị hình ảnh dựa trên chỉ số màu sắc
-                            function showImages(index) {
-                                hideAllImages();
-                                if (index === 0) {
-                                    imgHover1.forEach(img => img.style.display = 'block'); // Hiện tất cả ảnh cho màu 1
-                                } else if (index === 1) {
-                                    imgHover2.forEach(img => img.style.display = 'block'); // Hiện tất cả ảnh cho màu 2
-                                }
-                            }
-                    
-                            // Khi di chuột vào product-block
-                            block.addEventListener('mouseenter', () => {
-                                if (selectedColorIndex === null) {
-                                    imgDefault.style.display = 'block'; // Hiện ảnh mặc định
-                                } else {
-                                    showImages(selectedColorIndex); // Hiện ảnh tương ứng nếu đã chọn màu
-                                }
-                            });
-                    
-                            // Khi rời khỏi product-block
-                            block.addEventListener('mouseleave', () => {
-                                hideAllImages(); // Ẩn tất cả ảnh hover
-                                imgDefault.style.display = 'block'; // Hiện ảnh mặc định
-                            });
-                    
-                            // Xử lý hover vào các tùy chọn màu sắc
-                            block.querySelectorAll('.color-option').forEach((option, index) => {
-                                option.addEventListener('mouseenter', () => {
-                                    selectedColorIndex = index; // Lưu chỉ số ô màu sắc đã chọn
-                                    imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
-                                    showImages(index); // Hiện ảnh tương ứng
-                                });
-                    
-                                option.addEventListener('mouseleave', () => {
-                                    if (selectedColorIndex !== null) {
-                                        showImages(selectedColorIndex); // Giữ ảnh đã chọn
-                                    } else {
-                                        imgDefault.style.display = 'block'; // Hiện ảnh mặc định nếu không có lựa chọn
-                                    }
-                                });
-                            });
-                        });
-                    </script>
-                    
                 </li>
                 <li>
                     <div class="product-block">
@@ -393,45 +334,6 @@
                 <hr>
             </div>
         </div>
-        
-        <script>
-            const colorOptions = document.querySelectorAll('.color-option');
-        
-            colorOptions.forEach((option, index) => {
-                option.addEventListener('mouseenter', () => {
-                    // Đặt tất cả các ảnh về trạng thái ban đầu
-                    const imgDefault = option.closest('.product-block').querySelector('.img-default');
-                    const imgHover1 = option.closest('.product-block').querySelector('.img-hover-1');
-                    const imgHover2 = option.closest('.product-block').querySelector('.img-hover-2');
-                    const imgHover3 = option.closest('.product-block').querySelector('.img-hover-3');
-        
-                    imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
-                    imgHover1.style.display = 'none';   // Ẩn ảnh hover thứ nhất
-                    imgHover2.style.display = 'none';   // Ẩn ảnh hover thứ hai
-                    imgHover3.style.display = 'none';   // Ẩn ảnh hover thứ ba
-        
-                    // Nếu hover vào tùy chọn thứ hai thì hiện ảnh số 4
-                    if (index === 1) {
-                        imgHover3.style.display = 'block';
-                    } else {
-                        imgDefault.style.display = 'block'; // Hiển thị ảnh mặc định nếu không phải tùy chọn thứ hai
-                    }
-        
-                    // Xóa lớp 'active' từ tất cả các lựa chọn
-                    colorOptions.forEach(opt => opt.classList.remove('active'));
-                    // Thêm lớp 'active' cho lựa chọn đang được hover
-                    option.classList.add('active');
-                });
-        
-                option.addEventListener('mouseleave', () => {
-                    const imgDefault = option.closest('.product-block').querySelector('.img-default');
-                    const imgHover3 = option.closest('.product-block').querySelector('.img-hover-3');
-        
-                    imgDefault.style.display = 'block'; // Hiển thị ảnh mặc định khi rời chuột khỏi tùy chọn
-                    imgHover3.style.display = 'none';    // Ẩn ảnh 4 khi chuột không còn hover
-                });
-            });
-        </script>
         <div class="h3">
             <hr class="hr3">
             <div class="h3_hr">
