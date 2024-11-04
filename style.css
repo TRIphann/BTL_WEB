@@ -72,7 +72,7 @@ body
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 55px;
+    margin-left: 165px;
 }
 
 .navbar_list_ {
@@ -486,7 +486,7 @@ body
 
 .h3 h3 
 {
-    margin-top: 100px;
+    margin-top: 75px;
     text-align: center;
 }
 
@@ -494,12 +494,11 @@ body
 {
     padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 100px;
 }
 
 .h3 .h3_image
 {
-    margin-top: 30px;
+    margin-top: 17px;
     display: flex;
     justify-content: space-around;
 }
@@ -514,8 +513,8 @@ body
 .h3 .hr3
 {
     margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
     height: 0;
     box-sizing: content-box;
     border-top: 1px solid #eee;
@@ -528,29 +527,24 @@ body
 
 .h3 .h3_hr .h3_image .h3_information
 {
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
-.h4 .h4_hr #video
-{
-    margin-top: 50px;
-    position: relative;
-}
 
 .h4
 {
     padding-left: 100px;
     padding-right: 100px;
     margin-top: 30px;
-    padding-top: 50px;
+    padding-top: 10px;
     text-align: center;
 
 }
-
+.h4 h3{
+    margin-top: 45px;
+}
 .h4 .hr4
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: 15px;
     margin-right: 15px;
     height: 0;
@@ -598,11 +592,12 @@ body
 
 .h4 .khamphangay hr
 {
-    width: 120px;
-    margin-top: 10px ;
+    width: 130px;
+    margin-top: 5px ;
     border: 1.3px solid gray;
-    margin-left: 575px;
+    margin-left: 594px;
 }
+
 
 .h5 h3
 {
@@ -610,10 +605,8 @@ body
 }
 .h5 .hr5 
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
     height: 0;
     box-sizing: content-box;
     border-top: 1px solid #eee;
@@ -635,7 +628,7 @@ body
 
 .h5 
 {
-    margin-top: 200px;
+    margin-top: 75px;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
@@ -654,6 +647,7 @@ body
 {
     margin-top: 10px;
 }
+
 
 .h6 img 
 {
