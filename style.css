@@ -186,8 +186,6 @@ body
    
     
 }
-
-
 .navbar_input input 
 {
     font-size: 13px;
@@ -252,11 +250,6 @@ body
     width: 50%; /* Kéo dài sang bên phải */
     transform: translateX(100%); /* Di chuyển sang phải */
 }
-
-  
-
-  
-
 .navbar_user #shoppingcart
 {
     cursor: pointer;
@@ -276,17 +269,19 @@ body
     width: 100%;
     display: block; /* Ngăn ngừa khoảng trống dưới ảnh */
 }
+
   
 .arrow {
     position: absolute;
     top: 50%;
-    font-weight: lighter;
+    font-weight: 100;
     line-height: 100;
     transform: translateY(-50%);
     font-size: 60px;
     color: #333;
     cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
 }
+
 
 .left {
     left: 20px;
