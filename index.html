@@ -6,7 +6,8 @@
     <title>Giày Nữ Thời Trang - Giày Công Sở, Giày Đi Chơi, Giày Dự Tiệc - JUNO</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
     
@@ -503,16 +504,16 @@
             </ul>
             <ul class="h6_image">
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram1.webp" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram1.webp" alt=""></a>
                 </li>
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram2.jpg" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram2.jpg" alt=""></a>
                 </li>
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram3.jpg" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram3.jpg" alt=""></a>
                 </li>
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram4.webp" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram4.webp" alt=""></a>
                 </li>
             </ul>
             <hr class="hr6">
@@ -521,14 +522,14 @@
             <ul>
                 <li>
                     <div class="h7_1">
-                        <p class="h7_11", style="font-size: 14px;">GỌI MUA HÀNG ONLINE (08:00 - 21:00 mỗi ngày)</p>
+                        <p class="h7_11", style="font-size: 13px;">GỌI MUA HÀNG ONLINE (08:00 - 21: 00 mỗi ngày)</p>
                         <span>
-                            <p style="font-size: 23px;" class="h7_11">1800 1162</p>
+                            <p style="font-size: 20px;" class="h7_11">1800 1162</p>
                             <p style="font-size: 13px;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
                         </span>
-                        <p class="h7_12", style="font-size: 14px;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
+                        <p class="h7_12", style="font-size: 13px;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
                         <span>
-                            <p style="font-size: 23px;" class="h7_11">1800 1160</p>
+                            <p style="font-size: 20px;" class="h7_11">1800 1160</p>
                             <p style="font-size: 13px;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
                         </span>
                     </div>
@@ -536,14 +537,14 @@
                 <li>
                     <div class="h7_2">
                         <p class="h7_22", style="font-size: 14px;">HỆ THỐNG SHOWROOM</p>
-                        <a href="./"><img src="./Image/h5_files/hethongshowroom.webp" alt=""></a>
-                        <p class="h7_22_information"><u>Xem địa chỉ hệ thống 54 showroom</u><i class="fa-solid fa-play"></i></p>
+                        <a a href="./"><img src="./Image/h7_files/hethongshowroom.webp" alt=""></a>
+                        <a href="./showroom/showroom.html" p class="h7_22_information"><u>Xem địa chỉ hệ thống 54 showroom</u><i class="fa-solid fa-play"></i></p>
                     </div>
                 </li>
                 <li>
                     <div class="h7_3">
                         <p class="h7_33", style="font-size: 13px;">FANPAGE CỦA CHÚNG TÔI</p>
-                        <a href="./"><img src="./Image/h5_files/happyfridayday.webp" alt=""></a>
+                        <a href="./"><img src="./Image/h7_files/fanpagecuachungtoi.webp" alt=""></a>
                         <ul class="h7_33_information" style="margin-left: 110px;">
                             <li>
                                 <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
@@ -586,11 +587,10 @@
             </div>
             <div class="h8_2">
                 <div class="h8_2_1">
-                    <i class="fa-regular fa-copyright" style="color: #000000;"></i>
-                    <p>Công ty Cổ phần Seedcom Fashion Group</p>
+                    <p>© Công ty Cổ phần Seedcom Fashion Group</p>
                 </div>
                 <div class="h8_2_2">
-                    <a href="./"><img src="./Image/h5_files/Dathongbao.webp" alt=""></a>
+                    <a href="./"><img src="./Image/h8_files/Dathongbao.webp" alt=""></a>
                     <p>Powered by Haravan Enterprise.</p>
                 </div>
             </div>
@@ -609,14 +609,37 @@
         </div>
         <button><a href="./">XEM GIỎ HÀNG</a></button>
     </div> -->
-    <div class="return">
-        <i class="fa-solid fa-arrow-up"></i>
-        <script>
-            $(".return").click(function(){
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-            });
-        </script>
-    </div>
+
+<div class="return" onclick="scrollToTop()">
+    <p>Về đầu trang</p>
+    <i class="bi bi-chevron-up"></i>
+    <div class="vertical-line"></div> <!-- Dấu gạch dọc -->
+</div>
+
+<script>
+    $(window).scroll(function() {
+    var scrollPosition = $(window).scrollTop();  // Lấy vị trí cuộn của trang
+
+    // Nếu cuộn xuống trang (không phải ở đầu trang)
+    if (scrollPosition > 0) {
+        $('.return').css({
+            'opacity': 1,
+            'visibility': 'visible' // Hiển thị khi cuộn xuống
+        });
+    } else {
+        // Nếu ở đầu trang
+        $('.return').css({
+            'opacity': 0,
+            'visibility': 'hidden' // Ẩn khi ở đầu trang
+        });
+    }
+});
+
+function scrollToTop() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+}
+</script>
+
     <div class="user">
         <h4 class="giohang">GIỎ HÀNG</h4>
         <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
@@ -654,15 +677,4 @@
             });
         </script>
     </div>
-    <div class="banner">
-        <img src="./Image/h61.webp" class="image_1" alt="">
-        <i class="fa-regular fa-circle-xmark fa-shake" id="icon_x"></i>
-    </div>
-    <script>
-        $(document).ready(function(){
-            $("#icon_x").click(function(){
-                $(".banner").hide();
-            });
-        });
-    </script>
 </html>
