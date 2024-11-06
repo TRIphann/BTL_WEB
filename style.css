@@ -645,9 +645,10 @@ body
 }
 
 
+
 .h6 img 
 {
-    max-width: 100%;
+    max-width: 101%;
 }
 .h6 .h6_title_list h3{
     margin-top: 20px;
@@ -677,7 +678,7 @@ body
 
 .h6 .h6_title hr 
 {
-    width: 500px;
+    width: 515px;
     padding-left: 30px;
 }
 .h6_hr1, .h6_hr2 {
@@ -687,13 +688,13 @@ body
     margin: 20px 0;
 }
 .h6_hr1 {
-    margin-left: 81px;
+    margin-left: 65px;
     margin-top: 40px;
     
 }
 
 .h6_hr2 {
-    margin-right: 81px;
+    margin-right: 65px;
     margin-top: 40px;
     
 }
@@ -708,34 +709,35 @@ body
 .h6 .h6_image li 
 {
     list-style-type: none;
-    padding-left: 10px;
+    padding-left: 12px;
 }
 
 .h6 .h6_image
 {
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .h6 
 {
     margin-top: 200px;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 55px;
+    margin-right: 55px;
     padding-left: 40px;
     padding-right: 40px;
 }
 .h6 h3{
     font-size: 20px;
-    font-weight: bold;
 }
 .hr6 {
   width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
   height: 0.5px; /* Độ dày 0.5 pixel */
   border: none; /* Không có viền */
   background-color: #e7e4e4; /* Màu xám nhạt */
-  margin-top: 50px; /* Cách các phần tử khác 20px ở trên và dưới, căn giữa */
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  margin: 40px 10px;
+
 }
+
 
 .h7 img 
 {
@@ -771,23 +773,7 @@ body
     margin-top: 30px;
 }
 
-.h7 .h7_1 .h7_1_1 p
-{
-    margin-top: 2px;
-    margin-bottom: 5px;
-    text-decoration-color: #eee;
-    font-size: 15px;
-}
-.h7 .h7_1 .h7_1_2 p
-{
-    margin-top: 2px;
-    margin-bottom: 5px;
-    text-decoration-color: #eee;
-    font-size: 15px;
-}
-.h7_1_2{
-    padding-top: 25px;
-}
+
 
 
 
@@ -821,13 +807,14 @@ body
 
 .h7 .h7_3 .h7_33
 {
-    margin-bottom: 2px;
-    font-size: 15px ;
+    margin-bottom: 12px;
+    margin-left: 96px;
 }
 
 .h7 .h7_3 img
 {
-    width: 400px;
+    width: 410px;
+    margin-left: 96px;
 }
 
 .h7_33_information {
@@ -835,10 +822,6 @@ body
     list-style-type: none; /* Xóa dấu đầu dòng */
     padding: 0; /* Xóa khoảng cách mặc định */
     margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
-}
-.h7_33_information:hover{
-    color: black;
-    cursor: pointer;
 }
 
 .h7_33_information li {
@@ -855,6 +838,9 @@ body
 .fa-play{
     font-size: 5px;
 }
+
+
+
 
 .h8 
 {
