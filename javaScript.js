@@ -130,3 +130,6 @@ document.querySelectorAll('.product-block').forEach(block => {
         }
     });
 });
+
+
+
