@@ -648,7 +648,8 @@ body
 
 .h6 img 
 {
-    max-width: 101%;
+    max-width: 97%;
+    margin-left: 8px;
 }
 .h6 .h6_title_list h3{
     margin-top: 20px;
@@ -709,7 +710,7 @@ body
 .h6 .h6_image li 
 {
     list-style-type: none;
-    padding-left: 12px;
+    padding-left: -1px;
 }
 
 .h6 .h6_image
@@ -729,12 +730,12 @@ body
     font-size: 20px;
 }
 .hr6 {
-  width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
+  width: 98.75%; /* Chiếm 100% chiều rộng của phần tử cha */
   height: 0.5px; /* Độ dày 0.5 pixel */
   border: none; /* Không có viền */
   background-color: #e7e4e4; /* Màu xám nhạt */
   margin-bottom: 15px;
-  margin: 40px 10px;
+  margin: 40px 11px;
 
 }
 
@@ -804,6 +805,7 @@ body
 {
     width: 410px;
 }
+
 .fa-play {
   color: gray; /* Đặt màu thành xám */
   font-size: 5px; /* Điều chỉnh kích thước */
