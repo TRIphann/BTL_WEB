@@ -739,6 +739,7 @@ body
 }
 
 
+
 .h7 img 
 {
     width: calc(100% - 120px);
@@ -767,12 +768,18 @@ body
 .h7 .h7_1
 {
     width: 400px;
+    margin-left: 55px;
+    line-height: 1.7;
 }
 
 .h7 .h7_1 .h7_12{
-    margin-top: 30px;
+    margin-top: 25px;
 }
-
+.h7 .h7_2{
+    width: 400px;
+    margin-left: 20px;
+    margin-right: -75px;
+}
 
 
 
@@ -780,7 +787,6 @@ body
 .h7 .h7_2 .h7_22
 {
     margin-bottom: 10px;
-    font-size: 15px;
 }
 
 .h7 .h7_2 .h7_22_information
@@ -796,7 +802,7 @@ body
 
 .h7 .h7_2 img
 {
-    width: 400px;
+    width: 410px;
 }
 .fa-play {
   color: gray; /* Đặt màu thành xám */
@@ -804,7 +810,9 @@ body
   margin-left: 5px; /* Tạo khoảng cách với nội dung */
   vertical-align:auto;
 }
-
+.h7 .h7_3{
+    width: 400px;
+}
 .h7 .h7_3 .h7_33
 {
     margin-bottom: 12px;
@@ -825,19 +833,18 @@ body
 }
 
 .h7_33_information li {
-    margin-right: 30px;/*khoang cách giữa các biểu tượng*/
+    margin-right: 35px;/*khoang cách giữa các biểu tượng*/
     margin-top: -30px;
     margin-left: -40px;
-    font-size: 20px;
+    font-size: 18px;
    
 }
 
 .h7_33_information li:last-child {
     margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
 }
-.fa-play{
-    font-size: 5px;
-}
+
+
 
 
 
@@ -852,9 +859,10 @@ body
 {
     display: flex;
     background-color: rgb(245, 245, 245);
-    width: 1500px;
-    height: 70px;
+    width: 1519px;
+    height: 76px;
     margin-top: -15px;
+    margin-bottom: 13px;
 }
 
 .h8 .h8_1 ul li 
@@ -865,7 +873,8 @@ body
 
 .h8 .h8_1 .h8_1_1 
 {   
-    margin-left: 100px;
+    font-size: 13px;
+    margin-left: 110px;
     position: relative;
     margin-top: 15px;
 }
@@ -876,7 +885,10 @@ body
     position: relative;
     margin-top: 15px;
 }
-
+.h8 .h8_1_2{
+    font-size: 13px;
+    left: 75px;
+}
 .h8 .h8_1 ul li p 
 {
     font-size: 13px;
@@ -885,7 +897,8 @@ body
 .h8 .h8_1 ul li i 
 {
     position: absolute;
-    right: -20px;
+    right: -16px;
+    margin-top: 3px;
     top: 0px;
     cursor: pointer;
 }
@@ -910,7 +923,8 @@ body
     display: flex; /* Hiển thị theo hàng ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
     padding: 15px 0;
-    margin-top: -10px;
+    margin-top: -51px;
+    margin-left: -10px;
     font-weight:lighter;
 }
 .h8_2_1 i {
@@ -919,7 +933,6 @@ body
 .fa-chevron-down{
     font-size: 10px;
 }
-
 
 
 .h8 .h8_2 .h8_2_2
@@ -933,47 +946,58 @@ body
 
 .h8 .h8_2 .h8_2_2 img
 {
-    padding-left: 90px;
-    width: 200px;
-    margin-right: -10px;
-    margin-top: 10px;
+    padding-left: 95px;
+    width: 195px;
+    margin-right: -129px;
+    margin-top: 0;
 }
 
-.h8 .h8_2 .h8_2_2 p 
+.h8 .h8_2_2 p 
 {
     margin-top: 2.5px;
-    margin-left: 10px;
-    font-size: 15px;
+    font-size: 13px;
+    margin-bottom: 13px;
+    position: relative;
+    left: 69px; /* Điều chỉnh giá trị để nhích chữ qua phải */
 }
 
-.return a
-{
-    text-decoration: none;
-}
 
-.return
-{
+.return {
     position: fixed;
-    top: 600px;
-    right: 10px;
-    display: inline;
-    width: 20px;
-    height: 40px;
+    bottom: 105px; /* Đặt vị trí gần cuối trang */
+    right: -15px;
     display: flex;
     flex-direction: column-reverse;
-    opacity: 0.3;
+    align-items: center;
+    opacity: 0; /* Ban đầu là ẩn */
     cursor: pointer;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Thêm hiệu ứng visibility */
+
 }
 
-.return p 
-{
-    font-size: 11px;
+.return p {
+    font-size: 12px;
+    transform: rotate(-90deg); /* Xoay văn bản dọc */
+    white-space: nowrap;
+    font-weight: bold; /* In đậm chữ */
+    color: rgb(0, 0, 0); /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
 }
 
-.return i 
-{
-    font-size: 30px;
+.return i {
+    position: relative;
+    bottom: 48px;
+    font-size: 25px; /* Điều chỉnh kích thước của mũi tên */
 }
+
+.vertical-line {
+    position: relative;
+    width: 1.4px; /* Độ dày của dấu gạch */
+    height: 25px; /* Chiều dài của dấu gạch */
+    background-color: black; /* Màu sắc của dấu gạch */
+    bottom: 15px;
+}
+
 
 .user 
 {
