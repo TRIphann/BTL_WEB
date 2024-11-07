@@ -563,32 +563,39 @@ input[type="search"] {
     font-size: 15px;
 }
 
-.return a
-{
-    text-decoration: none;
-}
-
-.return
-{
+.return {
     position: fixed;
-    top: 600px;
-    right: 10px;
-    width: 20px;
-    height: 40px;
+    bottom: 105px; /* Đặt vị trí gần cuối trang */
+    right: -15px;
     display: flex;
     flex-direction: column-reverse;
-    opacity: 0.3;
+    align-items: center;
+    opacity: 0; /* Ban đầu là ẩn */
     cursor: pointer;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Thêm hiệu ứng visibility */
+
 }
 
-.return p 
-{ 
-    writing-mode: vertical-rl;
-    margin: 0;
-    font-size: 11px;
-    color: black;
-    transform: rotate(180deg);
-    white-space: nowrap; /* Đảm bảo không có sự ngắt dòng trong văn bản */
+.return p {
+    font-size: 12px;
+    transform: rotate(-90deg); /* Xoay văn bản dọc */
+    white-space: nowrap;
+    font-weight: bold; /* In đậm chữ */
+    color: rgb(0, 0, 0); /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
+}
+
+.return i {
+    position: relative;
+    bottom: 48px;
+    font-size: 25px; /* Điều chỉnh kích thước của mũi tên */
+}
+.vertical-line {
+    position: relative;
+    width: 1.4px; /* Độ dày của dấu gạch */
+    height: 25px; /* Chiều dài của dấu gạch */
+    background-color: black; /* Màu sắc của dấu gạch */
+    bottom: 15px;
 }
 
 .user 
