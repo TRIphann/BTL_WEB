@@ -1,7 +1,11 @@
+
 *
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+* {
     box-sizing: border-box;
 }
 
@@ -10,7 +14,10 @@ body
     background-color: #FFFFFF;
     font-family: 'MuliDisplayVN', sans-serif;
     text-decoration: color(black black black black);
+    display: flex;
+    justify-content: space-around;
 }
+/* Thanh màu đỏ */
 .top-bar{
     background-color: #d32f2f;
     width: 100%;
@@ -21,28 +28,30 @@ body
 .top-bar img{
     margin-left: 0;
     height: 31.5px;
-    display: block;
 
 }
+/* Thanh chứa logo, hàng mới, sản phảm... */
 .navbar 
 {
-    position: fixed;
-    top: 0px;
+    position:absolute;
+    top: 88px;
     left: 0px;
     right: 0px;
     display: flex;
-    justify-content: space-around;
-    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px ;
     padding-left: 60px;
     padding-right: 60px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    height: 60px;
+    height: 56.5px;
     z-index: 999;
-    background-color: #FFFFFF;
-    
+    background-color: #ffffff;
+    transition: top 0.3s ease, padding-top 0.3s ease;  /* Hiệu ứng chuyển động */
+    transform: translateY(-100%); 
+    opacity: 1; 
 }
-
-
+/* Logo */
 .navbar_img
 {
     display: flex;
@@ -54,6 +63,7 @@ body
     height: 100px;
     padding-bottom: 13.5px;
 }
+/* Mục hàng mới, sản phảm,... */
 .navbar_list {
     display: flex;
     flex-grow: 1;
@@ -169,25 +179,19 @@ body
     margin-bottom: 20px;/*điều chỉnh thanh tìm kiếm cho nó ở chính giữa*/
     margin-right: 100px;
     font-size: 13px;
+
 }
 .navbar_input input 
 {
     font-size: 13px;
+    color: gray;
     border: none;/*Không lấy khung tìm kiếm*/
     height: 20px;
     width: 100px;
     margin-top: -30px;
-    margin-left: 150px;
-    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
+    transition: all 0.1s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
     outline: none; /* Loại bỏ viền khi focus */
     border-bottom: 1px solid transparent; /* Viền dưới ban đầu */
-    padding-right: -100px;
-}
-.navbar_input i {
-    font-size: 18px; /* Kích thước của biểu tượng */
-    cursor: pointer; /* Thêm con trỏ tay khi hover vào biểu tượng */
-    right: 10px;
-
 }
 .navbar_input input:focus {
     border-bottom: 1px solid black; /* Hiện viền dưới khi nhấp vào */
@@ -204,6 +208,7 @@ body
 
   transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
 }
+
   .navbar_input:hover input::placeholder {
     color: transparent; /* Ẩn placeholder khi hover */
   }
@@ -233,23 +238,25 @@ body
 
 .navbar_input.active::before {
     width: 50%; /* Kéo dài sang bên trái */
-    transform: translateX(100%); /* Di chuyển sang trái */
+    transform: translateX(-100%); /* Di chuyển sang trái */
 }
 
 .navbar_input.active::after {
     width: 50%; /* Kéo dài sang bên phải */
-    transform: translateX(-100%); /* Di chuyển sang phải */
+    transform: translateX(100%); /* Di chuyển sang phải */
 }
-
 .navbar_user #shoppingcart
 {
     cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 13px;
+    margin-right: 20px;
 }
 
 .h1 img 
 {
     max-width: 100%;
-    margin-top: 50px;
+    vertical-align: middle;
 }
 
 .h2 
@@ -260,7 +267,7 @@ body
 
 .h2 .h2_pick
 {
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     margin-left: 200px;
@@ -271,7 +278,7 @@ body
 }
 
 select,
-input[type="text"] {
+input[type="search"] {
     width: 250px; /* Chiều rộng của các ô */
     height: 40px; /* Chiều cao của các ô */
     padding: 1px; /* Khoảng cách bên trong */
@@ -280,15 +287,15 @@ input[type="text"] {
     margin-left: 20px;
     outline: none;
     appearance: none;
-    bo
+    
 
 }
-input[type="text"]::placeholder {
+input[type="search"]::placeholder {
     color: black; /* Màu chữ của placeholder */
-    opacity: 1; /* Đảm bảo opacity là 1 để màu hiển thị rõ ràng */
 }
-
-
+input[type="search"] {
+    border: 1px solid #696969; /* Đảm bảo viền có độ dày nhẹ */
+}
 .h2 i 
 {
     margin-left: -30px;
@@ -310,11 +317,12 @@ input[type="text"]::placeholder {
 {
     display: flex;
     justify-content: space-around;
+    margin-left: 20px;
 }
 
 .h3 .h3_list div 
 {
-    padding-left: 20px;
+    padding-left: 15px;
 }
 
 .h3 .h3_list p 
@@ -323,9 +331,10 @@ input[type="text"]::placeholder {
     top: -30px;
     text-align: center;
     background-color: #ffffffde;
-    font-size: 15px;
+    font-size: 14px;
     height: 50px;
     padding-top: 10px;
+    font-weight: normal;
 }
 
 .h7 img 
@@ -356,6 +365,8 @@ input[type="text"]::placeholder {
 .h7 .h7_1
 {
     width: 400px;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 .h7 .h7_1 .h7_12{
@@ -380,7 +391,9 @@ input[type="text"]::placeholder {
     padding-top: 25px;
 }
 
-
+.h7_2{
+    margin-right: 10px;
+}
 
 .h7 .h7_2 .h7_22
 {
@@ -391,7 +404,7 @@ input[type="text"]::placeholder {
 .h7 .h7_2 .h7_22_information
 {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: 14px;
     color: grey;
 }
 .h7_22_information:hover{
@@ -412,21 +425,22 @@ input[type="text"]::placeholder {
 .h7 .h7_3 .h7_33
 {
     margin-bottom: 2px;
-    font-size: 15px ;
+    font-size: 13px ;
 }
 
 .h7 .h7_3 img
 {
     width: 400px;
+    margin-top: 8px;
 }
 
 .h7_33_information {
     display: flex; /* Hiển thị theo hàng ngang */
-    
     padding: 0; /* Xóa khoảng cách mặc định */
     margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
-    margin-left: -100px;
+    margin-right: 10px;
 }
+
 .h7_33_information:hover{
     color: black;
     cursor: pointer;
@@ -447,7 +461,7 @@ input[type="text"]::placeholder {
 
 .h8 
 {
-    margin-top: 40px;
+    margin-top: 48px;
     text-align: center;
 
 }
@@ -559,7 +573,6 @@ input[type="text"]::placeholder {
     position: fixed;
     top: 600px;
     right: 10px;
-    display: inline;
     width: 20px;
     height: 40px;
     display: flex;
@@ -569,8 +582,13 @@ input[type="text"]::placeholder {
 }
 
 .return p 
-{
+{ 
+    writing-mode: vertical-rl;
+    margin: 0;
     font-size: 11px;
+    color: black;
+    transform: rotate(180deg);
+    white-space: nowrap; /* Đảm bảo không có sự ngắt dòng trong văn bản */
 }
 
 .user 
