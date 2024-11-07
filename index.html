@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giày Nữ Thời Trang - Giày Công Sở, Giày Đi Chơi, Giày Dự Tiệc - JUNO</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
 
@@ -393,59 +394,70 @@
         <div class="h4">
             <hr class="hr4">
             <h3>BỘ SƯU TẬP</h3>
-            <div class="h4_hr"> 
-                <div class="video">
-                    <iframe style="margin-left: 40px; margin-right: 40px; width: 1200px; height: 600px;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="✨ SHAKE IT UP!! KHUẤY ĐỘNG NHỊP ĐIỆU THỜI TRANG ✨ SPECIAL COLLECTION 2022" width="100%" height="360" src="https://www.youtube.com/embed/sD5dcuu70JA?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=sD5dcuu70JA&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=1" data-gtm-yt-inspected-16="true"></iframe>
-                    <div class="video_information">
-                        <p style="font-weight: bold; font-size: 20px;" id="video_information1">SHAKE IT UP</p>
-                        <P style="font-size: 18px;" id="video_information2">
-                            Nguồn cảm hứng rực rỡ, sống động từ Bữa tiệc được tái hiện hoàn hảo trên từng 
-                            chi tiết giày túi và trang phục thời trang của bộ sưu tập Shake It Up! 
-                            Cổ vũ cho mỗi cô gái hãy khuấy động giai điệu thời trang của chính mình mỗi 
-                            ngày. Shake It Up!
-                        </P>
-                    </div>
+            <section>
+                <div class="swiper-btns">
+                    <div style="color: gray; " class="swiper-button-prev"></div>
+                    <div style="color: gray;" class="swiper-button-next"></div>
                 </div>
-                <div class="video">
-                    <iframe style="margin-left: 40px; margin-right: 40px; width: 1200px; height: 00px;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="JUNO ft MIU LÊ: SUMMER TASTE COLLECTION - BỘ SƯU TẬP ĐẶC BIỆT NHẤT DÀNH CHO MÙA HÈ 2021" width="100%" height="360" src="https://www.youtube.com/embed/M5sXSeqD9xU?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=M5sXSeqD9xU&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=2" data-gtm-yt-inspected-16="true"></iframe>
-                    <div class="video_information">
-                        <p style="font-weight: bold; font-size: 20px;" id="video_information1">SUMMER TASTE</p>
-                        <P style="font-size: 18px;" id="video_information2">
-                            Những chiếc túi kem thời trang, đầy cảm hứng từ nhiều sắc màu ngọt ngào và xu hướng thời trang hè 2021, SUMMER TASTE COLLECTION
-                             là sự kết hợp mới nhất của JUNO & Miu Lê để mang đến t
-                             hông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệ
-                             m & hương vị mùa hè khi đang độ rực rỡ nhất.
-                        </P>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="video">
+                            <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="✨ SHAKE IT UP!! KHUẤY ĐỘNG NHỊP ĐIỆU THỜI TRANG ✨ SPECIAL COLLECTION 2022" width="100%" height="360" src="https://www.youtube.com/embed/sD5dcuu70JA?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=sD5dcuu70JA&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=1" data-gtm-yt-inspected-16="true"></iframe>
+                        </div>
+                        <div class="video_information">
+                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">SHAKE IT UP</p>
+                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                                Nguồn cảm hứng rực rỡ, sống động từ Bữa tiệc được tái hiện hoàn hảo trên từng chi tiết giày
+                                túi và trang phục thời trang của bộ sưu tập Shake It Up! Cổ vũ cho mỗi cô gái hãy khuấy
+                                động giai điệu thời trang của chính mình mỗi ngày. Shake It Up!
+                            </P>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <script>
-                var slideIndex = 0;
-                showSlides();
-                function showSlides() {
-                    var i;
-                    var slides = document.getElementsByClassName("video");
-                    for (i = 0; i < slides.length; i++) 
-                    {
-                      slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if(slideIndex > slides.length) 
-                    {
-                        slideIndex = 1
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                    setTimeout(showSlides, 20000);
-                  }
-                  document.addEventListener("DOMContentLoaded", function() {
-                });
-            </script>
-            <div class="khamphangay">
-                <a href="./" >KHÁM PHÁ NGAY</a>
-                <hr>
-            </div>
-        </div>
+                    <div class="swiper-slide">
+                        <div class="video">
+                            <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " width="100%" height="360" src="https://www.youtube.com/embed/M5sXSeqD9xU?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=M5sXSeqD9xU&enablejsapi=1&origin=https%3A%2F%2Fjuno.vn&widgetid=2" data-gtm-yt-inspected-16="true"></iframe>
+                        </div> 
+                        <div class="video_information">
+                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">SUMMER TASTE</p>
+                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                                Những chiếc túi kem thời trang, đầy cảm hứng từ nhiều sắc màu ngọt ngào và xu hướng thời
+                                trang hè 2021, SUMMER TASTE COLLECTION là sự kết hợp mới nhất của JUNO & Miu Lê để
+                                mang đến thông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệm & hương vị
+                                mùa hè khi đang độ rực rỡ nhất.
+                            </P>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video">
+                            <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " width="100%" height="360" src="https://www.youtube.com/embed/kWSux5Nw_LI?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=kWSux5Nw_LI&enablejsapi=1&origin=https%3A%2F%2Fjuno.vn&widgetid=4S" data-gtm-yt-inspected-16="true"></iframe>
+                        </div>
+                        <div class="video_information">
+                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">IMPERFECT PERFECTION</p>
+                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                                Một năm 2020 không hoàn hảo, với thật nhiều thử thách, vụn vỡ cuối cùng đã sắp qua đi. Đã
+                                đến lúc nàng được nâng ly chúc mừng cho tinh thần mạnh mẽ, lạc quan của bản thân
+                            </P>
+                        </div>
+                    </div>  
+                    </div>
+                    <div class="khamphangay">
+                        <a href="./" >KHÁM PHÁ NGAY</a>
+                        <hr>
+                    </div>
+                    <div class="custom-pagination">
+                        <span class="custom-bullet"></span>
+                        <span class="custom-bullet"></span>
+                        <span class="custom-bullet"></span>
+                    </div>
 
+                </div>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <div class="h5">
             <hr class="hr5">
             <h3 style="font-size: 23px; text-align: center;">Gợi ý dành riêng cho bạn</h3>
