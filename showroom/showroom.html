@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ thống cửa hàng</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
@@ -325,16 +325,36 @@
                 </div>
             </div>
         </div>
-        <div class="return">
-            <p><strong>Về đầu trang</strong></p>
-            <i class="fa-solid fa-arrow-up"></i>
-            
-                <script>
-                        $(".return").click(function(){
-                            $("html, body").animate({ scrollTop: 0 }, "slow");
-                        });
-                   
-                </script>
+        <div class="return" onclick="scrollToTop()">
+            <p>Về đầu trang</p>
+            <i class="bi bi-chevron-up"></i>
+            <div class="vertical-line"></div> <!-- Dấu gạch dọc -->
+        </div>
+        
+        <script>
+            $(window).scroll(function() {
+            var scrollPosition = $(window).scrollTop();  // Lấy vị trí cuộn của trang
+        
+            // Nếu cuộn xuống trang (không phải ở đầu trang)
+            if (scrollPosition > 0) {
+                $('.return').css({
+                    'opacity': 1,
+                    'visibility': 'visible' // Hiển thị khi cuộn xuống
+                });
+            } else {
+                // Nếu ở đầu trang
+                $('.return').css({
+                    'opacity': 0,
+                    'visibility': 'hidden' // Ẩn khi ở đầu trang
+                });
+            }
+        });
+        
+        function scrollToTop() {
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        }
+        </script>
+        
 
            
 
