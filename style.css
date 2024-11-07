@@ -562,56 +562,37 @@ body
 }
 
 
-.h4
-{
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-top: 30px;
-    padding-top: 10px;
-    text-align: center;
-
-}
-.h4 h3{
-    margin-top: 45px;
+.h4 {
+    margin: 0; /* Xóa khoảng cách ngoài (margin) của phần tử h4 */
+    padding: 0; /* Xóa khoảng đệm bên trong (padding) của phần tử h4 */
+    width: 100%; /* Đảm bảo phần tử chiếm hết chiều rộng của container */
 }
 .h4 .hr4
 {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-top: 40px;
+    margin-left: 104px;
+    margin-right: 104px;
     height: 0;
     box-sizing: content-box;
     border-top: 1px solid #eee;
 }
 
-.h4 .h4_hr
-{
-    margin-top: 40px;
-    display: flex;
+.h4 h3{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
 }
 
-.h4 .h4_hr h3 
-{
-    margin-top: 150px;
+.h4 section {
+    width: 100%; /* Đảm bảo phần tử section chiếm hết chiều rộng của container */
+    padding: 0; /* Xóa padding của section */
+    margin: 0; /* Xóa margin của section */
 }
-
-.h4 .h4_hr .video .video_information
-{
-    margin-top: 30px;
-    position: relative;
-}
-
-.h4 .h4_hr .video .video_information #video_information2
-{
-    margin-top: 30px;
-    padding-left: 280px;
-    padding-right: 280px;
-    color: gray;
-    font-size: 18px;
-}
-
 .h4 .khamphangay
 {
-    margin-top: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 44px;
 }
 
 .h4 .khamphangay a
@@ -626,7 +607,139 @@ body
     width: 130px;
     margin-top: 5px ;
     border: 1.3px solid gray;
-    margin-left: 594px;
+    margin-left: 694px;
+}
+/* Container cho video slider */
+section {
+    position: relative; /* Định vị tương đối */
+    max-width: 1519px; /* Độ rộng tối đa cho section là 1500px */
+    margin: auto; /* Căn giữa section theo chiều ngang */
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    overflow: hidden; /* Ẩn phần nội dung bị tràn */
+}
+.swiper-slide {
+    left: 4px;
+    position: relative; /* Đảm bảo swiper-slide có vị trí tương đối để các phần tử con có thể căn chỉnh chính xác */
+    width: 100%; /* Đảm bảo slide chiếm 100% chiều rộng */
+    display: flex; /* Sử dụng flexbox cho mỗi slide */
+    justify-content: center; /* Căn giữa nội dung trong mỗi slide */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+.swiper-slide .video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Tạo tỷ lệ 16:9 */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ video mà không bị bóp méo */
+    border: none;
+    transform: scale(1.12); /* Phóng to video thêm 10% */
+}
+
+/* Kiểu cho thông tin video */
+.video_information {
+    text-align: center; /* Căn giữa văn bản trong phần thông tin */
+    margin-top: 50px; /* Khoảng cách giữa video và phần thông tin */
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt 80% */
+    padding: 15px; /* Khoảng đệm bên trong */
+    max-width: 800px; /* Độ rộng tối đa cho phần thông tin */
+    margin-left: auto; /* Căn giữa phần thông tin theo chiều ngang */
+    margin-right: auto; /* Căn giữa phần thông tin theo chiều ngang */
+    border-radius: 8px; /* Bo tròn các góc */
+}
+
+/* Kiểu chữ bên trong phần thông tin video */
+#video_information1 {
+    font-size: 24px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    color: #333; /* Màu chữ đậm */
+    margin-bottom: 30px;
+}
+
+#video_information2 {
+    font-size: 16px; /* Kích thước chữ nhỏ hơn */
+    color: #555; /* Màu chữ xám nhạt */
+}
+
+/* Container cho các nút điều khiển swiper */
+.swiper-btns {
+    position: absolute; /* Định vị tuyệt đối */
+    top: 32%; /* Vị trí cách đầu container 50% chiều cao */
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    justify-content: space-between; /* Căn đều hai nút sang hai bên */
+    transform: translateY(-50%); /* Dịch chuyển lên 50% chiều cao của nút */
+    z-index: 10; /* Đảm bảo nút ở lớp trên cùng */
+}
+
+.swiper-button-prev::after,
+.swiper-button-prev::before {
+    display: none !important; /* Ẩn biểu tượng SVG mặc định của Swiper */
+}
+.swiper-button-next::after,
+.swiper-button-next::before {
+    display: none !important; /* Ẩn biểu tượng SVG mặc định của Swiper */
+}
+
+.swiper-button-prev {
+    margin-left: 70px;
+    background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/leftt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
+    background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 36px;
+    color: transparent;          /* Ẩn màu của mũi tên mặc định */
+}
+.swiper-button-next {
+    margin-right: 70px;
+    background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/rightt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
+    background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 36px;
+    color: transparent;          /* Ẩn màu của mũi tên mặc định */
+}
+
+
+
+/* Ẩn phân trang mặc định của Swiper */
+.swiper-pagination {
+    display: none !important;
+}
+
+/* Phân trang tùy chỉnh */
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.custom-bullet {
+    display: inline-block;
+    width: 24px;  /* Kích thước dấu gạch */
+    height: 3px;
+    margin: 0 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+}
+
+.custom-bullet.active {
+    border: 1px solid black;
 }
 
 
