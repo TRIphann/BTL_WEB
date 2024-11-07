@@ -179,6 +179,37 @@ document.querySelectorAll('.size-option').forEach(item => {
 });
 
 
+$(document).ready(function() {
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 1.46,
+        slidesPerGroup: 1, // Di chuyển từng slide mỗi lần
+        spaceBetween: 165,
+        pagination: {
+            el: '.swiper-pagination', // Bỏ qua phân trang mặc định
+            type: 'none', // Tắt phân trang mặc định
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
+    swiper.on('slideChange', function () {
+        const bullets = document.querySelectorAll('.custom-bullet');
+        bullets.forEach((bullet, index) => {
+            bullet.classList.remove('active');
+            if (index === swiper.realIndex) {
+                bullet.classList.add('active');
+            }
+        });
+    });
+    
+
+    // Khởi tạo lần đầu khi swiper đã được tạo
+    swiper.emit('slideChange');
+});
 
 
 
