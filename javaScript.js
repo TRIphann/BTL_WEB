@@ -30,28 +30,28 @@ document.querySelectorAll('.product-block').forEach(block => {
 
     // Hàm ẩn tất cả các hình ảnh
     function hideAllImages() {
-        imgDefault.style.display = 'none';
-        imgHover1.style.display = 'none';
-        imgHover2.style.display = 'none';
-        imgHover3.style.display = 'none';
-        imgHover4.style.display = 'none';
-        imgHover5.style.display = 'none';
-        imgHover6.style.display = 'none';
+        if (imgDefault) imgDefault.style.display = 'none';
+        if (imgHover1) imgHover1.style.display = 'none';
+        if (imgHover2) imgHover2.style.display = 'none';
+        if (imgHover3) imgHover3.style.display = 'none';
+        if (imgHover4) imgHover4.style.display = 'none';
+        if (imgHover5) imgHover5.style.display = 'none';
+        if (imgHover6) imgHover6.style.display = 'none';
     }
 
     // Hàm hiển thị hình ảnh dựa trên chỉ số màu sắc
     function showImage(index) {
         hideAllImages();
-        if (index === 0) imgHover2.style.display = 'block'; // Hiện ảnh 3
-        else if (index === 1) imgHover3.style.display = 'block'; // Hiện ảnh 4
-        else if (index === 2) imgHover5.style.display = 'block'; // Hiện ảnh 6
+        if (index === 0 && imgHover2) imgHover2.style.display = 'block'; // Hiện ảnh 3
+        else if (index === 1 && imgHover3) imgHover3.style.display = 'block'; // Hiện ảnh 4
+        else if (index === 2 && imgHover5) imgHover5.style.display = 'block'; // Hiện ảnh 6
     }
 
     // Khi di chuột vào product-block
     block.addEventListener('mouseenter', () => {
         if (selectedColorIndex === null) {
-            imgDefault.style.display = 'block'; // Hiện ảnh mặc định
-            imgHover1.style.display = 'none'; // Ẩn ảnh 2
+            if (imgDefault) imgDefault.style.display = 'block'; // Hiện ảnh mặc định
+            if (imgHover1) imgHover1.style.display = 'none'; // Ẩn ảnh 2
         } else {
             showImage(selectedColorIndex); // Hiện ảnh tương ứng nếu đã chọn màu
         }
@@ -60,14 +60,14 @@ document.querySelectorAll('.product-block').forEach(block => {
     // Khi rời khỏi product-block
     block.addEventListener('mouseleave', () => {
         hideAllImages(); // Ẩn tất cả ảnh hover
-        imgDefault.style.display = 'block'; // Hiện ảnh mặc định
+        if (imgDefault) imgDefault.style.display = 'block'; // Hiện ảnh mặc định
     });
 
     // Xử lý hover vào các tùy chọn màu sắc
     block.querySelectorAll('.color-option').forEach((option, index) => {
         option.addEventListener('mouseenter', () => {
             selectedColorIndex = index; // Lưu chỉ số ô màu sắc đã chọn
-            imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
+            if (imgDefault) imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
             showImage(index); // Hiện ảnh tương ứng
         });
 
@@ -75,19 +75,18 @@ document.querySelectorAll('.product-block').forEach(block => {
             if (selectedColorIndex !== null) {
                 showImage(selectedColorIndex); // Giữ ảnh đã chọn
             } else {
-                imgDefault.style.display = 'block'; // Hiện ảnh mặc định nếu không có lựa chọn
+                if (imgDefault) imgDefault.style.display = 'block'; // Hiện ảnh mặc định nếu không có lựa chọn
             }
         });
     });
 
     // Khi di chuột vào Ảnh 1 (imgDefault) sẽ hiển thị Ảnh 2 (imgHover1) nếu chưa chọn màu
-    imgDefault.addEventListener('mouseenter', () => {
+    if (imgDefault) imgDefault.addEventListener('mouseenter', () => {
         if (selectedColorIndex === null) {
-            imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
-            imgHover1.style.display = 'block'; // Hiện ảnh 2
+            if (imgDefault) imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
+            if (imgHover1) imgHover1.style.display = 'block'; // Hiển thị ảnh 2
         }
     });
-
     // Khi rời khỏi Ảnh 2 (imgHover1)
     imgHover1.addEventListener('mouseleave', (event) => {
         if (event.relatedTarget && block.contains(event.relatedTarget)) {
@@ -98,38 +97,92 @@ document.querySelectorAll('.product-block').forEach(block => {
             imgDefault.style.display = 'block'; // Hiện ảnh mặc định
         }
     });
-
-    // Khi di chuột vào ảnh 3 (imgHover2)
-    imgHover2.addEventListener('mouseenter', () => {
-        imgHover2.style.display = 'none';
-        imgHover1.style.display = 'block'; // Hiện ảnh 2 khi vào ảnh 3
+    // Khi di chuột vào Ảnh 3 (imgHover2) sẽ hiển thị Ảnh 2 và Ẩn ảnh 3
+    if (imgHover2) imgHover2.addEventListener('mouseenter', () => {
+        if (imgHover1) imgHover1.style.display = 'block'; // Hiển thị ảnh 2 khi di chuột vào ảnh 3
+        if (imgHover2) imgHover2.style.display = 'none';  // Ẩn ảnh 3 khi di chuột vào ảnh 3
     });
 
-    // Xử lý các sự kiện hover cho các ảnh khác...
-    imgHover3.addEventListener('mouseenter', () => {
-        imgHover3.style.display = 'none';
-        imgHover4.style.display = 'block'; // Hiện ảnh 5
+    // Khi di chuột vào Ảnh 4 (imgHover3) sẽ hiển thị Ảnh 5 và Ẩn ảnh 4
+    if (imgHover3) imgHover3.addEventListener('mouseenter', () => {
+        if (imgHover4) imgHover4.style.display = 'block'; // Hiển thị ảnh 5 khi di chuột vào ảnh 4
+        if (imgHover3) imgHover3.style.display = 'none';  // Ẩn ảnh 4 khi di chuột vào ảnh 4
     });
-
     imgHover4.addEventListener('mouseleave', (event) => {
         if (event.relatedTarget && block.contains(event.relatedTarget)) {
             imgHover4.style.display = 'none';
             imgHover3.style.display = 'block'; // Hiện ảnh 4 khi rời khỏi ảnh 5
         }
     });
-
-    imgHover5.addEventListener('mouseenter', () => {
-        imgHover5.style.display = 'none';
-        imgHover6.style.display = 'block'; // Hiện ảnh 7
+    // Khi di chuột vào Ảnh 6 (imgHover5) sẽ hiển thị Ảnh 7 và Ẩn ảnh 6
+    if (imgHover5) imgHover5.addEventListener('mouseenter', () => {
+        if (imgHover6) imgHover6.style.display = 'block'; // Hiển thị ảnh 7 khi di chuột vào ảnh 6
+        if (imgHover5) imgHover5.style.display = 'none';  // Ẩn ảnh 6 khi di chuột vào ảnh 6
     });
-
-    imgHover6.addEventListener('mouseleave', (event) => {
+    if (imgHover6) imgHover6.addEventListener('mouseleave', (event) => {
         if (event.relatedTarget && block.contains(event.relatedTarget)) {
-            imgHover6.style.display = 'none';
-            imgHover5.style.display = 'block'; // Hiện ảnh 6 khi rời khỏi ảnh 7
+            if (imgHover6) imgHover6.style.display = 'none';
+            if (imgHover5) imgHover5.style.display = 'block'; // Hiện ảnh 6 khi rời khỏi ảnh 7
         }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelectorAll('.color-option').forEach(item => {
+    item.addEventListener('mouseenter', function () {
+        // Hiển thị phần size ngay khi di chuột vào ô màu
+        document.querySelector('.product-sizes').style.display = 'block';
+        
+        // Loại bỏ lớp active khỏi tất cả ô màu sắc
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.classList.remove('active');
+        });
+
+        // Thêm lớp active cho ô màu sắc hiện tại khi hover vào
+        item.classList.add('active');
+    });
+
+    item.addEventListener('mouseleave', function () {
+        // Không làm gì khi chuột di chuyển ra ngoài ô màu, vì bạn muốn giữ size hiển thị
+    });
+    
+});
+
+document.querySelectorAll('.size-option').forEach(item => {
+    item.addEventListener('mouseenter', function () {
+        // Hiển thị phần size ngay khi di chuột vào
+        document.querySelector('.product-sizes').style.display = 'block';
+        
+        // Đảm bảo tất cả các size không được chọn trước đó
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.classList.remove('selected');
+        });
+
+        // Thêm lớp selected cho size hiện tại khi hover vào
+        item.classList.add('selected');
+    });
+
+    item.addEventListener('mouseleave', function () {
+        // Không làm gì khi chuột di chuyển ra ngoài ô kích thước
+    });
+});
+
+
+
+
+
+
 
 
 
