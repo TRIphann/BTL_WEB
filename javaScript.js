@@ -213,7 +213,45 @@ $(document).ready(function() {
 
 
 
+const productCards = document.querySelectorAll('.product-card');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const productList = document.querySelector('.h5_image');
 
+let currentIndex = 0;
 
+// Hàm để cập nhật hiển thị sản phẩm
+function updateProducts() {
+  // Ẩn tất cả các sản phẩm
+  productCards.forEach((card) => {
+    card.classList.add('hidden');
+  });
 
+  // Hiển thị 4 sản phẩm tiếp theo
+  for (let i = currentIndex; i < currentIndex + 4; i++) {
+    if (productCards[i]) {
+      productCards[i].classList.remove('hidden');
+    }
+  }
+}
 
+// Chuyển sang nhóm sản phẩm tiếp theo
+nextButton.addEventListener('click', () => {
+  currentIndex += 4; // Tăng 4 mỗi lần nhấn "next"
+  if (currentIndex >= productCards.length) {
+    currentIndex = 0; // Quay lại đầu danh sách khi đến cuối
+  }
+  updateProducts();
+});
+
+// Chuyển về nhóm sản phẩm trước đó
+prevButton.addEventListener('click', () => {
+  currentIndex -= 4; // Giảm 4 mỗi lần nhấn "prev"
+  if (currentIndex < 0) {
+    currentIndex = productCards.length - 4; // Quay lại cuối danh sách nếu index âm
+  }
+  updateProducts();
+});
+
+// Hiển thị sản phẩm ban đầu
+updateProducts();
