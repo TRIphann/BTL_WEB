@@ -741,8 +741,6 @@ section {
 .custom-bullet.active {
     border: 1px solid black;
 }
-
-
 .h5 h3
 {
     margin-top: 20px;
@@ -763,15 +761,28 @@ section {
 
 .h5 .h5_image
 {
-    padding-left: 47px;
-    padding-right: 47px;
-    margin-top: 26px;
+    padding: 0; /* Loại bỏ padding để các sản phẩm căn đều */
+    margin: 0 auto; /* Căn giữa toàn bộ container */
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Cho phép bọc các sản phẩm thành nhiều hàng */
+    justify-content: flex-start; /* Căn trái các sản phẩm */
+    max-width: 100%;
+    align-items: flex-start; /* Căn phần tử theo chiều dọc */
 }
-
+.h5 .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các sản phẩm xuống hàng */
+    justify-content: center; /* Căn giữa các sản phẩm */
+    margin-top: 19px;
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+    transform: scale(1.015); /* Zoom toàn bộ danh sách sản phẩm lên 5% */
+    margin-bottom: -70px;
+}
 .h5 
 {
+    position: relative;
     margin-top: 75px;
     margin-left: 20px;
     margin-right: 20px;
@@ -783,15 +794,115 @@ section {
 .h5 .h5_image li
 {
     list-style-type: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 8.5px; /* Thêm khoảng cách giữa các sản phẩm */
+    width: 23%; /* Đặt chiều rộng của mỗi sản phẩm để vừa 4 sản phẩm trên một hàng */
+    box-sizing: border-box;
+}
+/* Product card wrapper */
+.h5 .h5_image .product-card {
+    height: 508px;
+    position: relative;
+    border: 1px solid transparent;
+    text-align: center;
+    margin-top: 0; /* Đảm bảo không bị lệch */
+
+}
+.h5 .h5_image .product-card:hover {
+    border: 1px solid #eee; /* Viền khi hover */
+}
+.h5 .h5_image .image {
+    position: relative;
+    overflow: hidden;
 }
 
+.h5 .h5_image .image .image_after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.h5 .h5_image .image:hover .image_before {
+    opacity: 0;
+}
+
+.h5 .h5_image .image:hover .image_after {
+    opacity: 1;
+}
 .h5 .h5_image .h5_information
 {
     font-size: 13px;
     margin-top: 45px;
+    text-align: center;
 }
+.h5 .h5_image .product-card .detail_overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    opacity: 0;
+    font-size: 14px;
+
+}
+.h5 .h5_image .product-card:hover .detail_overlay {
+    bottom: -40px;
+    opacity: 1;
+}
+/* CSS for hidden products */
+.h5 .prev, .h5 .next {
+    position: absolute;
+    top: 51.5%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid #eee;
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 30px; /* Đặt kích thước chiều rộng */
+    height: 30px; /* Đặt kích thước chiều cao */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 10; /* Đảm bảo mũi tên luôn ở trên các sản phẩm */
+}
+.h5 .prev {
+    left: 80px;
+}
+
+.h5 .next {
+    right: 80px;
+}
+
+.hidden {
+    display: none;
+} 
+
+.pc1{
+    top: -17px;
+}
+
+.pc2{
+    top: -17px;
+}
+
+.pc3{
+    top: -17px;
+}
+
+.pc4{
+    top: -17px;
+}
+
+  
+
+
 
 
 
