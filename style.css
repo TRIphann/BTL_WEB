@@ -72,7 +72,7 @@ body
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 55px;
+    margin-left: 165px;
 }
 
 .navbar_list_ {
@@ -186,8 +186,6 @@ body
    
     
 }
-
-
 .navbar_input input 
 {
     font-size: 13px;
@@ -252,11 +250,6 @@ body
     width: 50%; /* Kéo dài sang bên phải */
     transform: translateX(100%); /* Di chuyển sang phải */
 }
-
-  
-
-  
-
 .navbar_user #shoppingcart
 {
     cursor: pointer;
@@ -276,17 +269,19 @@ body
     width: 100%;
     display: block; /* Ngăn ngừa khoảng trống dưới ảnh */
 }
+
   
 .arrow {
     position: absolute;
     top: 50%;
-    font-weight: lighter;
+    font-weight: 100;
     line-height: 100;
     transform: translateY(-50%);
     font-size: 60px;
     color: #333;
     cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
 }
+
 
 .left {
     left: 20px;
@@ -386,14 +381,14 @@ body
     position: relative;
     overflow: hidden;
 }
-.product-img .img-loop {
-    width: 100%;
-    transition: opacity 0.3s ease;
-}
 .product-img .img-hover {
-    width: 100%;
     display: none;
 }
+
+.product-img .img-loop {
+    display: block;
+}
+
 
 .product-img:hover .img-loop {
     display: none;
@@ -420,7 +415,7 @@ body
 
 /* Buy Now Button */
 .btn-buy {
-    margin-top: 25px;
+    margin-top: 15px;
     margin-bottom: 10px;
     padding: 8px 31px;
     background-color: black;
@@ -457,18 +452,54 @@ body
 }
 .color-option {
     display: inline-block;
-    transition: transform 0.1s ease, border 0.1s ease; /* Thêm hiệu ứng cho chuyển đổi */
+    transition: transform 0.3s ease, border 0.3s ease; /* Thêm hiệu ứng cho chuyển đổi */
     padding: 3px; /* Thêm khoảng đệm cho ô màu sắc */
     border-radius: 50%; /* Đảm bảo viền vẫn giữ hình tròn */
     box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
     width: 30px; /* Kích thước cố định cho ô màu sắc */
     height: 30px; /* Kích thước cố định cho ô màu sắc */
+    cursor: pointer; /* Thêm con trỏ khi di chuột vào */
 }
 
-.color-option.active {
-    transform: scale(1.1); /* Phóng to lên 20% */
-    outline: 1px solid gray; /* Viền xung quanh */
+/* Khi di chuột vào hoặc ô được chọn, ô sẽ phóng to */
+.color-option:hover, .color-option.active {
+    transform: scale(1.1); /* Phóng to lên 10% */
+    border: 1px solid gray; /* Thêm viền đen khi di chuột hoặc ô được chọn */
 }
+
+/* Khi không có hành động, giữ ô màu sắc bình thường */
+.color-option:not(.active):not(:hover) {
+    border: none; /* Không có viền khi không chọn và không hover */
+}
+
+
+
+
+/* Đảm bảo size-option luôn hiển thị border khi hover */
+.product-sizes .size-option {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 5px;
+    cursor: pointer;
+    border: 1px solid transparent; /* Không có border ban đầu */
+}
+
+/* Khi hover vào size-option, border sẽ xuất hiện và được chọn */
+.product-sizes .size-option.hovered,
+.product-sizes .size-option.selected {
+    border: 1px solid gray; /* Màu border khi hover hoặc khi đã chọn */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -486,7 +517,7 @@ body
 
 .h3 h3 
 {
-    margin-top: 100px;
+    margin-top: 75px;
     text-align: center;
 }
 
@@ -494,12 +525,11 @@ body
 {
     padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 100px;
 }
 
 .h3 .h3_image
 {
-    margin-top: 30px;
+    margin-top: 17px;
     display: flex;
     justify-content: space-around;
 }
@@ -514,8 +544,8 @@ body
 .h3 .hr3
 {
     margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
     height: 0;
     box-sizing: content-box;
     border-top: 1px solid #eee;
@@ -528,65 +558,41 @@ body
 
 .h3 .h3_hr .h3_image .h3_information
 {
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
-.h4 .h4_hr #video
-{
-    margin-top: 50px;
-    position: relative;
+
+.h4 {
+    margin: 0; /* Xóa khoảng cách ngoài (margin) của phần tử h4 */
+    padding: 0; /* Xóa khoảng đệm bên trong (padding) của phần tử h4 */
+    width: 100%; /* Đảm bảo phần tử chiếm hết chiều rộng của container */
 }
-
-.h4
-{
-    padding-left: 100px;
-    padding-right: 100px;
-    margin-top: 30px;
-    padding-top: 50px;
-    text-align: center;
-
-}
-
 .h4 .hr4
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-top: 40px;
+    margin-left: 104px;
+    margin-right: 104px;
     height: 0;
     box-sizing: content-box;
     border-top: 1px solid #eee;
 }
 
-.h4 .h4_hr
-{
-    margin-top: 40px;
-    display: flex;
+.h4 h3{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align: center;
 }
 
-.h4 .h4_hr h3 
-{
-    margin-top: 150px;
+.h4 section {
+    width: 100%; /* Đảm bảo phần tử section chiếm hết chiều rộng của container */
+    padding: 0; /* Xóa padding của section */
+    margin: 0; /* Xóa margin của section */
 }
-
-.h4 .h4_hr .video .video_information
-{
-    margin-top: 30px;
-    position: relative;
-}
-
-.h4 .h4_hr .video .video_information #video_information2
-{
-    margin-top: 30px;
-    padding-left: 280px;
-    padding-right: 280px;
-    color: gray;
-    font-size: 18px;
-}
-
 .h4 .khamphangay
 {
-    margin-top: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 44px;
 }
 
 .h4 .khamphangay a
@@ -598,22 +604,151 @@ body
 
 .h4 .khamphangay hr
 {
-    width: 120px;
-    margin-top: 10px ;
+    width: 130px;
+    margin-top: 5px ;
     border: 1.3px solid gray;
-    margin-left: 575px;
+    margin-left: 694px;
+}
+/* Container cho video slider */
+section {
+    position: relative; /* Định vị tương đối */
+    max-width: 1519px; /* Độ rộng tối đa cho section là 1500px */
+    margin: auto; /* Căn giữa section theo chiều ngang */
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    overflow: hidden; /* Ẩn phần nội dung bị tràn */
+}
+.swiper-slide {
+    left: 4px;
+    position: relative; /* Đảm bảo swiper-slide có vị trí tương đối để các phần tử con có thể căn chỉnh chính xác */
+    width: 100%; /* Đảm bảo slide chiếm 100% chiều rộng */
+    display: flex; /* Sử dụng flexbox cho mỗi slide */
+    justify-content: center; /* Căn giữa nội dung trong mỗi slide */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+}
+.swiper-slide .video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Tạo tỷ lệ 16:9 */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.swiper-slide .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Giữ tỷ lệ video mà không bị bóp méo */
+    border: none;
+    transform: scale(1.12); /* Phóng to video thêm 10% */
+}
+
+/* Kiểu cho thông tin video */
+.video_information {
+    text-align: center; /* Căn giữa văn bản trong phần thông tin */
+    margin-top: 50px; /* Khoảng cách giữa video và phần thông tin */
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng với độ trong suốt 80% */
+    padding: 15px; /* Khoảng đệm bên trong */
+    max-width: 800px; /* Độ rộng tối đa cho phần thông tin */
+    margin-left: auto; /* Căn giữa phần thông tin theo chiều ngang */
+    margin-right: auto; /* Căn giữa phần thông tin theo chiều ngang */
+    border-radius: 8px; /* Bo tròn các góc */
+}
+
+/* Kiểu chữ bên trong phần thông tin video */
+#video_information1 {
+    font-size: 24px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    color: #333; /* Màu chữ đậm */
+    margin-bottom: 30px;
+}
+
+#video_information2 {
+    font-size: 16px; /* Kích thước chữ nhỏ hơn */
+    color: #555; /* Màu chữ xám nhạt */
+}
+
+/* Container cho các nút điều khiển swiper */
+.swiper-btns {
+    position: absolute; /* Định vị tuyệt đối */
+    top: 32%; /* Vị trí cách đầu container 50% chiều cao */
+    width: 100%; /* Chiếm toàn bộ chiều rộng container */
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    justify-content: space-between; /* Căn đều hai nút sang hai bên */
+    transform: translateY(-50%); /* Dịch chuyển lên 50% chiều cao của nút */
+    z-index: 10; /* Đảm bảo nút ở lớp trên cùng */
+}
+
+.swiper-button-prev::after,
+.swiper-button-prev::before {
+    display: none !important; /* Ẩn biểu tượng SVG mặc định của Swiper */
+}
+.swiper-button-next::after,
+.swiper-button-next::before {
+    display: none !important; /* Ẩn biểu tượng SVG mặc định của Swiper */
+}
+
+.swiper-button-prev {
+    margin-left: 70px;
+    background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/leftt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
+    background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 36px;
+    color: transparent;          /* Ẩn màu của mũi tên mặc định */
+}
+.swiper-button-next {
+    margin-right: 70px;
+    background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/rightt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
+    background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 36px;
+    color: transparent;          /* Ẩn màu của mũi tên mặc định */
+}
+
+
+
+/* Ẩn phân trang mặc định của Swiper */
+.swiper-pagination {
+    display: none !important;
+}
+
+/* Phân trang tùy chỉnh */
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.custom-bullet {
+    display: inline-block;
+    width: 24px;  /* Kích thước dấu gạch */
+    height: 3px;
+    margin: 0 5px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+}
+
+.custom-bullet.active {
+    border: 1px solid black;
+}
 .h5 h3
 {
-    margin-top: 150px;
+    margin-top: 20px;
 }
 .h5 .hr5 
 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
     height: 0;
     box-sizing: content-box;
     border-top: 1px solid #eee;
@@ -626,16 +761,29 @@ body
 
 .h5 .h5_image
 {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+    padding: 0; /* Loại bỏ padding để các sản phẩm căn đều */
+    margin: 0 auto; /* Căn giữa toàn bộ container */
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Cho phép bọc các sản phẩm thành nhiều hàng */
+    justify-content: flex-start; /* Căn trái các sản phẩm */
+    max-width: 100%;
+    align-items: flex-start; /* Căn phần tử theo chiều dọc */
 }
-
+.h5 .product-list {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các sản phẩm xuống hàng */
+    justify-content: center; /* Căn giữa các sản phẩm */
+    margin-top: 19px;
+    padding: 0;
+    max-width: 100%;
+    list-style: none;
+    transform: scale(1.015); /* Zoom toàn bộ danh sách sản phẩm lên 5% */
+    margin-bottom: -70px;
+}
 .h5 
 {
-    margin-top: 200px;
+    position: relative;
+    margin-top: 75px;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
@@ -646,18 +794,122 @@ body
 .h5 .h5_image li
 {
     list-style-type: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 8.5px; /* Thêm khoảng cách giữa các sản phẩm */
+    width: 23%; /* Đặt chiều rộng của mỗi sản phẩm để vừa 4 sản phẩm trên một hàng */
+    box-sizing: border-box;
+}
+/* Product card wrapper */
+.h5 .h5_image .product-card {
+    height: 508px;
+    position: relative;
+    border: 1px solid transparent;
+    text-align: center;
+    margin-top: 0; /* Đảm bảo không bị lệch */
+
+}
+.h5 .h5_image .product-card:hover {
+    border: 1px solid #eee; /* Viền khi hover */
+}
+.h5 .h5_image .image {
+    position: relative;
+    overflow: hidden;
 }
 
+.h5 .h5_image .image .image_after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.h5 .h5_image .image:hover .image_before {
+    opacity: 0;
+}
+
+.h5 .h5_image .image:hover .image_after {
+    opacity: 1;
+}
 .h5 .h5_image .h5_information
 {
-    margin-top: 10px;
+    font-size: 13px;
+    margin-top: 45px;
+    text-align: center;
 }
+.h5 .h5_image .product-card .detail_overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    opacity: 0;
+    font-size: 14px;
+
+}
+.h5 .h5_image .product-card:hover .detail_overlay {
+    bottom: -40px;
+    opacity: 1;
+}
+/* CSS for hidden products */
+.h5 .prev, .h5 .next {
+    position: absolute;
+    top: 51.5%;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid #eee;
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 30px; /* Đặt kích thước chiều rộng */
+    height: 30px; /* Đặt kích thước chiều cao */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0 10px;
+    z-index: 10; /* Đảm bảo mũi tên luôn ở trên các sản phẩm */
+}
+.h5 .prev {
+    left: 80px;
+}
+
+.h5 .next {
+    right: 80px;
+}
+
+.hidden {
+    display: none;
+} 
+
+.pc1{
+    top: -17px;
+}
+
+.pc2{
+    top: -17px;
+}
+
+.pc3{
+    top: -17px;
+}
+
+.pc4{
+    top: -17px;
+}
+
+  
+
+
+
+
 
 .h6 img 
 {
-    max-width: 100%;
+    max-width: 97%;
+    margin-left: 8px;
 }
 .h6 .h6_title_list h3{
     margin-top: 20px;
@@ -666,13 +918,12 @@ body
 
 .h6 .h6_title_list
 {
-    margin-top: -20px;
     font-size: 18px;
     text-align: center;
 }
 .h6_title_list p{ /*chu @juno*/
     margin-top: 2px;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: -15px;
 }
 .h6 .h6_title 
@@ -688,25 +939,24 @@ body
 
 .h6 .h6_title hr 
 {
-    width: 500px;
+    width: 515px;
     padding-left: 30px;
 }
 .h6_hr1, .h6_hr2 {
     border: none; /* Xóa viền mặc định */
     height: 1px; /* Chiều cao của thanh hr */
     background-color: rgb(206, 205, 205); /* Màu sắc thanh hr */
-    width: 80%;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 .h6_hr1 {
-    margin-left: 50px;
-    margin-top: 20px;
+    margin-left: 65px;
+    margin-top: 40px;
     
 }
 
 .h6_hr2 {
-    margin-right: 50px;
-    margin-top: 20px;
+    margin-right: 65px;
+    margin-top: 40px;
     
 }
 
@@ -720,30 +970,37 @@ body
 .h6 .h6_image li 
 {
     list-style-type: none;
-    padding-left: 10px;
+    padding-left: -1px;
 }
 
 .h6 .h6_image
 {
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .h6 
 {
     margin-top: 200px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 55px;
+    margin-right: 55px;
     padding-left: 40px;
     padding-right: 40px;
 }
+.h6 h3{
+    font-size: 20px;
+}
 .hr6 {
-  width: 100%; /* Chiếm 100% chiều rộng của phần tử cha */
+  width: 98.75%; /* Chiếm 100% chiều rộng của phần tử cha */
   height: 0.5px; /* Độ dày 0.5 pixel */
   border: none; /* Không có viền */
   background-color: #e7e4e4; /* Màu xám nhạt */
-  margin-top: 50px; /* Cách các phần tử khác 20px ở trên và dưới, căn giữa */
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  margin: 40px 11px;
+
 }
+
+
+
 .h7 img 
 {
     width: calc(100% - 120px);
@@ -772,36 +1029,25 @@ body
 .h7 .h7_1
 {
     width: 400px;
+    margin-left: 55px;
+    line-height: 1.7;
 }
 
 .h7 .h7_1 .h7_12{
-    margin-top: 30px;
+    margin-top: 25px;
+}
+.h7 .h7_2{
+    width: 400px;
+    margin-left: 20px;
+    margin-right: -75px;
 }
 
-.h7 .h7_1 .h7_1_1 p
-{
-    margin-top: 2px;
-    margin-bottom: 5px;
-    text-decoration-color: #eee;
-    font-size: 15px;
-}
-.h7 .h7_1 .h7_1_2 p
-{
-    margin-top: 2px;
-    margin-bottom: 5px;
-    text-decoration-color: #eee;
-    font-size: 15px;
-}
-.h7_1_2{
-    padding-top: 25px;
-}
 
 
 
 .h7 .h7_2 .h7_22
 {
     margin-bottom: 10px;
-    font-size: 15px;
 }
 
 .h7 .h7_2 .h7_22_information
@@ -817,24 +1063,28 @@ body
 
 .h7 .h7_2 img
 {
-    width: 400px;
+    width: 410px;
 }
+
 .fa-play {
   color: gray; /* Đặt màu thành xám */
   font-size: 5px; /* Điều chỉnh kích thước */
   margin-left: 5px; /* Tạo khoảng cách với nội dung */
   vertical-align:auto;
 }
-
+.h7 .h7_3{
+    width: 400px;
+}
 .h7 .h7_3 .h7_33
 {
-    margin-bottom: 2px;
-    font-size: 15px ;
+    margin-bottom: 12px;
+    margin-left: 96px;
 }
 
 .h7 .h7_3 img
 {
-    width: 400px;
+    width: 410px;
+    margin-left: 96px;
 }
 
 .h7_33_information {
@@ -843,25 +1093,23 @@ body
     padding: 0; /* Xóa khoảng cách mặc định */
     margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
 }
-.h7_33_information:hover{
-    color: black;
-    cursor: pointer;
-}
 
 .h7_33_information li {
-    margin-right: 30px;/*khoang cách giữa các biểu tượng*/
+    margin-right: 35px;/*khoang cách giữa các biểu tượng*/
     margin-top: -30px;
     margin-left: -40px;
-    font-size: 20px;
+    font-size: 18px;
    
 }
 
 .h7_33_information li:last-child {
     margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
 }
-.fa-play{
-    font-size: 5px;
-}
+
+
+
+
+
 
 .h8 
 {
@@ -873,9 +1121,10 @@ body
 {
     display: flex;
     background-color: rgb(245, 245, 245);
-    width: 1500px;
-    height: 70px;
+    width: 1519px;
+    height: 76px;
     margin-top: -15px;
+    margin-bottom: 13px;
 }
 
 .h8 .h8_1 ul li 
@@ -886,7 +1135,8 @@ body
 
 .h8 .h8_1 .h8_1_1 
 {   
-    margin-left: 100px;
+    font-size: 13px;
+    margin-left: 110px;
     position: relative;
     margin-top: 15px;
 }
@@ -897,7 +1147,10 @@ body
     position: relative;
     margin-top: 15px;
 }
-
+.h8 .h8_1_2{
+    font-size: 13px;
+    left: 75px;
+}
 .h8 .h8_1 ul li p 
 {
     font-size: 13px;
@@ -906,7 +1159,8 @@ body
 .h8 .h8_1 ul li i 
 {
     position: absolute;
-    right: -20px;
+    right: -16px;
+    margin-top: 3px;
     top: 0px;
     cursor: pointer;
 }
@@ -931,7 +1185,8 @@ body
     display: flex; /* Hiển thị theo hàng ngang */
     align-items: center; /* Căn giữa theo chiều dọc */
     padding: 15px 0;
-    margin-top: -10px;
+    margin-top: -51px;
+    margin-left: -10px;
     font-weight:lighter;
 }
 .h8_2_1 i {
@@ -940,7 +1195,6 @@ body
 .fa-chevron-down{
     font-size: 10px;
 }
-
 
 
 .h8 .h8_2 .h8_2_2
@@ -954,47 +1208,58 @@ body
 
 .h8 .h8_2 .h8_2_2 img
 {
-    padding-left: 90px;
-    width: 200px;
-    margin-right: -10px;
-    margin-top: 10px;
+    padding-left: 95px;
+    width: 195px;
+    margin-right: -129px;
+    margin-top: 0;
 }
 
-.h8 .h8_2 .h8_2_2 p 
+.h8 .h8_2_2 p 
 {
     margin-top: 2.5px;
-    margin-left: 10px;
-    font-size: 15px;
+    font-size: 13px;
+    margin-bottom: 13px;
+    position: relative;
+    left: 69px; /* Điều chỉnh giá trị để nhích chữ qua phải */
 }
 
-.return a
-{
-    text-decoration: none;
-}
 
-.return
-{
+.return {
     position: fixed;
-    top: 600px;
-    right: 10px;
-    display: inline;
-    width: 20px;
-    height: 40px;
+    bottom: 105px; /* Đặt vị trí gần cuối trang */
+    right: -15px;
     display: flex;
     flex-direction: column-reverse;
-    opacity: 0.3;
+    align-items: center;
+    opacity: 0; /* Ban đầu là ẩn */
     cursor: pointer;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Thêm hiệu ứng visibility */
+
 }
 
-.return p 
-{
-    font-size: 11px;
+.return p {
+    font-size: 12px;
+    transform: rotate(-90deg); /* Xoay văn bản dọc */
+    white-space: nowrap;
+    font-weight: bold; /* In đậm chữ */
+    color: rgb(0, 0, 0); /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
 }
 
-.return i 
-{
-    font-size: 30px;
+.return i {
+    position: relative;
+    bottom: 48px;
+    font-size: 25px; /* Điều chỉnh kích thước của mũi tên */
 }
+
+.vertical-line {
+    position: relative;
+    width: 1.4px; /* Độ dày của dấu gạch */
+    height: 25px; /* Chiều dài của dấu gạch */
+    background-color: black; /* Màu sắc của dấu gạch */
+    bottom: 15px;
+}
+
 
 .user 
 {

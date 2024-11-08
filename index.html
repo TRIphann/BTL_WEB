@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giày Nữ Thời Trang - Giày Công Sở, Giày Đi Chơi, Giày Dự Tiệc - JUNO</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
     
@@ -37,10 +40,10 @@
             </ul>
             <ul class="navbar_list">
                 <li class="navbar_list_">
-                    <a href="./hàng mới/hangmoi.html" style="color: #252A2B;">HÀNG MỚI</a>
+                    <a style="color: #252A2B;">HÀNG MỚI</a>
                 </li>
                 <li class="navbar_list_">
-                    <a href="./sanpham/sanpham.html" class="sanpham" style="color: #252A2B;">SẢN PHẨM</a>
+                    <a class="sanpham" style="color: #252A2B;">SẢN PHẨM</a>
                     <div class="sanpham_list">
                         <div class="sanpham_list_">
                             <ul>
@@ -162,14 +165,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <p class="sanpham_list_information">Miễn phí giao hàng toàn quốc với hóa đơn từ 300.000 đồng | Thời gian đổi trả sản phẩm lên đến 30 ngày</p>
                     </div>
                 </li>
                 <li class="navbar_list_">
-                    <a class=navbar_list_a href="./saleduongsinh/saleduongsinh.html" style="color: #F40000;">SALE THƯƠNG THƯƠNG</a>
+                    <a class=navbar_list_a style="color: #F40000;">SALE</a>
                 </li>
                 <li class="navbar_list_">
-                    <a class=navbar_list_a href="./saledonggiatu99k/saledongiatu99k.html" style="color: #F40000;">QUẦN ÁO SALE UPTO 50%</a>
+                    <a class=navbar_list_a style="color: #F40000;">QUẦN ÁO SALE TỪ 90K</a>
                 </li>
                 <li class="navbar_list_">
                     <a href="./showroom/showroom.html" class="showroom" style="color: #252A2B;">SHOWROOM</a>
@@ -183,12 +185,11 @@
                 <i class="fa-solid fa-bag-shopping" id="shoppingcart" style="color: #000000;"></i>
             </ul>
         </nav>
+        
         <div class="h1">
             <i class="fas fa-angle-left arrow left"></i>
             <img src="./Image/h1_files/h13.webp" alt="">
             <i class="fas fa-angle-right arrow right"></i>
-            
-            
         </div>
         <script>
             var slideIndex = 0;
@@ -244,7 +245,10 @@
                             <img src="Image/h2_files/TXNBH2.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
                             <img src="Image/h2_files/TXNBH3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
                             <img src="Image/h2_files/TXNBH4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
-                            <img src="Image/h2_files/TXNBH5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <img src="Image/h2_files/TXNBH5.jpeg" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <img src="Image/h2_files/TXNBH6.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                            <img src="Image/h2_files/TXNBH7.webp" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
+
                             <span class="hang-moi">Hàng Mới</span>
                         </div>
                         <div>
@@ -254,19 +258,17 @@
                         </div>
                         <div class="pro-options">
                             <div class="pro-colors">
-                                <img src="Image/h2_files/TXNBHW.webp" alt="Màu sắc 1" class="color-option">
-                                <img src="Image/h2_files/TXNBHB.webp" alt="Màu sắc 2" class="color-option">
-                                <img src="Image/h2_files/TXNBHBR.jpeg" alt="Màu sắc 3" class="color-option">
+                                <img src="Image/h2_files/TXNBHW.webp" alt="Màu sắc 1" class="color-option" onclick="selectColor(this)">
+                                <img src="Image/h2_files/TXNBHB.webp" alt="Màu sắc 2" class="color-option" onclick="selectColor(this)">
+                                <img src="Image/h2_files/TXNBHBR.jpeg" alt="Màu sắc 3" class="color-option" onclick="selectColor(this)">
                             </div>
                             <button class="btn-buy">Mua Ngay</button>
                         </div>
                     </div>
-                    
                 </li>
                 <li>
                     <div class="product-block">
                         <div class="product-img">
-                            <picture>
                                 <img src="Image/h2_files/GCGQMJ1.webp" alt="Ảnh 1" class="img-loop img-default">
                                 <img src="Image/h2_files/GCGQMJ2.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
                                 <img src="Image/h2_files/GCGQMJ3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
@@ -275,7 +277,6 @@
                                 <img src="Image/h2_files/GCGQMJ6.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
                                 <img src="Image/h2_files/GCGQMJ7.webp" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
                                 <span class="hang-moi">Hàng Mới</span>
-                            </picture>
                         </div>
                         <div class="product-detail">
                             <p class="pro-name">Giày Cao Gót Quai Mary Jane</p>
@@ -287,20 +288,27 @@
                                 <img src="Image/h2_files/GCGQMJB.webp" alt="Màu sắc 2" class="color-option">
                                 <img src="Image/h2_files/GCGQMJW.webp" alt="Màu sắc 3" class="color-option">
                             </div>
+                            <div class="product-sizes">
+                                <span class="size-option">35</span>
+                                <span class="size-option">36</span>
+                                <span class="size-option">37</span>
+                                <span class="size-option">38</span>
+                                <span class="size-option">39</span>
+                            </div>
                             <button class="btn-buy">Mua Ngay</button>
                         </div>
                     </div>
                 </li>
+                <!-- Cập nhật sản phẩm 3 -->
                 <li>
                     <div class="product-block">
                         <div class="product-img">
-                            <picture>
-                                <img src="Image/h2_files/BBH1.webp" alt="Ảnh 1" class="img-loop img-default">
-                                <img src="Image/h2_files/BBH2.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
-                                <img src="Image/h2_files/BBH3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
-                                <img src="Image/h2_files/BBH4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
-                                <img src="Image/h2_files/BBH5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
-                            </picture>
+                            <img src="Image/h2_files/BBH1.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="Image/h2_files/BBH2.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="Image/h2_files/BBH3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="Image/h2_files/BBH4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="Image/h2_files/BBH5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <span class="hang-moi">Hàng Mới</span>
                         </div>
                         <div class="product-detail">
                             <p class="pro-name">Balo Bear Hug</p>
@@ -314,76 +322,32 @@
                             <button class="btn-buy">Mua Ngay</button>
                         </div>
                     </div>
-                    <script>
-                        document.querySelectorAll('.product-block').forEach(block => {
-                            const imgDefault = block.querySelector('.img-default'); // Ảnh mặc định
-                            const imgHover1 = block.querySelectorAll('.img-hover-1'); // Ảnh cho màu 1
-                            const imgHover2 = block.querySelectorAll('.img-hover-2'); // Ảnh cho màu 2
-                    
-                            let selectedColorIndex = null; // Biến lưu trữ chỉ số màu sắc đã chọn
-                    
-                            // Hàm ẩn tất cả các hình ảnh
-                            function hideAllImages() {
-                                imgDefault.style.display = 'none';
-                                imgHover1.forEach(img => img.style.display = 'none'); // Ẩn tất cả ảnh cho màu 1
-                                imgHover2.forEach(img => img.style.display = 'none'); // Ẩn tất cả ảnh cho màu 2
-                            }
-                    
-                            // Hàm hiển thị hình ảnh dựa trên chỉ số màu sắc
-                            function showImages(index) {
-                                hideAllImages();
-                                if (index === 0) {
-                                    imgHover1.forEach(img => img.style.display = 'block'); // Hiện tất cả ảnh cho màu 1
-                                } else if (index === 1) {
-                                    imgHover2.forEach(img => img.style.display = 'block'); // Hiện tất cả ảnh cho màu 2
-                                }
-                            }
-                    
-                            // Khi di chuột vào product-block
-                            block.addEventListener('mouseenter', () => {
-                                if (selectedColorIndex === null) {
-                                    imgDefault.style.display = 'block'; // Hiện ảnh mặc định
-                                } else {
-                                    showImages(selectedColorIndex); // Hiện ảnh tương ứng nếu đã chọn màu
-                                }
-                            });
-                    
-                            // Khi rời khỏi product-block
-                            block.addEventListener('mouseleave', () => {
-                                hideAllImages(); // Ẩn tất cả ảnh hover
-                                imgDefault.style.display = 'block'; // Hiện ảnh mặc định
-                            });
-                    
-                            // Xử lý hover vào các tùy chọn màu sắc
-                            block.querySelectorAll('.color-option').forEach((option, index) => {
-                                option.addEventListener('mouseenter', () => {
-                                    selectedColorIndex = index; // Lưu chỉ số ô màu sắc đã chọn
-                                    imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
-                                    showImages(index); // Hiện ảnh tương ứng
-                                });
-                    
-                                option.addEventListener('mouseleave', () => {
-                                    if (selectedColorIndex !== null) {
-                                        showImages(selectedColorIndex); // Giữ ảnh đã chọn
-                                    } else {
-                                        imgDefault.style.display = 'block'; // Hiện ảnh mặc định nếu không có lựa chọn
-                                    }
-                                });
-                            });
-                        });
-                    </script>
-                    
                 </li>
+
+                <!-- Cập nhật sản phẩm 4 -->
                 <li>
                     <div class="product-block">
                         <div class="product-img">
-                            <picture>
-                                <img class="img-loop" src="Image/h2_files/TXNTTK1.webp" alt="Túi Xách Nhỏ Bear Hug">
-                            </picture>
+                            <img src="Image/h2_files/TXNTTK1.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="Image/h2_files/TXNTTK2.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="Image/h2_files/TXNTTK3.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="Image/h2_files/TXNTTK4.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="Image/h2_files/TXNTTK5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <img src="Image/h2_files/TXNTTK6.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                            <img src="Image/h2_files/TXNTTK7.jpeg" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
+                            <span class="hang-moi">Hàng Mới</span>
                         </div>
                         <div class="product-detail">
                             <p class="pro-name">Túi Xách Nhỏ Trang Trí Khóa</p>
                             <p class="pro-price"><b>799,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="Image/h2_files/TXNTTKP.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="Image/h2_files/TXNTTKW.webp" alt="Màu sắc 2" class="color-option">
+                                <img src="Image/h2_files/TXNTTKB.webp" alt="Màu sắc 3" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
                         </div>
                     </div>
                 </li>
@@ -393,71 +357,32 @@
                 <hr>
             </div>
         </div>
-        
-        <script>
-            const colorOptions = document.querySelectorAll('.color-option');
-        
-            colorOptions.forEach((option, index) => {
-                option.addEventListener('mouseenter', () => {
-                    // Đặt tất cả các ảnh về trạng thái ban đầu
-                    const imgDefault = option.closest('.product-block').querySelector('.img-default');
-                    const imgHover1 = option.closest('.product-block').querySelector('.img-hover-1');
-                    const imgHover2 = option.closest('.product-block').querySelector('.img-hover-2');
-                    const imgHover3 = option.closest('.product-block').querySelector('.img-hover-3');
-        
-                    imgDefault.style.display = 'none'; // Ẩn ảnh mặc định
-                    imgHover1.style.display = 'none';   // Ẩn ảnh hover thứ nhất
-                    imgHover2.style.display = 'none';   // Ẩn ảnh hover thứ hai
-                    imgHover3.style.display = 'none';   // Ẩn ảnh hover thứ ba
-        
-                    // Nếu hover vào tùy chọn thứ hai thì hiện ảnh số 4
-                    if (index === 1) {
-                        imgHover3.style.display = 'block';
-                    } else {
-                        imgDefault.style.display = 'block'; // Hiển thị ảnh mặc định nếu không phải tùy chọn thứ hai
-                    }
-        
-                    // Xóa lớp 'active' từ tất cả các lựa chọn
-                    colorOptions.forEach(opt => opt.classList.remove('active'));
-                    // Thêm lớp 'active' cho lựa chọn đang được hover
-                    option.classList.add('active');
-                });
-        
-                option.addEventListener('mouseleave', () => {
-                    const imgDefault = option.closest('.product-block').querySelector('.img-default');
-                    const imgHover3 = option.closest('.product-block').querySelector('.img-hover-3');
-        
-                    imgDefault.style.display = 'block'; // Hiển thị ảnh mặc định khi rời chuột khỏi tùy chọn
-                    imgHover3.style.display = 'none';    // Ẩn ảnh 4 khi chuột không còn hover
-                });
-            });
-        </script>
         <div class="h3">
             <hr class="hr3">
             <div class="h3_hr">
-                <h3>NHÓM SẢN PHẨM ĐƯỢC QUAN TÂM NHẤT</h3>
+                <h3>BALO MỚI CHO MÙA TỰU TRƯỜNG</h3>
                 <ul class="h3_image">
                     <li>
                         <div>
-                            <img src="./Image/h31.jpg" alt="">
+                            <img src="./Image/h3_files/BL163.webp" alt="">
                             <div class="h3_information">
-                                <p>GIÀY SANDAL</p>
+                                <p>BL163</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <img src="./Image/h32.jpg" alt="">
+                            <img src="./Image/h3_files/BL119.webp" alt="">
                             <div class="h3_information">
-                                <p>TÚI XÁCH NHỎ</p>
+                                <p>BL119</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <img src="./Image/h33.jpg" alt="">
+                            <img src="./Image/h3_files/BL157.webp" alt="">
                             <div class="h3_information">
-                                <p>QUẦN ÁO THỜI TRANG</p>
+                                <p>BL157</p>
                             </div>
                         </div>
                     </li>
@@ -467,121 +392,213 @@
         <div class="h4">
             <hr class="hr4">
             <h3>BỘ SƯU TẬP</h3>
-            <div class="h4_hr"> 
-                <div class="video">
-                    <iframe style="margin-left: 40px; margin-right: 40px; width: 1200px; height: 600px;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="✨ SHAKE IT UP!! KHUẤY ĐỘNG NHỊP ĐIỆU THỜI TRANG ✨ SPECIAL COLLECTION 2022" width="100%" height="360" src="https://www.youtube.com/embed/sD5dcuu70JA?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=sD5dcuu70JA&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=1" data-gtm-yt-inspected-16="true"></iframe>
-                    <div class="video_information">
-                        <p style="font-weight: bold; font-size: 20px;" id="video_information1">SHAKE IT UP</p>
-                        <P style="font-size: 18px;" id="video_information2">
-                            Nguồn cảm hứng rực rỡ, sống động từ Bữa tiệc được tái hiện hoàn hảo trên từng 
-                            chi tiết giày túi và trang phục thời trang của bộ sưu tập Shake It Up! 
-                            Cổ vũ cho mỗi cô gái hãy khuấy động giai điệu thời trang của chính mình mỗi 
-                            ngày. Shake It Up!
-                        </P>
-                    </div>
+            <section>
+                <div class="swiper-btns">
+                    <div style="color: gray; " class="swiper-button-prev"></div>
+                    <div style="color: gray;" class="swiper-button-next"></div>
                 </div>
-                <div class="video">
-                    <iframe style="margin-left: 40px; margin-right: 40px; width: 1200px; height: 600px;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="JUNO ft MIU LÊ: SUMMER TASTE COLLECTION - BỘ SƯU TẬP ĐẶC BIỆT NHẤT DÀNH CHO MÙA HÈ 2021" width="100%" height="360" src="https://www.youtube.com/embed/M5sXSeqD9xU?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=M5sXSeqD9xU&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=2" data-gtm-yt-inspected-16="true"></iframe>
-                    <div class="video_information">
-                        <p style="font-weight: bold; font-size: 20px;" id="video_information1">SUMMER TASTE</p>
-                        <P style="font-size: 18px;" id="video_information2">
-                            Những chiếc túi kem thời trang, đầy cảm hứng từ nhiều sắc màu ngọt ngào và xu hướng thời trang hè 2021, SUMMER TASTE COLLECTION
-                             là sự kết hợp mới nhất của JUNO & Miu Lê để mang đến t
-                             hông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệ
-                             m & hương vị mùa hè khi đang độ rực rỡ nhất.
-                        </P>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="video">
+                            <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="✨ SHAKE IT UP!! KHUẤY ĐỘNG NHỊP ĐIỆU THỜI TRANG ✨ SPECIAL COLLECTION 2022" width="100%" height="360" src="https://www.youtube.com/embed/sD5dcuu70JA?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=sD5dcuu70JA&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=1" data-gtm-yt-inspected-16="true"></iframe>
+                        </div>
+                        <div class="video_information">
+                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">SHAKE IT UP</p>
+                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                                Nguồn cảm hứng rực rỡ, sống động từ Bữa tiệc được tái hiện hoàn hảo trên từng chi tiết giày
+                                túi và trang phục thời trang của bộ sưu tập Shake It Up! Cổ vũ cho mỗi cô gái hãy khuấy
+                                động giai điệu thời trang của chính mình mỗi ngày. Shake It Up!
+                            </P>
+                        </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="video">
+                            <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " width="100%" height="360" src="https://www.youtube.com/embed/M5sXSeqD9xU?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=M5sXSeqD9xU&enablejsapi=1&origin=https%3A%2F%2Fjuno.vn&widgetid=2" data-gtm-yt-inspected-16="true"></iframe>
+                        </div> 
+                        <div class="video_information">
+                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">SUMMER TASTE</p>
+                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                                Những chiếc túi kem thời trang, đầy cảm hứng từ nhiều sắc màu ngọt ngào và xu hướng thời
+                                trang hè 2021, SUMMER TASTE COLLECTION là sự kết hợp mới nhất của JUNO & Miu Lê để
+                                mang đến thông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệm & hương vị
+                                mùa hè khi đang độ rực rỡ nhất.
+                            </P>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="video">
+                            <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " width="100%" height="360" src="https://www.youtube.com/embed/kWSux5Nw_LI?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=kWSux5Nw_LI&enablejsapi=1&origin=https%3A%2F%2Fjuno.vn&widgetid=4S" data-gtm-yt-inspected-16="true"></iframe>
+                        </div>
+                        <div class="video_information">
+                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">IMPERFECT PERFECTION</p>
+                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                                Một năm 2020 không hoàn hảo, với thật nhiều thử thách, vụn vỡ cuối cùng đã sắp qua đi. Đã
+                                đến lúc nàng được nâng ly chúc mừng cho tinh thần mạnh mẽ, lạc quan của bản thân
+                            </P>
+                        </div>
+                    </div>  
+                    </div>
+                    <div class="khamphangay">
+                        <a href="./" >KHÁM PHÁ NGAY</a>
+                        <hr>
+                    </div>
+                    <div class="custom-pagination">
+                        <span class="custom-bullet"></span>
+                        <span class="custom-bullet"></span>
+                        <span class="custom-bullet"></span>
+                    </div>
+
                 </div>
-            </div>
-            <script>
-                var slideIndex = 0;
-                showSlides();
-                function showSlides() {
-                    var i;
-                    var slides = document.getElementsByClassName("video");
-                    for (i = 0; i < slides.length; i++) 
-                    {
-                      slides[i].style.display = "none";
-                    }
-                    slideIndex++;
-                    if(slideIndex > slides.length) 
-                    {
-                        slideIndex = 1
-                    }
-                    slides[slideIndex-1].style.display = "block";
-                    setTimeout(showSlides, 20000);
-                  }
-                  document.addEventListener("DOMContentLoaded", function() {
-                });
-            </script>
-            <div class="khamphangay">
-                <a href="./" >KHÁM PHÁ NGAY</a>
-                <hr>
-            </div>
+            </section>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <div class="h5">
             <hr class="hr5">
             <h3 style="font-size: 23px; text-align: center;">Gợi ý dành riêng cho bạn</h3>
-            <ul class="h5_image">
+            <button class="prev">&#10094;</button>
+            <ul class="h5_image product-list">
                 <li>
-                    <!-- <div class="image"> -->
-                        <!-- <div>
-                            <a href="./"><img src="./Image/h21.webp" class="image_before" alt=""></a>
-                            <a href="./"><img src="./Image/h211.webp" class="image_after" alt=""></a>
+                    <div class="product-card">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/ASMDTPC1.jpeg" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/ASMDTPC2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Áo Sơ Mi Dài Tay Phối Cổ</p>
+                                <p><b>449,000<u>đ</u></b></p>
+                            </div>
                         </div>
-                        <div class="h2_information">
-                            <p>Túi Xách Trung Khóa Trang Trí Diamond</p>
-                            <p><b>941,000<u>đ</u></b></p>
-                        </div>
-                    </div> -->
-                    <div class="image">
-                        <div>
-                            <a href="./"><img src="./Image/h51.webp" class="image_before" alt=""></a>
-                            <a href="./"><img src="./Image/h51.webp" class="image_after" alt=""></a>
-                        </div>
-                        <div class="h2_information">
-                            <p>Túi Xách Nhỏ Đeo Vai Dập Nổi Họa Tiết</p>
-                            <p><b>741,000<u>đ</u></b></p>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="image">
-                        <div>
-                            <a href="./"><img src="./Image/h52.webp" class="image_before" alt=""></a>
-                            <a href="./"><img src="./Image/h522.webp" class="image_after" alt=""></a>
+                    <div class="product-card">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/GCGPMNGT1.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/GCGPMNGT2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
+                                <p><b>449,000<u>đ</u></b></p>
+                            </div>
                         </div>
-                        <div class="h5_information">
-                            <p>Balo Buckle Phối Si Vân</p>
-                            <p><b>780,000<u>đ</u></b></p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="image">
-                        <div>
-                            <a href="./"><img src="./Image/h53.webp" class="image_before" alt=""></a>
-                            <a href="./"><img src="./Image/h533.webp" class="image_after" alt=""></a>
-                        </div>
-                        <div class="h5_information">
-                            <p>Giày Cao Gót 5cm Mũi Tròn Phối Nơ CG05059</p>
-                            <p><b>382,000<u>đ</u></b></p>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="image">
-                        <div>
-                            <a href="./"><img src="./Image/h54.webp" class="image_before" alt=""></a>
-                            <a href="./"><img src="./Image/h544.webp" class="image_after" alt=""></a>
+                    <div class="product-card">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/ATFBIM1.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/ATFBIM2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>ÁO THUN FORM BOXY IN "MUSÉE"</p>
+                                <p><b>299,000<u>đ</u></b></p>
+                            </div>
                         </div>
-                        <div class="h5_information">
-                            <p>Túi Xách Nhỏ Nắp Gập Dập Nổi 3d</p>
-                            <p><b>682,000<u>đ</u></b></p>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-card">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/GMMNGT1.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/GMMNGT2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Giày Mules Mũi Nhọn Gót Trụ</p>
+                                <p><b>455,000<u>đ</u></b></p>
+                            </div>
+                        </div>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-card pc1">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/AKPNT1.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/AKPNT2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Áo Knit Polo Ngắn Tay</p>
+                                <p><b>549,000<u>đ</u></b></p>
+                            </div>
+                        </div>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-card pc2">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/GCGPMNGT3.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/GCGPMNGT4.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
+                                <p><b>449,000<u>đ</u></b></p>
+                            </div>
+                        </div>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-card pc3">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/GSKTTJ1.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/GSKTTJ2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Giày Sandal Khóa Trang Trí Juno</p>
+                                <p><b>399,000<u>đ</u></b></p>
+                            </div>
+                        </div>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-card pc4">
+                        <div class="image">
+                            <div>
+                                <a href="./"><img src="./Image/h5_files/GBBGBTTK1.webp" class="image_before" alt=""></a>
+                                <a href="./"><img src="./Image/h5_files/GBBGBTTK2.webp" class="image_after" alt=""></a>
+                            </div>
+                            <div class="h5_information">
+                                <p>Giày Búp Bê Giày Ballerina Trang Trí Khóa</p>
+                                <p><b>229,000<u>đ</u></b> <b>229,000<u>đ</u></b></p>
+                            </div>
+                        </div>
+                        <div class="detail_overlay">
+                            <span>&#128065; Xem chi tiết</span>
                         </div>
                     </div>
                 </li>
             </ul>
+            <button class="next">&#10095;</button>
         </div>
         <div class="h6">
             <ul class="h6_title">
@@ -600,16 +617,16 @@
             </ul>
             <ul class="h6_image">
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram1.webp" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram1.webp" alt=""></a>
                 </li>
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram2.jpg" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram2.jpg" alt=""></a>
                 </li>
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram3.jpg" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram3.jpg" alt=""></a>
                 </li>
                 <li>
-                    <a href="./"><img src="./Image/h5_files/instagram4.webp" alt=""></a>
+                    <a href="./"><img src="./Image/h6_files/instagram4.webp" alt=""></a>
                 </li>
             </ul>
             <hr class="hr6">
@@ -618,14 +635,14 @@
             <ul>
                 <li>
                     <div class="h7_1">
-                        <p class="h7_11", style="font-size: 14px;">GỌI MUA HÀNG ONLINE (08:00 - 21:00 mỗi ngày)</p>
+                        <p class="h7_11", style="font-size: 13px;">GỌI MUA HÀNG ONLINE (08:00 - 21: 00 mỗi ngày)</p>
                         <span>
-                            <p style="font-size: 23px;" class="h7_11">1800 1162</p>
+                            <p style="font-size: 20px;" class="h7_11">1800 1162</p>
                             <p style="font-size: 13px;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
                         </span>
-                        <p class="h7_12", style="font-size: 14px;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
+                        <p class="h7_12", style="font-size: 13px;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
                         <span>
-                            <p style="font-size: 23px;" class="h7_11">1800 1160</p>
+                            <p style="font-size: 20px;" class="h7_11">1800 1160</p>
                             <p style="font-size: 13px;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
                         </span>
                     </div>
@@ -633,15 +650,15 @@
                 <li>
                     <div class="h7_2">
                         <p class="h7_22", style="font-size: 14px;">HỆ THỐNG SHOWROOM</p>
-                        <a href="./"><img src="./Image/h5_files/hethongshowroom.webp" alt=""></a>
-                        <p class="h7_22_information"><u>Xem địa chỉ hệ thống 54 showroom</u><i class="fa-solid fa-play"></i></p>
+                        <a a href="./"><img src="./Image/h7_files/hethongshowroom.webp" alt=""></a>
+                        <a href="./showroom/showroom.html" p class="h7_22_information"><u>Xem địa chỉ hệ thống 54 showroom</u><i class="fa-solid fa-play"></i></p>
                     </div>
                 </li>
                 <li>
                     <div class="h7_3">
-                        <p class="h7_33", style="font-size: 14px;">FANPAGE CỦA CHÚNG TÔI</p>
-                        <a href="./"><img src="./Image/h5_files/happyfridayday.webp" alt=""></a>
-                        <ul class="h7_33_information">
+                        <p class="h7_33", style="font-size: 13px;">FANPAGE CỦA CHÚNG TÔI</p>
+                        <a href="./"><img src="./Image/h7_files/fanpagecuachungtoi.webp" alt=""></a>
+                        <ul class="h7_33_information" style="margin-left: 110px;">
                             <li>
                                 <i class="fa-brands fa-facebook-f" style="color: #000000;"></i>
                             </li>
@@ -683,18 +700,17 @@
             </div>
             <div class="h8_2">
                 <div class="h8_2_1">
-                    <i class="fa-regular fa-copyright" style="color: #000000;"></i>
-                    <p>Công ty Cổ phần Seedcom Fashion Group</p>
+                    <p>© Công ty Cổ phần Seedcom Fashion Group</p>
                 </div>
                 <div class="h8_2_2">
-                    <a href="./"><img src="./Image/h5_files/Dathongbao.webp" alt=""></a>
+                    <a href="./"><img src="./Image/h8_files/Dathongbao.webp" alt=""></a>
                     <p>Powered by Haravan Enterprise.</p>
                 </div>
             </div>
         </div>
     </div>
     <script src="javaScript.js"></script>
-    <div class="shopping">
+    <!-- <div class="shopping">
         <p>GIỎ HÀNG</p>
         <p>Bạn đang có 0 sản phẩm trong giỏ hàng.</p>
         <hr>
@@ -705,15 +721,38 @@
             <p>0₫</p>
         </div>
         <button><a href="./">XEM GIỎ HÀNG</a></button>
-    </div>
-    <div class="return">
-        <i class="fa-solid fa-arrow-up"></i>
-        <script>
-            $(".return").click(function(){
-                $("html, body").animate({ scrollTop: 0 }, "slow");
-            });
-        </script>
-    </div>
+    </div> -->
+
+<div class="return" onclick="scrollToTop()">
+    <p>Về đầu trang</p>
+    <i class="bi bi-chevron-up"></i>
+    <div class="vertical-line"></div> <!-- Dấu gạch dọc -->
+</div>
+
+<script>
+    $(window).scroll(function() {
+    var scrollPosition = $(window).scrollTop();  // Lấy vị trí cuộn của trang
+
+    // Nếu cuộn xuống trang (không phải ở đầu trang)
+    if (scrollPosition > 0) {
+        $('.return').css({
+            'opacity': 1,
+            'visibility': 'visible' // Hiển thị khi cuộn xuống
+        });
+    } else {
+        // Nếu ở đầu trang
+        $('.return').css({
+            'opacity': 0,
+            'visibility': 'hidden' // Ẩn khi ở đầu trang
+        });
+    }
+});
+
+function scrollToTop() {
+    $('html, body').animate({ scrollTop: 0 }, 'slow');
+}
+</script>
+
     <div class="user">
         <h4 class="giohang">GIỎ HÀNG</h4>
         <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
@@ -751,15 +790,4 @@
             });
         </script>
     </div>
-    <div class="banner">
-        <img src="./Image/h61.webp" class="image_1" alt="">
-        <i class="fa-regular fa-circle-xmark fa-shake" id="icon_x"></i>
-    </div>
-    <script>
-        $(document).ready(function(){
-            $("#icon_x").click(function(){
-                $(".banner").hide();
-            });
-        });
-    </script>
 </html>
