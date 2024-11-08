@@ -274,21 +274,33 @@ body
 .arrow {
     position: absolute;
     top: 50%;
-    font-weight: 100;
-    line-height: 100;
+    width: 100%;
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    justify-content: space-between; /* Căn đều hai nút sang hai bên */
     transform: translateY(-50%);
-    font-size: 60px;
-    color: #333;
+    z-index: 10; /* Đảm bảo nút ở lớp trên cùng */
     cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
 }
-
-
 .left {
-    left: 20px;
+    margin-left: 70px;
+    background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/leftt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
+    background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 36px;
+    color: transparent;          /* Ẩn màu của mũi tên mặc định */
 }
 
 .right {
-    right: 20px;
+    margin-right: 70px;
+    background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/rightt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
+    background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 36px;
+    color: transparent;          /* Ẩn màu của mũi tên mặc định */
 }
 
 
