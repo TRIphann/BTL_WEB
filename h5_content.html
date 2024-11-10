@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1480px;
+            height: 500px;
+            background-color: rgb(255, 255, 255);
+            padding-left: 0;  /* Loại bỏ padding trái */
+            padding-right: 0; /* Loại bỏ padding phải */
+            margin-left: 30px;
+            margin-top: 24px;
+        }
+        .carousel {
+            margin-bottom: 0;
+            padding: 0 102px 30px 40px;
+        }
+        /* Xóa nền đen loang của các nút điều khiển */
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none; /* Loại bỏ nền đen */
+        }
+        .carousel-indicators li{
+            background: #cecece;
+        }
+        .h5_image .image {
+            position: relative;
+            overflow: hidden;
+        }
+        .h5_image .image .image_after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+        .h5_image .image:hover .image_before {
+            opacity: 0;
+        }
+        .h5_image .image:hover .image_after {
+            opacity: 1;
+        }
+        .h5_information p {
+            text-align: center;
+            font-size: 14px;
+        }
+        .product-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            left: 22px;
+            overflow: visible; /* Cho phép ảnh vượt quá chiều cao của carousel */
+            height: auto; /* Đảm bảo carousel không bị giới hạn chiều cao */
+            overflow-x: hidden; /* Giới hạn ảnh không vượt quá chiều ngang của carousel */
+            margin-left: 0;  /* Đảm bảo không có khoảng cách trái */
+            margin-right: 0; /* Đảm bảo không có khoảng cách phải */
+        }
+        .carousel-inner .row {
+            margin-left: 0; /* Loại bỏ khoảng cách trái */
+            margin-right: 0; /* Loại bỏ khoảng cách phải */
+        }
+        /* Điều chỉnh khoảng cách giữa các item carousel */
+        .carousel-inner .item {
+            margin-bottom: 0;  /* Loại bỏ khoảng cách phía dưới mỗi item */
+        }
+
+        .carousel-inner .image_before, .carousel-inner .image_after {
+            width: 100%;  /* Đảm bảo ảnh chiếm hết chiều rộng */
+            height: 390px; /* Chiều cao ảnh */
+            object-fit: cover; /* Cắt ảnh cho vừa với khung */
+        }
+        /* Giảm khoảng cách giữa các ảnh */
+        .h5_image .product-card {
+            height: 546px;
+            position: relative;
+            border: 1px solid transparent;
+            text-align: center;
+            margin-top: 0; /* Đảm bảo không bị lệch */
+        }
+        /* Thêm border khi hover vào sản phẩm */
+        .h5_image .product-card:hover {
+            border: 1px solid #eee; /* Màu vàng khi hover */
+        }
+        .col-md-3 {
+            padding-left: 10px;  /* Giảm padding giữa các cột */
+            padding-right: 10px; /* Giảm padding giữa các cột */
+            width: 327PX;
+        }
+        .h5_information
+        {
+            font-size: 13px;
+            margin-top: 45px;
+            text-align: center;
+        }
+        .h5_information p {
+            margin-bottom: 0;  /* Giảm khoảng cách dưới mỗi thẻ <p> */
+            margin-top: 0; /* Loại bỏ khoảng cách trên */
+        }
+
+        .h5_image .product-card .detail_overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            background-color: black;
+            color: #ffffff;
+            padding: 8px 0;
+            text-align: center;
+            opacity: 0; /* Ban đầu opacity là 0, không nhìn thấy */
+            font-size: 14px;
+        }
+
+        .h5_image .product-card:hover .detail_overlay {
+            opacity: 1; /* Khi hover thì opacity bằng 1, làm hiện thị overlay */
+            top: 509px; /* Hiện overlay ở dưới */
+        }
+
+        .h5_image .product-card .image {
+            position: relative;
+            overflow: hidden;
+        }
+          /* Nút điều khiển trái và phải */
+          .carousel-control.left, .carousel-control.right {
+            background-image: none; /* Loại bỏ nền mũi tên mặc định */
+            border-radius: 50%; /* Làm cho nút có hình tròn */
+            width: 30px; /* Đặt chiều rộng của nút */
+            height: 30px; /* Đặt chiều cao của nút */
+            line-height: 40px; /* Căn giữa mũi tên trong nút */
+            font-size: 20px; /* Điều chỉnh kích thước mũi tên */
+            color: #000000; /* Màu chữ/mũi tên */
+            text-align: center;
+            background-color: #fff; /* Màu nền nút */
+            border: 1px solid #ddd; /* Đặt đường viền mờ */
+            z-index: 10; /* Đảm bảo mũi tên luôn nằm trên các sản phẩm */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        /* Nút điều khiển trái */
+        .carousel-control.left {
+            left: 52px; /* Vị trí của nút prev */
+            top: 227px;
+        }
+
+        /* Nút điều khiển phải */
+        .carousel-control.right {
+            right: 73px; /* Vị trí của nút next */
+            top: 227px;
+        }
+
+        /* Tạo hình tròn màu trắng dưới nút prev và next */
+        .circle {
+            position: absolute;
+            width: 30px; /* Đặt kích thước hình tròn */
+            height: 30px;
+            background-color: rgb(255, 255, 255); /* Màu nền trắng */
+            border-radius: 50%; /* Tạo hình tròn */
+        }
+
+        /* Hình tròn dưới nút prev */
+        .prev-circle {
+            top: 227px; /* Khoảng cách từ nút prev */
+            left: 52px; /* Đặt vị trí hình tròn dưới nút prev */
+        }
+
+        /* Hình tròn dưới nút next */
+        .next-circle {
+            top: 227px; /* Khoảng cách từ nút next */
+            right: 73px; /* Đặt vị trí hình tròn dưới nút next */
+        }
+    </style>
+</head>
+<body>
+    <hr style="width: 1308px;" class="hr5">
+    <h3 style="font-size: 23px; text-align: center;">Gợi ý dành riêng cho bạn</h3>
+    <div class="container">
+
+        <div class="col-md-12">
+            <div id="Carousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/ASMDTPC1.jpeg" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/ASMDTPC2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Áo Sơ Mi Dài Tay Phối Cổ</p>
+                                            <p><b>449,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/GCGPMNGT1.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/GCGPMNGT2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
+                                            <p><b>449,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/ATFBIM1.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/ATFBIM2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>ÁO THUN FORM BOXY IN "MUSÉE"</p>
+                                            <p><b>299,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>                            
+                            </div>
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/GMMNGT1.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/GMMNGT2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Giày Mules Mũi Nhọn Gót Trụ</p>
+                                            <p><b>455,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/AKPNT1.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/AKPNT2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Áo Knit Polo Ngắn Tay</p>
+                                            <p><b>549,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>                     
+                            </div>
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/GCGPMNGT3.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/GCGPMNGT4.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
+                                            <p><b>449,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>                 
+                            </div>
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card pc3">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/GSKTTJ1.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/GSKTTJ2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Giày Sandal Khóa Trang Trí Juno</p>
+                                            <p><b>399,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>                   
+                            </div>
+                            <div class="col-md-3 h5_image">
+                                <div class="product-card pc4">
+                                    <div class="image">
+                                        <div>
+                                            <a href="./"><img src="./Image/h5_files/GBBGBTTK1.webp" class="image_before" alt=""></a>
+                                            <a href="./"><img src="./Image/h5_files/GBBGBTTK2.webp" class="image_after" alt=""></a>
+                                        </div>
+                                        <div class="h5_information">
+                                            <p>Giày Búp Bê Giày Ballerina Trang Trí Khóa</p>
+                                            <p><b>229,000<u>đ</u></b> <b>229,000<u>đ</u></b></p>
+                                        </div>
+                                    </div>
+                                    <div class="detail_overlay">
+                                        <span>&#128065; Xem chi tiết</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Điều khiển carousel -->
+                    <a data-slide="prev" href="#Carousel" class="left carousel-control">&#10094;</a>
+                    <!-- Thêm hình tròn dưới nút prev -->
+                    <div class="circle prev-circle"></div>
+                    
+                    <a data-slide="next" href="#Carousel" class="right carousel-control">&#10095;</a>
+                    <!-- Thêm hình tròn dưới nút next -->
+                    <div class="circle next-circle"></div>
+
+            </div>
+        </div>        
+    </div>
+</body>
+</html>
