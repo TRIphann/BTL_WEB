@@ -216,7 +216,7 @@ body
     opacity: 1; /* Hiện input khi nhấn */
     pointer-events: auto; /* Cho phép nhập */
   }
-  .navbar_input::before,
+.navbar_input::before,
 .navbar_input::after {
     content: '';
     position: absolute;
