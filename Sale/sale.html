@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bạn đang xem tất cả Sản phẩm</title>
+    <link rel="stylesheet" href="./javaScript.js">
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  
     
     <script>
         $(document).ready(function(){
@@ -191,8 +191,138 @@
         <div class="text_1">
             <p>Bạn đang xem tất cả Sản phẩm Sale</p>
         </div>
-        
+        <div class="container">
+            <button class="sale-button">Tất cả Sản Phẩm Sale</button>
+            <a href="#" class="sale-link">Sản Phẩm Sale 149k</a>
+            <a href="#" class="sale-link">Sản Phẩm Sale Từ 249k</a>
+          </div>
 
+          <div class="choice">
+            <span class="boloc">
+                <p>Bộ lọc</p>
+                <span>
+                    <img src="./image/down_1c848d6224514fddb82fcdd24bed41a1.webp" alt="">
+                </span>
+            </span>
+            <p>Sắp xếp theo:</p>
+            <select class="selection">
+                <option value="all">Tùy chọn</option>
+                <option value="giatangdan">Giá: Tăng dần</option>
+                <option value="giagiamdan">Giá: Giảm dần</option>
+                <option value="moinhat">Mới nhất</option>
+                <option value="banchaynhat">Bán chạy nhất</option>
+            </select>
+        </div>
+        <ul class="h2_image">
+            <li>
+                <div class="product-block">
+                    <div class="product-img">
+                        <img src="./image/do_txn748_2_20231025180531_e8450ab638a54e1cbb213d1ad5441938_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                        <img src="./image/do_txn748_1_20231016101521_9d720103e85a415e81349240ee6633ff_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                        <img src="./image/den_txn748_22_20231025180531_350bddaeb2df457fbffd5b086f5b2ce6_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                        <img src="./image/den_txn748_17_20231016125245_8758a02184354f988b5c7ef13d22a39d_master.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                        <span class="hang-moi">Hàng Mới</span>
+                    </div>
+                    <div>
+                    <div class="h2_information">
+                        <p class="pro-name">Túi Xách Nhỏ Top Handle Phối Tweed</p>
+                        <p class="pro-price"><b>349,000<u>đ</u></b></p>
+                    </div>
+                    <div class="pro-options">
+                        <div class="pro-colors">
+                            <img src="./image/color_do_txn748_25_20231016101522_a88ac47fc1944c3aa3868c93f405bcb1_thumb.jpeg" alt="Màu sắc 1" class="color-option" onclick="selectColor(this)">
+                            <img src="./image/color_den_txn748_27_20231016101522_9ef0280e370f42c2b8cf38ec06ab7575_thumb.webp" alt="Màu sắc 2" class="color-option" onclick="selectColor(this)">
+                        </div>
+                        <button class="btn-buy">Mua Ngay</button>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="product-block">
+                    <div class="product-img">
+                            <img src="" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="./image/xanh_txn745_1_20231106093534_d16c3c3df3074cd0b0435bb3eb0eeff0_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="./image/xanh_txn745_2_20231107164238_6a59e0c36f8c4e918c0897a59aa3a05d_master.jpeg" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                        
+                            <span class="hang-moi">Hàng Mới</span>
+                    </div>
+                    <div class="product-detail">
+                        <p class="pro-name">Túi Xách Nhỏ Đeo Chéo Khoá Trang Trí Diamond</p>
+                        <p class="pro-price"><b>349,000<u>đ</u></b></p>
+                    </div>
+                    <div class="pro-options">
+                        <div class="pro-colors">
+                            <img src="./image/color_xanh_txn745_25_20231102210649_3cc0f7dcf0bb4dbb9efe1b2a1fef1f84_thumb (1).webp" alt="Màu sắc 1" class="color-option">
+                            
+                        </div>
+                        
+                        <button class="btn-buy">Mua Ngay</button>
+                    </div>
+                </div>
+            </li>
+            <!-- Cập nhật sản phẩm 3 -->
+            <li>
+                <div class="product-block">
+                    <div class="product-img">
+                        <img src="./image/den_sd11019_1_20231009085420_60319e70eee7484686df5f0fb1d61d6d_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                        <img src="./image/den_sd11019_12_20231011101552_f56a309108b44cb48f9f81098e0380db_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                        <img src="./image/kem_sd11019_2_20231011101551_58218858d2f34826a5b3cfea6a78175f_master.jpeg" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                        <img src="./image/kem_sd11019_9_20231009085420_debb9a39715842778a2e7411598f0f5d_master.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                        <img src="./image/dong_sd11019_17_20231009085420_fdefd7a9fa0448a8afb5b2cedaf71a6a_master.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                        <span class="hang-moi">Hàng Mới</span>
+                    </div>
+                    <div class="product-detail">
+                        <p class="pro-name">Giày Sandal Xuồng Bọc Cói</p>
+                        <p class="pro-price"><b>249,000<u>đ</u></b></p>
+                    </div>
+                    <div class="pro-options">
+                        <div class="pro-colors">
+                            <img src="./image/color_kem_sd11019_26_20231009085421_e268252b20bb466c9334c028a340afad_thumb.webp" alt="Màu sắc 1" class="color-option">
+                            <img src="./image/color_dong_sd11019_27_20231009085421_7113de234fd14211ac5c433622183a1f_thumb.webp" alt="Màu sắc 2" class="color-option">
+                            <img src="./image/color_den_txn748_27_20231016101522_9ef0280e370f42c2b8cf38ec06ab7575_thumb.webp" alt="Màu sắc 2" class="color-option">
+                        </div>
+                        <div class="product-sizes">
+                            <span class="size-option">35</span>
+                            <span class="size-option">36</span>
+                            <span class="size-option">37</span>
+                            <span class="size-option">38</span>
+                            <span class="size-option">39</span>
+                        </div>
+                        <button class="btn-buy">Mua Ngay</button>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Cập nhật sản phẩm 4 -->
+            <li>
+                <div class="product-block">
+                    <div class="product-img">
+                        <img src="./image/hong_mk102_1_20220711143248_8e0ac5535359421f98575da_29c2f72748b141b8af63d93b21a44136_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                        <img src="./image/hong_mk102_2_20221025152404_d8baaec4e3874f399e1b891_7afdbad3238548d89aa5f23936f976cb_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                        <img src="./image/den_mk102_4_20220711143248_ea950d152f94437c8202e7bb_65ddd73eeb944a779451a0d19c717b57_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                        <img src="./image/den_mk102_7_20221025152404_e109571a20364ad9be10ba79_ec147016b05643d99647fb221ba75461_master.jpeg" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                        <img src="./image/xanh_mk102_7_20220711143249_b1cb985d87724ac690a595f_a8dec9ece1ac4fedadc2aae379ebaae7_master.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                        <img src="./image/xanh_mk102_12_20221025152405_69a6351bf05449f1a02e7f_796ba02a56c24f76990f2da75ff4197a_master.jpeg" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                        
+                        <span class="hang-moi">Hàng Mới</span>
+                    </div>
+                    <div class="product-detail">
+                        <p class="pro-name">Mắt kính round plannet</p>
+                        <p class="pro-price"><b>149,000<u>đ</u></b></p>
+                    </div>
+                    <div class="pro-options">
+                        <div class="pro-colors">
+                            <img src="./image/color_hong_mk102_10_20220711143249_fe3adf8af6944bc1_7fcf53b01a3c4551a5b66e2a03954170_thumb.webp" alt="Màu sắc 1" class="color-option">
+                            <img src="./image/color_den_mk102_11_20220711143249_79de6bf6342e4f3b8_f55ce869ec1841fabd9ab93c4b4ef84b_thumb.webp" alt="Màu sắc 2" class="color-option">
+                            <img src="./image/color_xanh_mk102_12_20220711143249_aff1d47cc74e4ae1_96c9b10305c44021a9ba97db46866638_thumb.webp" alt="Màu sắc 3" class="color-option">
+                        </div>
+                        <button class="btn-buy">Mua Ngay</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        
+        
 
 
 
