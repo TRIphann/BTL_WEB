@@ -666,3 +666,19 @@ body
 {
     display: flex;
 }
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%); /* Trượt thanh trắng lên */
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
+  }
+.navbar.show {
+    transform: translateY(0); /* Trượt xuống khi cuộn */
+    opacity: 1; /* Hiển thị thanh trắng */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
+}
