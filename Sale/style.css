@@ -313,6 +313,7 @@ body
     margin-top: 50px;
     margin: 50px 0 0 0;
     padding-right: 10px;
+    margin-bottom: 40px;
    
 
 
@@ -357,6 +358,34 @@ body
 .selection:focus  .options {
     display: block;
   }
+.h2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.h2 .h2_image {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+  .h2 .h2_image
+{
+    margin-top: 40px;
+}
+.h2_information{
+    margin-top: 10px;
+}
+.h2 p {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.h2 .h2_image li {
+    list-style-type: none;
+    width: 25%; /* Đảm bảo mỗi sản phẩm chiếm 22% độ rộng */
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
 
   .pro-name {
     font-size: 14px;
