@@ -1181,27 +1181,6 @@ section {
     cursor: pointer;
 }
 
-.banner 
-{
-    position: fixed;
-    bottom: 20px;
-    right: 0px;
-}
-
-.banner img 
-{
-    width: 100px;
-    border-radius: 50%;
-}
-
-.banner i 
-{
-    position: relative;
-    top: -90px;
-    left: -20px;
-    font-size: 20px;
-    cursor: pointer;
-}
 .navbar.fixed {
     position: fixed;
     top: 0;
