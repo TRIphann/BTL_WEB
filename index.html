@@ -212,28 +212,6 @@
                 document.addEventListener("DOMContentLoaded", function() {
             });
         </script>
-        <script>
-            window.onscroll = function() {
-              var whiteBar = document.getElementById('.navbar');
-              var redBarHeight = document.querySelector('.header-red').offsetHeight;
-        
-              if (window.pageYOffset > redBarHeight) {
-                if (!whiteBar.classList.contains('fixed')) {
-                  whiteBar.classList.add('fixed');
-                  setTimeout(function() {
-                    whiteBar.classList.add('show');
-                  }, 100); // Hiệu ứng trượt xuống sau một khoảng thời gian ngắn
-                }
-              } else {
-                if (whiteBar.classList.contains('show')) {
-                  whiteBar.classList.remove('show');
-                  setTimeout(function() {
-                    whiteBar.classList.remove('fixed');
-                  }, 300); // Trễ một chút để hoàn tất hiệu ứng trượt trước khi loại bỏ class
-                }
-              }
-            };
-        </script>
         <div class="h2">
             <h3>HÀNG MỚI VỀ</h3>
             <p class="h2_a">Các sản phẩm bắt nhịp quốc tế, nàng thời thượng không nên bỏ lỡ</p>
