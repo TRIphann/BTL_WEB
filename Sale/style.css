@@ -358,6 +358,26 @@ body
 .selection:focus  .options {
     display: block;
   }
+
+
+.h2 {
+    margin-top: 70px;
+    padding-left: 100px;
+    padding-right: 45px;
+    margin-left: -6px;
+    padding-bottom: 82px;
+}
+
+.h2 .h2_image {
+    margin-top: -75px;
+    height: 531px;
+    background-color: #ffffff;
+}
+
+.h2_information {
+    margin-top: 10px;
+}
+
 .h2 img {
     max-width: 100%;
     height: auto;
@@ -366,28 +386,18 @@ body
 .h2 .h2_image {
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 29px;
 }
-  .h2 .h2_image
-{
-    margin-top: 40px;
-}
-.h2_information{
-    margin-top: 10px;
-}
-.h2 p {
-    margin-bottom: 5px;
-    text-align: center;
-}
+
 .h2 .h2_image li {
     list-style-type: none;
-    width: 25%; /* Đảm bảo mỗi sản phẩm chiếm 22% độ rộng */
+    width: 25%;
     text-align: center;
     font-size: 13px;
     margin-bottom: 30px;
 }
 
-  .pro-name {
+.pro-name {
     font-size: 14px;
     color: rgb(0, 0, 0);
     margin: 10px 0;
@@ -398,19 +408,26 @@ body
     font-weight: bold;
     color: #000000;
 }
-  .product-block {
-    text-align: center;
+
+.product-block {
     position: relative;
-    width: 300px;
-    margin: 4px;
+    width: 297px;
+    height: 546px;
+    background-color: #ffffff;
+    z-index: 1;
+
 }
-.product-block:hover{
+
+.product-block:hover {
     border: 1px solid #eee;
+    z-index: 2;
 }
+
 .product-img {
     position: relative;
     overflow: hidden;
 }
+
 .product-img .img-hover {
     display: none;
 }
@@ -419,7 +436,6 @@ body
     display: block;
 }
 
-
 .product-img:hover .img-loop {
     display: none;
 }
@@ -427,23 +443,7 @@ body
 .product-img:hover .img-hover {
     display: block;
 }
-.hang-moi {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(0, 0, 0);
-    padding: 5px 10px;
-    font-size: 12px;
-    opacity: 0;
-    border: 1px solid gray;
-}
-.product-block:hover .hang-moi {
-    opacity: 1;
-}
 
-
-/* Buy Now Button */
 .btn-buy {
     margin-top: 15px;
     margin-bottom: 10px;
@@ -454,71 +454,410 @@ body
     cursor: pointer;
     font-size: 14px;
 }
-/*THÊM*/
 
 .product-img img {
-    width: 320px;
-    height: auto;
+    width: 297px;
+    height: 375px;
     object-fit: cover;
+    /*object-position: 50% 80%;*/
 }
 
 .pro-options {
     display: none;
     margin-top: 18px;
     text-align: center;
-
 }
 
 .product-block:hover .pro-options,
 .color-option:hover ~ .pro-options {
-    display: block; /* Hiện pro-options */
+    display: block; 
 }
-/* Color Options */
+
 .pro-colors {
     display: flex;
     justify-content: center;
     gap: 4px;
     margin-top: 10px;
 }
+
 .color-option {
     display: inline-block;
-    transition: transform 0.3s ease, border 0.3s ease; /* Thêm hiệu ứng cho chuyển đổi */
-    padding: 3px; /* Thêm khoảng đệm cho ô màu sắc */
-    border-radius: 50%; /* Đảm bảo viền vẫn giữ hình tròn */
-    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước tổng thể */
-    width: 30px; /* Kích thước cố định cho ô màu sắc */
-    height: 30px; /* Kích thước cố định cho ô màu sắc */
-    cursor: pointer; /* Thêm con trỏ khi di chuột vào */
+    transition: transform 0.3s ease, border 0.3s ease;
+    padding: 3px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
-/* Khi di chuột vào hoặc ô được chọn, ô sẽ phóng to */
+/* Giữ hiệu ứng hover và trạng thái được chọn cho màu sắc */
 .color-option:hover, .color-option.active {
-    transform: scale(1.1); /* Phóng to lên 10% */
-    border: 1px solid gray; /* Thêm viền đen khi di chuột hoặc ô được chọn */
+    transform: scale(1.1);
+    border: 1px solid gray;
 }
 
-/* Khi không có hành động, giữ ô màu sắc bình thường */
-.color-option:not(.active):not(:hover) {
-    border: none; /* Không có viền khi không chọn và không hover */
-}
-
-
-
-
-/* Đảm bảo size-option luôn hiển thị border khi hover */
 .product-sizes .size-option {
     display: inline-block;
     margin-top: 10px;
     padding: 5px 5px;
     cursor: pointer;
-    border: 1px solid transparent; /* Không có border ban đầu */
+    border: 1px solid transparent;
 }
 
-/* Khi hover vào size-option, border sẽ xuất hiện và được chọn */
-.product-sizes .size-option.hovered,
-.product-sizes .size-option.selected {
-    border: 1px solid gray; /* Màu border khi hover hoặc khi đã chọn */
+/* Giữ hiệu ứng hover và trạng thái được chọn cho kích thước */
+.product-sizes .size-option.selected, 
+.product-sizes .size-option:hover {
+    border: 1px solid gray;
+}
+
+/* Hiển thị danh sách kích thước khi hover vào ô màu */
+.product-sizes.visible {
+    display: block;
+}
+
+
+.h7 img 
+{
+    width: calc(100% - 120px);
+}
+
+.h7 ul
+{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 10px;
+}
+
+.h7 ul li 
+{
+    list-style-type: none;
+    padding-left: 30px;
+}
+
+.h7 ul li a 
+{
+    text-decoration: none;
+}
+
+.h7 .h7_1
+{
+    width: 400px;
+    margin-left: 55px;
+    line-height: 1.7;
+}
+
+.h7 .h7_1 .h7_12{
+    margin-top: 25px;
+}
+.h7 .h7_2{
+    width: 400px;
+    margin-left: 20px;
+    margin-right: -75px;
 }
 
 
 
+
+.h7 .h7_2 .h7_22
+{
+    margin-bottom: 10px;
+}
+
+.h7 .h7_2 .h7_22_information
+{
+    margin-top: 10px;
+    font-size: 15px;
+    color: grey;
+}
+.h7_22_information:hover{
+    color: black;
+    cursor: pointer;
+}
+
+.h7 .h7_2 img
+{
+    width: 410px;
+}
+
+.fa-play {
+  color: gray; /* Đặt màu thành xám */
+  font-size: 5px; /* Điều chỉnh kích thước */
+  margin-left: 5px; /* Tạo khoảng cách với nội dung */
+  vertical-align:auto;
+}
+.h7 .h7_3{
+    width: 400px;
+}
+.h7 .h7_3 .h7_33
+{
+    margin-bottom: 12px;
+    margin-left: 96px;
+}
+
+.h7 .h7_3 img
+{
+    width: 410px;
+    margin-left: 96px;
+}
+
+.h7_33_information {
+    display: flex; /* Hiển thị theo hàng ngang */
+    list-style-type: none; /* Xóa dấu đầu dòng */
+    padding: 0; /* Xóa khoảng cách mặc định */
+    margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
+}
+
+.h7_33_information li {
+    margin-right: 35px;/*khoang cách giữa các biểu tượng*/
+    margin-top: -30px;
+    margin-left: -40px;
+    font-size: 20px;
+   
+}
+
+.h7_33_information li:last-child {
+    margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
+}
+.hr7 {
+    width: 87%; /* Chiếm 100% chiều rộng của phần tử cha */
+    height: 0.5px; /* Độ dày 0.5 pixel */
+    border: none; /* Không có viền */
+    background-color: #e7e4e4; /* Màu xám nhạt */
+    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-left: 100px;
+  }
+
+
+
+
+
+.h8 
+{
+    margin-top: 40px;
+    text-align: center;
+
+}
+.h8 .h8_1 ul
+{
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    width: 1519px;
+    height: 76px;
+    margin-top: -15px;
+    margin-bottom: 13px;
+}
+
+.h8 .h8_1 ul li 
+{
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.h8 .h8_1 .h8_1_1 
+{   
+    font-size: 13px;
+    margin-left: 110px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.h8 .h8_1 .h8_1_2
+{
+    margin-left: 230px;
+    position: relative;
+    margin-top: 15px;
+}
+.h8 .h8_1_2{
+    font-size: 13px;
+    left: 75px;
+}
+.h8 .h8_1 ul li p 
+{
+    font-size: 13px;
+} 
+
+.h8 .h8_1 ul li i 
+{
+    position: absolute;
+    right: -16px;
+    margin-top: 3px;
+    top: 0px;
+    cursor: pointer;
+}
+.h8 .h8_1 a
+{
+    text-decoration: none;
+    color: black;
+}
+.h8 .h8_2_1 p{
+    font-size: 13px;
+}
+
+.h8 .h8_2
+{
+    display: inline-flex;
+    margin-top: 20px;
+    width: 1300px;
+}
+
+
+.h8_2_1 {
+    display: flex; /* Hiển thị theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 15px 0;
+    margin-top: -51px;
+    margin-left: -10px;
+    font-weight:lighter;
+}
+.h8_2_1 i {
+    margin-right: 4px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+.fa-chevron-down{
+    font-size: 10px;
+}
+
+
+.h8 .h8_2 .h8_2_2
+{
+    margin-right: -300px;
+    font-size: 13px;
+    float: right;
+    padding-left: 800px;
+    margin-top: -20px;
+}
+
+.h8 .h8_2 .h8_2_2 img
+{
+    padding-left: 95px;
+    width: 195px;
+    margin-right: -129px;
+    margin-top: 0;
+}
+
+.h8 .h8_2_2 p 
+{
+    margin-top: 2.5px;
+    font-size: 13px;
+    margin-bottom: 13px;
+    position: relative;
+    left: 69px; /* Điều chỉnh giá trị để nhích chữ qua phải */
+}
+.return {
+    position: fixed;
+    bottom: 105px; /* Đặt vị trí gần cuối trang */
+    right: -15px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    opacity: 0; /* Ban đầu là ẩn */
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Thêm hiệu ứng visibility */
+
+}
+
+.return p {
+    font-size: 12px;
+    transform: rotate(-90deg); /* Xoay văn bản dọc */
+    white-space: nowrap;
+    font-weight: bold; /* In đậm chữ */
+    color: rgb(0, 0, 0); /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
+}
+
+.return i {
+    position: relative;
+    bottom: 48px;
+    font-size: 25px; /* Điều chỉnh kích thước của mũi tên */
+}
+
+.vertical-line {
+    position: relative;
+    width: 1.4px; /* Độ dày của dấu gạch */
+    height: 25px; /* Chiều dài của dấu gạch */
+    background-color: black; /* Màu sắc của dấu gạch */
+    bottom: 15px;
+}
+
+
+.user 
+{
+    padding-left: 30px;
+    border: 1px solid black;
+    width: 600px;
+    background-color: white;
+    height: 100%;
+    z-index: 1000;
+    position: fixed; /* Đặt div cố định trên màn hình */
+    top: 20px; /* Cách mép trên 20px */
+    right: 20px; /* Cách mép phải 20px */
+}
+
+
+
+.giohang 
+{
+    margin-bottom: 5px;
+}
+
+.giohang_information 
+{
+    margin-bottom: 10px;
+}
+
+.giohang_status 
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.totalprice 
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.user a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+.user .link 
+{
+    background-color: gray;
+    text-align: center;
+    padding: 10px;
+}
+
+.user i 
+{
+    position: absolute;
+    font-size: 30px;
+    top: 50px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%); /* Trượt thanh trắng lên */
+    opacity: 1;
+    transition: transform 1s ease, opacity 1s ease; /* Hiệu ứng chuyển động */
+  }
+.navbar.show {
+    transform: translateY(0); /* Trượt xuống khi cuộn */
+    opacity: 1; /* Hiển thị thanh trắng */
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng khi cố định */
+}
