@@ -4,8 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bạn đang xem tất cả Sản phẩm</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    
+    <script>
+        $(document).ready(function(){
+            $(".sanpham_list_").hide();
+            $(".sanpham_list_information").hide();
+            
+            $(".sanpham, .sanpham_list_").mouseenter(function(){
+                $(".sanpham_list_").show();
+                $(".sanpham_list_information").show();
+            });
+    
+            $(".sanpham, .sanpham_list_").mouseleave(function(){
+                $(".sanpham_list_").hide();
+                $(".sanpham_list_information").hide();
+            });
+        });
+    </script>
 </head>
 <body>
+    <div class="1">
+        <div class="top-bar">
+            <img src="./image/pc_1920x870_3da2c6fc94ae4b3e9ee33afb78518529 (1).webp" alt="Top Bar Image">
+        </div>
+        <nav class="navbar">
+            <ul class="navbar_img">
+                <a href="./index.html"><img src="./Image/logo-svg.svg" alt="" ></a>
+            </ul>
+            <ul class="navbar_list">
+                <li class="navbar_list_">
+                    <a style="color: #252A2B;">HÀNG MỚI</a>
+                </li>
+                <li class="navbar_list_">
+                    <a class="sanpham" style="color: #252A2B;">SẢN PHẨM</a>
+                    <div class="sanpham_list">
+                        <div class="sanpham_list_">
+                            <ul>
+                                <li>
+                                    <a href="./">GIÀY</a>
+                                </li>
+                                <li>
+                                    <a href="./">Giày xăng đan</a>
+                                </li>
+                                <li>
+                                    <a href="./"> Giày cao gót</a>
+                                </li>
+                                <li>
+                                    <a href="./">Giày Sneakers</a>
+                                </li>
+                                <li>
+                                    <a href="./">Giày búp bê</a>
+                                </li>
+                                <li>
+                                    <a href="./">Dép guốc</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">TÚI</a>
+                                </li>
+                                <li>
+                                    <a href="./">Túi cỡ nhỏ</a>
+                                </li>
+                                <li>
+                                    <a href="./">Túi cỡ trung</a>
+                                </li>
+                                <li>
+                                    <a href="./">Túi cỡ lớn</a>
+                                </li>
+                                <li>
+                                    <a href="./">Balo</a>
+                                </li>
+                                <li>
+                                    <a href="./">Ví - Clutch</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">PHỤ KIỆN</a>
+                                </li>
+                                <li>
+                                    <a href="./">Mắt kính</a>
+                                </li>
+                                <li>
+                                    <a href="./">Vớ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">QUẦN ÁO</a>
+                                </li>
+                                <li>
+                                    <a href="./">Đầm & Jumpsuit</a>
+                                </li>
+                                <li>
+                                    <a href="./">Áo</a>
+                                </li>
+                                <li>
+                                    <a href="./">Quần</a>
+                                </li>
+                                <li>
+                                    <a href="./">Váy</a>
+                                </li>
+                                <li>
+                                    <a href="./">Khoác</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">BỘ SƯU TẬP</a>
+                                </li>
+                                <li>
+                                    <a href="./">Moda Feminia</a>
+                                </li>
+                                <li>
+                                    <a href="./">Golden Hour</a>
+                                </li>
+                                <li>
+                                    <a href="./">Autumn Knit</a>
+                                </li>
+                                <li>
+                                    <a href="./">Back To Cool</a>
+                                </li>
+                                <li>
+                                    <a href="./">Parisian Chic</a>
+                                </li>
+                                <li>
+                                    <a href="./">Summer Ombré</a>
+                                </li>
+                                <li>
+                                    <a href="./">Summer Play</a>
+                                </li>
+                                <li>
+                                    <a href="./">Sunshine Retreat</a>
+                                </li>
+                                <li>
+                                    <a href="./">The Raw MySelf</a>
+                                </li>
+                                <li>
+                                    <a href="./">Love Is In The Air</a>
+                                </li>
+                                <li>
+                                    <a href="./">Em Là Hoa</a>
+                                </li>
+                                <li>
+                                    <a href="./">X-mas</a>
+                                </li>
+                                <li>
+                                    <a href="./">Magic Snow</a>
+                                </li>
+                                <li>
+                                    <a href="./">Panorama Diamond</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar_list_">
+                    <a class=navbar_list_a style="color: #F40000;">SALE</a>
+                </li>
+                <li class="navbar_list_">
+                    <a class=navbar_list_a style="color: #F40000;">QUẦN ÁO SALE TỪ 90K</a>
+                </li>
+                <li class="navbar_list_">
+                    <a href="./showroom/showroom.html" class="showroom" style="color: #252A2B;">SHOWROOM</a>
+                </li>
+            </ul>
+            <ul class="navbar_input">
+                <input type="text" placeholder="Tìm kiếm"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+            </ul>
+            <ul class="navbar_user">    
+                <a href="./dangnhap/dangnhap.html"><i class="fa-regular fa-user" id="user" style="color: #080808;font-weight: lighter;"></i></a>
+                <i class="fa-solid fa-bag-shopping" id="shoppingcart" style="color: #000000;"></i>
+            </ul>
+        </nav>
     
 </body>
 </html>
