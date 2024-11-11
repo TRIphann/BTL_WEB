@@ -435,22 +435,18 @@ input[type="search"] {
 }
 
 .h7_33_information {
-    display: flex; /* Hiển thị theo hàng ngang */
+    display: flex;
+    list-style-type: none; /* Hiển thị theo hàng ngang */
     padding: 0; /* Xóa khoảng cách mặc định */
     margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
-    margin-right: 10px;
 }
 
-.h7_33_information:hover{
-    color: black;
-    cursor: pointer;
-}
 
 .h7_33_information li {
-    margin-right: 30px;/*khoang cách giữa các biểu tượng*/
+    margin-right: 35px;/*khoang cách giữa các biểu tượng*/
     margin-top: -30px;
     margin-left: -40px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .h7_33_information li:last-child {
