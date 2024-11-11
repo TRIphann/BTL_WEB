@@ -387,7 +387,7 @@ body
     margin: 4px;
 }
 .product-block:hover{
-    border: 0.1px solid gray;
+    border: 1px solid #eee;
 }
 .product-img {
     position: relative;
@@ -952,7 +952,7 @@ section {
     margin-right: 35px;/*khoang cách giữa các biểu tượng*/
     margin-top: -30px;
     margin-left: -40px;
-    font-size: 18px;
+    font-size: 20px;
    
 }
 
@@ -1076,6 +1076,9 @@ section {
     position: relative;
     left: 69px; /* Điều chỉnh giá trị để nhích chữ qua phải */
 }
+
+
+
 
 
 .return {
