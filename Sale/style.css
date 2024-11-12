@@ -7,7 +7,92 @@
 * {
     box-sizing: border-box;
 }
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 400;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Regular.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 500;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-SemiBold.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 700;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Bold.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 800;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraBold.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 900;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Black.ttf?v=2326')
+}
 
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 300;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Light.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 200;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraLight.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 400;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Italic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 500;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-SemiBoldItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 700;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-BoldItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 800;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraBoldItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 900;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-BlackItalic.ttf?v=2326')
+}
+
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 300;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-LightItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 200;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraLightItalic.ttf?v=2326')
+}
 body
 {
     background-color: #FFFFFF;
@@ -18,7 +103,7 @@ body
 }
 /* Thanh màu đỏ */
 .top-bar{
-    background-color: #d32f2f;
+    background-color: #c32a2e;
     width: 100%;
     height: 31px;
     justify-content: center;
@@ -29,6 +114,7 @@ body
     height: 31.5px;
 
 }
+
 /* Thanh chứa logo, hàng mới, sản phảm... */
 .navbar 
 {
@@ -71,10 +157,12 @@ body
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-left: 165px;
+    margin-left: 41px;
 }
 
 .navbar_list_ {
+    font-family: MuliDisplayVN;
+    font-weight: 500;
     display: flex;
     align-items: center;
     font-size: 13px;
@@ -176,88 +264,91 @@ body
 }
 
 
-.navbar_input
-{
+.navbar_input {
     position: relative;
-    margin-bottom: 20px;/*điều chỉnh thanh tìm kiếm cho nó ở chính giữa*/
-    margin-right: 100px;
-    font-size: 13px;
-   
-    
-}
-.navbar_input input 
-{
-    font-size: 13px;
-    border: none;/*Không lấy khung tìm kiếm*/
-    height: 20px;
-    width: 100px;
-    margin-top: -30px;
-    padding:  5px;
-    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
-    outline: none; /* Loại bỏ viền khi focus */
-    border-bottom: 1px solid transparent; /* Viền dưới ban đầu */
-}
-.navbar_input input:focus {
-    border-bottom: 1px solid black; /* Hiện viền dưới khi nhấp vào */
-    background-color: #f9f9f9; /* Có thể thay đổi màu nền khi focus */
-}
-.navbar_input.active input {
-    opacity: 1; /* Hiện input khi active */
-    pointer-events: auto; /* Cho phép nhập liệu */
-}
-.navbar_input input:hover {
-  border-bottom: 0.5px solid black;
-  width: 130px;
-  padding: 0 15px;
-
-  transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển động mượt mà */
+    display: inline-block;
+    margin-top: -42px;
+    margin-right: 53px;
 }
 
-  .navbar_input:hover input::placeholder {
-    color: transparent; /* Ẩn placeholder khi hover */
-  }
-  .navbar_input.active input {
-    opacity: 1; /* Hiện input khi nhấn */
-    pointer-events: auto; /* Cho phép nhập */
-  }
-  .navbar_input::before,
-.navbar_input::after {
-    content: '';
+.input-wrapper {
     position: absolute;
-    bottom: 0;
-    height: 0.5px; /* Độ dày của viền */
-    background-color: black; /* Màu viền */
-    transition: width 0.3s ease-in-out; /* Hiệu ứng chuyển động cho chiều rộng */
+    top: 0;
+    right: 0;
+    width: 100px; /* Kích thước ban đầu */
+    overflow: hidden;
+    border-bottom: 1px solid transparent; /* Viền dưới ban đầu */
+    transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-.navbar_input::before {
-    left: 50%; /* Đặt ở giữa */
-    width: 0; /* Bắt đầu với chiều rộng bằng 0 */
+.input-wrapper:hover {
+    width: 130px; /* Kích thước khi hover */
+    border-color: black; /* Viền hiện lên khi hover */
 }
 
-.navbar_input::after {
-    left: 50%; /* Đặt ở giữa */
-    width: 0; /* Bắt đầu với chiều rộng bằng 0 */
+.navbar_input input {
+    font-size: 13px;
+    border: none;
+    height: 20px;
+    width: 100%; /* Để input lấp đầy wrapper */
+    padding: 5px;
+    outline: none;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out; /* Chuyển đổi padding và width */
 }
 
-.navbar_input.active::before {
-    width: 50%; /* Kéo dài sang bên trái */
-    transform: translateX(-100%); /* Di chuyển sang trái */
+.input-wrapper:hover input {
+    width: 130px; /* Mở rộng input khi hover */
+    padding: 0 15px; /* Thêm padding khi hover để làm thanh tìm kiếm rộng hơn */
 }
 
-.navbar_input.active::after {
-    width: 50%; /* Kéo dài sang bên phải */
-    transform: translateX(100%); /* Di chuyển sang phải */
+.navbar_input input::placeholder {
+    transition: color 0.3s ease-in-out;
 }
+
+.input-wrapper:hover input::placeholder {
+    color: transparent; /* Ẩn placeholder khi hover */
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Vị trí ban đầu */
+    transform: translateY(-50%);
+    transition: right 0.3s ease-in-out; /* Di chuyển mượt mà khi hover */
+}
+.input-wrapper:hover .search-icon {
+    right: 5px; /* Di chuyển icon sang bên phải khi hover */
+}
+
+
 .navbar_user #shoppingcart
 {
     cursor: pointer;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
     font-size: 13px;
     margin-right: 20px;
 }
+.navbar_user #dangnhap{
+    margin-bottom: 23px;
+    margin-right: 10px;
+}
+a {
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    color: inherit; /* Thừa kế màu sắc từ phần tử cha (nếu muốn giữ màu sắc ban đầu) */
+}
+
+a:focus, a:active {
+    outline: none;  /* Loại bỏ outline */
+    border: none;   /* Loại bỏ border */
+    cursor: pointer; /* Đảm bảo con trỏ vẫn là pointer khi hover */
+}
+
+
+
+
+
 .h1{
-    width: 1550px;
+    width: 1519px;
     height: 850px;
     margin-top: -190px;
 
@@ -274,10 +365,11 @@ body
     object-fit: contain;
 }
 .text_1 p{
+    font-family:MuliDisplayVN;
+    font-weight: 700;
     text-align: center;
     margin-top: -200px;
-    font-size: 25px;
-    font-family: 'MuliDisplayVN', sans-serif;
+    font-size: 24px;
 }
 .container {
     display: flex;
@@ -285,11 +377,26 @@ body
     align-items: center;
     margin-top: 20px;
   }
-  .container a{
+.container a{
+    font-family:MuliDisplayVN;
     font-size: 16px;
     font-weight: bolder;
-  }
-  .sale-button {
+}
+.container {
+    position: relative;
+}
+
+.fixed-container {
+    position: fixed;
+    top: 36px; /* Đặt dưới navbar */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+.sale-button {
+    font-family:MuliDisplayVN;
     background-color: rgb(220, 38, 38); /* Màu đỏ tươi */
     color: white;
     padding: 10px 20px;
@@ -297,23 +404,24 @@ body
     margin: 10px;
     font-weight: bold;
     font-size: 16px;
-  }
-  .sale-link {
+}
+.sale-link {
+    font-family:MuliDisplayVN;
     color: rgb(220, 38, 38); /* Màu đỏ tươi */
     text-decoration: underline;
     padding: 10px 20px;
     margin: 10px;
-  }
+}
   
-  .sale-link:hover {
+.sale-link:hover {
     background-color: rgb(220, 38, 38);
     color: white;
     cursor: pointer;
-  }
-  .sale-button, .sale-link {
+}
+.sale-button, .sale-link {
     margin: 2px; /* Giảm margin xuống còn 2px */
-  }
-  .choice
+}
+.choice
 {
     /* float: right; */
     padding-left: 1150px;
@@ -322,13 +430,11 @@ body
     margin: 50px 0 0 0;
     padding-right: 10px;
     margin-bottom: 40px;
-   
-
-
 }
 
 .choice .boloc
 {
+    font-family:MuliDisplayVN;
     margin-right: 35px;
     display: flex;
     cursor: pointer;
@@ -341,6 +447,7 @@ body
     padding-bottom: 2px;
 }
 .choice p{
+    font-family:MuliDisplayVN;
     font-size: 14px;
 }
 
@@ -354,6 +461,7 @@ body
     
 }
 .selection{
+    font-family:MuliDisplayVN;
     -webkit-appearance:none;
     -moz-appearance: none;
     appearance: none;
@@ -365,13 +473,15 @@ body
 }
 .selection:focus  .options {
     display: block;
-  }
+}
+.container a, .sale-button, .sale-link, .choice .boloc, .choice p, .choice select {
+    white-space: nowrap;
+}
 
 
 .h2 {
     margin-top: 70px;
     padding-left: 100px;
-    padding-right: 45px;
     margin-left: -6px;
     padding-bottom: 82px;
 }
@@ -380,6 +490,7 @@ body
     margin-top: -75px;
     height: 531px;
     background-color: #ffffff;
+    margin-right: 52px;
 }
 
 .h2_information {
@@ -406,18 +517,22 @@ body
 }
 
 .pro-name {
+    font-family:MuliDisplayVN;
+    font-weight: normal;
     font-size: 14px;
     color: rgb(0, 0, 0);
     margin: 10px 0;
 }
 
 .pro-price {
+    font-family:MuliDisplayVN;
     font-size: 14px;
     font-weight: bold;
     color: #000000;
 }
 
 .product-block {
+    font-family:MuliDisplayVN;
     position: relative;
     width: 297px;
     height: 546px;
@@ -453,6 +568,7 @@ body
 }
 
 .btn-buy {
+    font-family:MuliDisplayVN;
     margin-top: 15px;
     margin-bottom: 10px;
     padding: 8px 31px;
@@ -504,149 +620,125 @@ body
     transform: scale(1.1);
     border: 1px solid gray;
 }
-
-.product-sizes .size-option {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 5px;
-    cursor: pointer;
-    border: 1px solid transparent;
-}
-
-/* Giữ hiệu ứng hover và trạng thái được chọn cho kích thước */
-.product-sizes .size-option.selected, 
-.product-sizes .size-option:hover {
-    border: 1px solid gray;
-}
-
-/* Hiển thị danh sách kích thước khi hover vào ô màu */
-.product-sizes.visible {
-    display: block;
-}
 .hr6 {
-    width: 98.75%; /* Chiếm 100% chiều rộng của phần tử cha */
+    width: 92%; /* Chiếm 100% chiều rộng của phần tử cha */
     height: 0.5px; /* Độ dày 0.5 pixel */
     border: none; /* Không có viền */
     background-color: #e7e4e4; /* Màu xám nhạt */
     margin-bottom: 25px;
     margin: 40px 11px;
     margin-top: 50px;
+    margin-left: 8px;
   
   }
 
-.h7 img 
-{
-    width: calc(100% - 120px);
-}
 
-.h7 ul
-{
-    display: flex;
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-right: 10px;
-}
-
-.h7 ul li 
-{
-    list-style-type: none;
-    padding-left: 30px;
-}
-
-.h7 ul li a 
-{
-    text-decoration: none;
-}
-
-.h7 .h7_1
-{
-    width: 400px;
-    margin-left: 55px;
-    line-height: 1.7;
-}
-
-.h7 .h7_1 .h7_12{
-    margin-top: 25px;
-}
-.h7 .h7_2{
-    width: 400px;
-    margin-left: 20px;
-    margin-right: -75px;
-}
-
-
-
-
-.h7 .h7_2 .h7_22
-{
-    margin-bottom: 10px;
-}
-
-.h7 .h7_2 .h7_22_information
-{
-    margin-top: 10px;
-    font-size: 15px;
-    color: grey;
-}
-.h7_22_information:hover{
-    color: black;
-    cursor: pointer;
-}
-
-.h7 .h7_2 img
-{
-    width: 410px;
-}
-
-.fa-play {
-  color: gray; /* Đặt màu thành xám */
-  font-size: 5px; /* Điều chỉnh kích thước */
-  margin-left: 5px; /* Tạo khoảng cách với nội dung */
-  vertical-align:auto;
-}
-.h7 .h7_3{
-    width: 400px;
-}
-.h7 .h7_3 .h7_33
-{
-    margin-bottom: 12px;
-    margin-left: 96px;
-}
-
-.h7 .h7_3 img
-{
-    width: 410px;
-    margin-left: 96px;
-}
-
-.h7_33_information {
-    display: flex; /* Hiển thị theo hàng ngang */
-    list-style-type: none; /* Xóa dấu đầu dòng */
-    padding: 0; /* Xóa khoảng cách mặc định */
-    margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
-}
-
-.h7_33_information li {
-    margin-right: 35px;/*khoang cách giữa các biểu tượng*/
-    margin-top: -30px;
-    margin-left: -40px;
-    font-size: 20px;
-   
-}
-
-.h7_33_information li:last-child {
-    margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
-}
-.hr7 {
-    width: 87%; /* Chiếm 100% chiều rộng của phần tử cha */
-    height: 0.5px; /* Độ dày 0.5 pixel */
-    border: none; /* Không có viền */
-    background-color: #e7e4e4; /* Màu xám nhạt */
-    margin-bottom: 15px;
-    margin-top: 25px;
-    margin-left: 100px;
+  .h7 img 
+  {
+      width: calc(100% - 120px);
   }
+  
+  .h7 ul
+  {
+      display: flex;
+      margin-top: 40px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-right: 10px;
+  }
+  
+  .h7 ul li 
+  {
+      list-style-type: none;
+      padding-left: 30px;
+  }
+  
+  .h7 ul li a 
+  {
+      text-decoration: none;
+  }
+  
+  .h7 .h7_1
+  {
+    width: 400px;
+    margin-left: -39px;
+    line-height: 1.7;
+  }
+  
+  .h7 .h7_1 .h7_12{
+      margin-top: 25px;
+  }
+  .h7 .h7_2{
+      width: auto;
+      margin-left: 20px;
+      margin-right: -75px;
+  }
+  
+  
+  
+  
+  .h7 .h7_2 .h7_22
+  {
+      margin-bottom: 13px;
+  }
+  
+  .h7 .h7_2 .h7_22_information
+  {
+      margin-top: 6px;
+      font-size: 14px;
+      font-family:MuliDisplayVN;
+      color: grey;
+  }
+  .h7_22_information:hover{
+      color: black;
+      cursor: pointer;
+  }
+  
+  .h7 .h7_2 img
+  {
+      width: 410px;
+  }
+  
+  .fa-play {
+    color: gray; /* Đặt màu thành xám */
+    font-size: 5px; /* Điều chỉnh kích thước */
+    margin-left: 5px; /* Tạo khoảng cách với nội dung */
+    vertical-align:auto;
+  }
+  .h7 .h7_3{
+      width: auto;
+  }
+  .h7 .h7_3 .h7_33
+  {
+      margin-bottom: 12px;
+      margin-left: 86px;
+  }
+  
+  .h7 .h7_3 img
+  {
+      width: 410px;
+      margin-left: 86px;
+  }
+  
+  .h7_33_information {
+      display: flex; /* Hiển thị theo hàng ngang */
+      list-style-type: none; /* Xóa dấu đầu dòng */
+      padding: 0; /* Xóa khoảng cách mặc định */
+      margin-top: -2px; /* Khoảng cách từ tiêu đề đến danh sách */
+  }
+  
+  .h7_33_information li {
+      margin-right: 50px;/*khoang cách giữa các biểu tượng*/
+      margin-top: -35px;
+      margin-left: -50px;
+      font-size: 19px;
+     
+  }
+  
+  .h7_33_information li:last-child {
+      margin-right: 0; /* Không thêm khoảng cách cho phần tử cuối cùng */
+  }
+  
 
 
 
@@ -656,13 +748,15 @@ body
 {
     margin-top: 40px;
     text-align: center;
+    margin-left: -94px;
+    margin-bottom: -66px;
 
 }
 .h8 .h8_1 ul
 {
     display: flex;
     background-color: rgb(245, 245, 245);
-    width: 1519px;
+    /*width: 1518px;*/
     height: 76px;
     margin-top: -15px;
     margin-bottom: 13px;
@@ -675,7 +769,8 @@ body
 }
 
 .h8 .h8_1 .h8_1_1 
-{   
+{   font-family:MuliDisplayVN;
+    font-weight: 500;
     font-size: 13px;
     margin-left: 110px;
     position: relative;
@@ -684,6 +779,8 @@ body
 
 .h8 .h8_1 .h8_1_2
 {
+    font-family:MuliDisplayVN;
+    font-weight: 500;
     margin-left: 230px;
     position: relative;
     margin-top: 15px;
@@ -711,6 +808,7 @@ body
     color: black;
 }
 .h8 .h8_2_1 p{
+    font-family:MuliDisplayVN;
     font-size: 13px;
 }
 
@@ -719,7 +817,7 @@ body
     display: inline-flex;
     margin-top: 20px;
     width: 1300px;
-    margin-right: 100px;
+    margin-right: -5px;
 }
 
 
@@ -729,7 +827,6 @@ body
     padding: 15px 0;
     margin-top: -51px;
     margin-left: -10px;
-    font-weight:lighter;
 }
 .h8_2_1 i {
     margin-right: 4px; /* Khoảng cách giữa biểu tượng và văn bản */
@@ -741,7 +838,6 @@ body
 
 .h8 .h8_2 .h8_2_2
 {
-    margin-right: -300px;
     font-size: 13px;
     float: right;
     padding-left: 800px;
@@ -758,9 +854,9 @@ body
 
 .h8 .h8_2_2 p 
 {
+    font-family:MuliDisplayVN;
     margin-top: 2.5px;
     font-size: 13px;
-    margin-bottom: 13px;
     position: relative;
     left: 69px; /* Điều chỉnh giá trị để nhích chữ qua phải */
 }
@@ -779,11 +875,13 @@ body
 }
 
 .return p {
+    font-family:MuliDisplayVN;
+    font-weight: 1000;
     font-size: 12px;
     transform: rotate(-90deg); /* Xoay văn bản dọc */
     white-space: nowrap;
     font-weight: bold; /* In đậm chữ */
-    color: rgb(0, 0, 0); /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
+    color: black; /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
 }
 
 .return i {
@@ -797,7 +895,7 @@ body
     width: 1.4px; /* Độ dày của dấu gạch */
     height: 25px; /* Chiều dài của dấu gạch */
     background-color: black; /* Màu sắc của dấu gạch */
-    bottom: 15px;
+    margin-bottom: 10px;
 }
 
 
