@@ -256,14 +256,21 @@ body
     font-size: 13px;
     margin-right: 20px;
 }
+.h1{
+    width: 1550px;
+    height: 850px;
+    margin-top: -180px;
+}
 .h1 img 
 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 410px;
+    height: 100%;
     width: 100%;
     display: block; /* Ngăn ngừa khoảng trống dưới ảnh */
+    align-items: center;
+    object-fit: contain;
 }
 .text_1 p{
     text-align: center;
