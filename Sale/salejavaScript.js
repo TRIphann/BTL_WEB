@@ -120,3 +120,30 @@ document.querySelectorAll('.product-block').forEach(block => {
 });
 
 
+
+$(document).ready(function() {
+    // Khi nhấp vào dấu chevron, mở/đóng danh sách sản phẩm
+    $(".toggle-link").click(function() {
+        var $parentLi = $(this).closest('li'); // Lấy li cha của link
+        var $dropdownContent = $parentLi.find('.dropdown-content'); // Tìm .dropdown-content trong phần tử li
+
+        // Đóng tất cả các dropdowns khác
+        $(".dropdown-content").not($dropdownContent).slideUp(); // Ẩn các phần tử không được nhấp
+
+        // Chuyển đổi giữa việc hiển thị/ẩn nội dung cho phần tử hiện tại
+        $dropdownContent.stop(true, true).slideToggle(); // Mở/đóng phần tử hiện tại
+
+        // Thêm/loại bỏ class "open" cho dấu chevron
+        $(this).find('i').toggleClass('open');
+    });
+
+    // Đảm bảo đóng danh sách nếu nhấp ra ngoài
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.h8_1_1, .h8_1_2').length) {
+            $(".dropdown-content").slideUp(); // Ẩn tất cả dropdowns
+            $(".fa-chevron-down").removeClass('open'); // Đặt lại dấu chevron
+        }
+    });
+});
+
+
