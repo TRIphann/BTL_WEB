@@ -1120,8 +1120,9 @@ section {
 
 .user 
 {
+    
     padding-left: 30px;
-    border: 1px solid black;
+    border: none;
     width: 600px;
     background-color: white;
     height: 100%;
@@ -1129,13 +1130,22 @@ section {
     position: fixed; /* Đặt div cố định trên màn hình */
     top: 20px; /* Cách mép trên 20px */
     right: 20px; /* Cách mép phải 20px */
+    font-size: 14px;
+}
+
+  .hr_dotted{
+    width: 90%;
+    border-top: 0.005px dotted black;
+    font-weight: bolder;
 }
 
 
 
 .giohang 
 {
+    margin-top: 100px;
     margin-bottom: 5px;
+    font-weight: lighter;
 }
 
 .giohang_information 
@@ -1167,9 +1177,10 @@ section {
 
 .user .link 
 {
-    background-color: gray;
+    background-color: black;
     text-align: center;
     padding: 10px;
+    width: 90%;
 }
 
 .user i 
