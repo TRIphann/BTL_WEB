@@ -130,7 +130,7 @@ body
     padding-right: 60px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     height: 56.5px;
-    z-index: 999;
+    z-index: 998;
     background-color: #ffffff;
     transition: transform 0s ease, opacity 0s ease; /* Hiệu ứng chuyển động */
     transform: translateY(-100%); 
@@ -207,22 +207,28 @@ body
     height: 0.1px;
     background-color: rgb(0, 0, 0); /* Màu sắc của border */
 }
-
+.navbar .navbar_list .red-border:hover::after {
+    background-color: red; /* Màu đỏ */
+}
+/* Các mục còn lại có border màu đen khi hover */
+.navbar .navbar_list .navbar_list_:not(.red-border):hover::after {
+    background-color: rgb(0, 0, 0); /* Màu đen */
+}
 .sanpham_list_
 {
+    position: fixed;  /* Giữ sanpham_list_ ở vị trí cố định */
     display: flex;
     justify-content: space-around;
     position: fixed;
-    top: 13px;
+    top: 36px;
     left: 0;
     right: 0;
     width: 1519.5px;
     height: 100vh;
-    margin-top: 23px;
     letter-spacing: 0.5px;
     background-color: #ffffff;
     padding-left: 150px;
-    padding-top: 60px;
+    padding-top: 15px;
     padding-right: 400px;
     z-index: 999;
 }
@@ -230,10 +236,9 @@ body
 .sanpham_list_ li 
 {
     list-style: none;
-    line-height: 45px;
+    line-height: 43px;
     padding: -20px;
 }
-
 .sanpham_list_ a 
 {
     color: black;
@@ -243,11 +248,10 @@ body
 .sanpham_list
 {
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column; 
 }
 .sanpham_list_{
+    font-family:MuliDisplayVN;
     font-size: 14px;
 }
 
@@ -262,7 +266,10 @@ body
 {
     text-decoration: underline;
 }
-
+/* Đảm bảo không có phần tử nào che mất sanpham_list_ */
+.sanpham_list_:hover {
+    z-index: 10000; /* Khi hover lên sanpham_list_, đưa nó lên trên mọi phần tử */
+}
 
 .navbar_input {
     position: relative;
@@ -375,7 +382,8 @@ a:focus, a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 21px;
+    height: 60px;
   }
 .container a{
     font-family:MuliDisplayVN;
@@ -391,7 +399,7 @@ a:focus, a:active {
     top: 36px; /* Đặt dưới navbar */
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 998;
     background-color: white;
 }
 
@@ -860,10 +868,12 @@ a:focus, a:active {
     position: relative;
     left: 69px; /* Điều chỉnh giá trị để nhích chữ qua phải */
 }
+
+
 .return {
     position: fixed;
-    bottom: 105px; /* Đặt vị trí gần cuối trang */
-    right: -15px;
+    bottom: 57px; /* Đặt vị trí gần cuối trang */
+    right: -6px;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -871,33 +881,14 @@ a:focus, a:active {
     cursor: pointer;
     text-align: center;
     transition: opacity 0.5s ease, visibility 0.5s ease; /* Thêm hiệu ứng visibility */
+}
+.return-text {
+    width: auto; /* Giảm kích thước hình ảnh */
+    height: 140px; /* Giảm chiều cao của hình ảnh */
+    object-fit: contain; /* Đảm bảo ảnh không bị méo */
+    background-color: transparent; /* Đảm bảo không có nền phía sau ảnh */
 
 }
-
-.return p {
-    font-family:MuliDisplayVN;
-    font-weight: 1000;
-    font-size: 12px;
-    transform: rotate(-90deg); /* Xoay văn bản dọc */
-    white-space: nowrap;
-    font-weight: bold; /* In đậm chữ */
-    color: black; /* Tô màu chữ, bạn có thể thay màu theo ý muốn */
-}
-
-.return i {
-    position: relative;
-    bottom: 48px;
-    font-size: 25px; /* Điều chỉnh kích thước của mũi tên */
-}
-
-.vertical-line {
-    position: relative;
-    width: 1.4px; /* Độ dày của dấu gạch */
-    height: 25px; /* Chiều dài của dấu gạch */
-    background-color: black; /* Màu sắc của dấu gạch */
-    margin-bottom: 10px;
-}
-
 
 .user 
 {
