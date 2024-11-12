@@ -260,6 +260,7 @@ body
     width: 1550px;
     height: 850px;
     margin-top: -180px;
+
 }
 .h1 img 
 {
@@ -274,7 +275,7 @@ body
 }
 .text_1 p{
     text-align: center;
-    margin-top: 40px;
+    margin-top: -200px;
     font-size: 25px;
     font-family: 'MuliDisplayVN', sans-serif;
 }
@@ -315,7 +316,7 @@ body
   .choice
 {
     /* float: right; */
-    padding-left: 1100px;
+    padding-left: 1150px;
     display: flex;
     margin-top: 50px;
     margin: 50px 0 0 0;
@@ -522,7 +523,16 @@ body
 .product-sizes.visible {
     display: block;
 }
-
+.hr6 {
+    width: 98.75%; /* Chiếm 100% chiều rộng của phần tử cha */
+    height: 0.5px; /* Độ dày 0.5 pixel */
+    border: none; /* Không có viền */
+    background-color: #e7e4e4; /* Màu xám nhạt */
+    margin-bottom: 25px;
+    margin: 40px 11px;
+    margin-top: 50px;
+  
+  }
 
 .h7 img 
 {
@@ -709,6 +719,7 @@ body
     display: inline-flex;
     margin-top: 20px;
     width: 1300px;
+    margin-right: 100px;
 }
 
 
