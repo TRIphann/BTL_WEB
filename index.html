@@ -682,9 +682,9 @@ function scrollToTop() {
     <div class="user">
         <h4 class="giohang">GIỎ HÀNG</h4>
         <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
-        <hr>
+        <hr class="hr_dotted">
         <p class="giohang_status">Hiện chưa có sản phẩm</p>
-        <hr>
+        <hr class="hr" style="border: 1px solid black; width: 90%;">
         <div class="totalprice">
             <p class="totalprice_1">TỔNG TIỀN TẠM TÍNH:</p>
             <p class="totalprice_2">0<u>đ</u></p>
@@ -699,10 +699,18 @@ function scrollToTop() {
                 $("#shoppingcart").click(function(){
                     $(".user").show();
                     $(".user").animate({
-                        right : '350px',
-                        top : '200px' ,
-                        height : '350px'
+                        right : '0',
+                        top : '0' ,
+                        height : '800px',
+                        width: '500px',
+                        
                     });
+                    //Làm mờ các phần tử khác
+                    $(".other-element").addClass("blur");
+                    //Đẩy các phần tử sang trái
+                    $(".other-elements").animate({
+                        
+                    })
                     $(".1").animate({
                         opacity : '0.3'
                     })
