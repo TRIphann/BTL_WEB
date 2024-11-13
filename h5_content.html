@@ -8,6 +8,92 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Document</title>
     <style>
+        @font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 400;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Regular.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 500;
+            font-style: normal;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-SemiBold.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 700;
+            font-style: normal;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Bold.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 800;
+            font-style: normal;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraBold.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 900;
+            font-style: normal;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Black.ttf?v=2326')
+        }
+
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 300;
+            font-style: normal;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Light.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 200;
+            font-style: normal;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraLight.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 400;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Italic.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 500;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-SemiBoldItalic.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 700;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-BoldItalic.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 800;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraBoldItalic.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 900;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-BlackItalic.ttf?v=2326')
+        }
+
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 300;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-LightItalic.ttf?v=2326')
+        }
+        @font-face {
+            font-family: MuliDisplayVN;
+            font-weight: 200;
+            font-style: italic;
+            src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraLightItalic.ttf?v=2326')
+        }
         .container{
             width: 1480px;
             height: 500px;
@@ -47,7 +133,6 @@
         }
         .h5_information p {
             text-align: center;
-            font-size: 14px;
         }
         .product-card {
             position: relative;
@@ -94,7 +179,7 @@
         }
         .h5_information
         {
-            font-size: 13px;
+            font-family: MuliDisplayVN;
             margin-top: 45px;
             text-align: center;
         }
@@ -112,7 +197,6 @@
             padding: 8px 0;
             text-align: center;
             opacity: 0; /* Ban đầu opacity là 0, không nhìn thấy */
-            font-size: 14px;
         }
 
         .h5_image .product-card:hover .detail_overlay {
@@ -179,7 +263,7 @@
 </head>
 <body>
     <hr style="width: 1308px;" class="hr5">
-    <h3 style="font-size: 23px; text-align: center;">Gợi ý dành riêng cho bạn</h3>
+    <p style="font-family: MuliDisplayVN; font-size: 23px; text-align: center; font-weight: bold;">Gợi ý dành riêng cho bạn</p>
     <div class="container">
 
         <div class="col-md-12">
@@ -195,11 +279,11 @@
                                             <a href="./"><img src="./Image/h5_files/ASMDTPC2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Áo Sơ Mi Dài Tay Phối Cổ</p>
-                                            <p><b>449,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Áo Sơ Mi Dài Tay Phối Cổ</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>449,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>                            
@@ -212,11 +296,11 @@
                                             <a href="./"><img src="./Image/h5_files/GCGPMNGT2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
-                                            <p><b>449,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>449,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>                            
@@ -229,11 +313,11 @@
                                             <a href="./"><img src="./Image/h5_files/ATFBIM2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>ÁO THUN FORM BOXY IN "MUSÉE"</p>
-                                            <p><b>299,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Áo THun Form Boxy In "MUSÉE"</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>299,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>                            
@@ -246,11 +330,11 @@
                                             <a href="./"><img src="./Image/h5_files/GMMNGT2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Giày Mules Mũi Nhọn Gót Trụ</p>
-                                            <p><b>455,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Giày Mules Mũi Nhọn Gót Trụ</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>455,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div> 
@@ -267,11 +351,11 @@
                                             <a href="./"><img src="./Image/h5_files/AKPNT2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Áo Knit Polo Ngắn Tay</p>
-                                            <p><b>549,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Áo Knit Polo Ngắn Tay</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>549,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>                     
@@ -284,11 +368,11 @@
                                             <a href="./"><img src="./Image/h5_files/GCGPMNGT4.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
-                                            <p><b>449,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Giày Cao Gót Pump Mũi Nhọn Gót Thanh</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>449,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>                 
@@ -301,11 +385,11 @@
                                             <a href="./"><img src="./Image/h5_files/GSKTTJ2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Giày Sandal Khóa Trang Trí Juno</p>
-                                            <p><b>399,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Giày Sandal Khóa Trang Trí Juno</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>399,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>                   
@@ -318,11 +402,11 @@
                                             <a href="./"><img src="./Image/h5_files/GBBGBTTK2.webp" class="image_after" alt=""></a>
                                         </div>
                                         <div class="h5_information">
-                                            <p>Giày Búp Bê Giày Ballerina Trang Trí Khóa</p>
-                                            <p><b>229,000<u>đ</u></b> <b>229,000<u>đ</u></b></p>
+                                            <p style="font-size: 14px;">Giày Búp Bê Giày Ballerina Trang Trí Khóa</p>
+                                            <p style="font-size: 13px; font-weight: bold;"><b>229,000<u>đ</u></b> <b>229,000<u>đ</u></b></p>
                                         </div>
                                     </div>
-                                    <div class="detail_overlay">
+                                    <div class="detail_overlay" style="font-family: MuliDisplayVN; font-size: 13px;">
                                         <span>&#128065; Xem chi tiết</span>
                                     </div>
                                 </div>
