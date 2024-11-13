@@ -678,50 +678,51 @@ function scrollToTop() {
     $('html, body').animate({ scrollTop: 0 }, 'slow');
 }
 </script>
-
-    <div class="user">
-        <h4 class="giohang">GIỎ HÀNG</h4>
-        <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
-        <hr class="hr_dotted">
-        <p class="giohang_status">Hiện chưa có sản phẩm</p>
-        <hr class="hr" style="border: 1px solid black; width: 90%;">
-        <div class="totalprice">
-            <p class="totalprice_1">TỔNG TIỀN TẠM TÍNH:</p>
-            <p class="totalprice_2">0<u>đ</u></p>
-        </div>
-        <div class="link">
-            <a href="./">XEM GIỎ HÀNG</a>
-        </div>
-        <i class="fa-regular fa-circle-xmark fa-shake"></i>
-        <script>
-            $(document).ready(function(){
-                $(".user").hide();
-                $("#shoppingcart").click(function(){
-                    $(".user").show();
-                    $(".user").animate({
-                        right : '0',
-                        top : '0' ,
-                        height : '800px',
-                        width: '500px',
-                        
-                    });
-                    //Làm mờ các phần tử khác
-                    $(".other-element").addClass("blur");
-                    //Đẩy các phần tử sang trái
-                    $(".other-elements").animate({
-                        
-                    })
-                    $(".1").animate({
-                        opacity : '0.3'
-                    })
-                });
-                $(".user i").click(function(){
-                    $(".user").hide();
-                    $(".1").animate({
-                        opacity : '1'
-                    })
-                });
-            });
-        </script>
+<div class="user">
+    <h4 class="giohang">GIỎ HÀNG</h4>
+    <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
+    <hr>
+    <p class="giohang_status">Hiện chưa có sản phẩm</p>
+    <hr>
+    <div class="totalprice">
+        <p class="totalprice_1" style="font-weight: 600; color: #000000;">TỔNG TIỀN TẠM TÍNH:</p>
+        <p class="totalprice_2">0<u>đ</u></p>
     </div>
+    <div class="link">
+        <a href="./">XEM GIỎ HÀNG</a>
+    </div>
+    <i class="fa-regular fa-circle-xmark fa-shake"></i>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".user").hide(); // Ẩn giỏ hàng ban đầu
+
+// Khi nhấn vào biểu tượng giỏ hàng
+        $("#shoppingcart").click(function(){
+            $(".user").show(); // Hiển thị giỏ hàng
+             $("body").addClass("moved");
+    $(".content").animate({
+        opacity: '0.8' // Di chuyển giỏ hàng từ phải vào
+    }, 300);
+});
+    $(".user i").click(function(){
+            $("body").removeClass("moved"); // Khôi phục trạng thái của trang
+            $(".content").animate({
+                opacity: '1' // Khôi phục độ mờ của các phần tử khác
+            }, 300);
+
+            // Ẩn giỏ hàng và dịch chuyển ra ngoài
+            $(".user").animate({
+                right: '-1000px', // Đưa giỏ hàng ra ngoài
+                opacity: 0 // Làm mờ giỏ hàng khi đóng
+            }, 300, function() {
+                $(".user").hide(); // Ẩn giỏ hàng khi animation xong
+            });
+        });
+    });
+    
+
+
+    </script>
+</div>
 </html>
