@@ -10,7 +10,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+      
     
     <script>
         $(document).ready(function(){
@@ -161,28 +162,42 @@
                                     <a href="./">Magic Snow</a>
                                 </li>
                                 <li>
-                                    <a href="./">Panorama Diamond</a>
+                                    <a href="./">Panorama</a>
+                                </li>
+                                <li>
+                                    <a href="./">Diamond</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </li>
-                <li class="navbar_list_">
+                <li class="navbar_list_ red-border">
                     <a  href="./Sale/sale.html" class=navbar_list_a style="color: #F40000;">SALE</a>
                 </li>
-                <li class="navbar_list_">
-                    <a class=navbar_list_a style="color: #F40000;">QUẦN ÁO SALE TỪ 90K</a>
+                <li class="navbar_list_ red-border">
+                    <a class=navbar_list_a style="color: #F40000;">SALE QUẦN ÁO TỪ 90K</a>
                 </li>
                 <li class="navbar_list_">
                     <a href="./showroom/showroom.html" class="showroom" style="color: #252A2B;">SHOWROOM</a>
                 </li>
             </ul>
             <ul class="navbar_input">
-                <input type="text" placeholder="Tìm kiếm"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <div class="search-icon">
+                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3457 5.49982C11.3457 8.26112 9.10717 10.4996 6.34572 10.4996C3.58427 10.4996 1.3457 8.26112 1.3457 5.49982C1.3457 2.73851 3.58427 0.5 6.34572 0.5C9.10717 0.5 11.3457 2.73851 11.3457 5.49982Z" stroke="#2D2D2D"></path>
+                            <line y1="-0.5" x2="4.94967" y2="-0.5" transform="matrix(0.70712 0.707094 -0.70712 0.707094 9.3457 9.5)" stroke="#2D2D2D" stroke-linejoin="round"></line>
+                        </svg>
+                    </div>
+                </div>            
             </ul>
-            <ul class="navbar_user">    
-                <a href="./dangnhap/dangnhap.html"><i class="fa-regular fa-user" id="user" style="color: #080808;font-weight: lighter;"></i></a>
-                <i class="fa-solid fa-bag-shopping" id="shoppingcart" style="color: #000000;"></i>
+            <ul class="navbar_user" style="margin-right: 20px;">    
+                <a id="dangnhap" href="./dangnhap/dangnhap.html">
+                    <img src="./Image/dangnhap.svg" alt="SVG Image" style="margin-bottom: 23px;margin-right: 10px;">
+                </a>
+                <img id="shoppingcart" src="./Image/giohang.svg" alt="SVG Image" >
+
             </ul>
         </nav>
         
@@ -240,7 +255,7 @@
                                 <img src="Image/h2_files/TXNBHB.webp" alt="Màu sắc 2" class="color-option" onclick="selectColor(this)">
                                 <img src="Image/h2_files/TXNBHBR.jpeg" alt="Màu sắc 3" class="color-option" onclick="selectColor(this)">
                             </div>
-                            <button class="btn-buy">Mua Ngay</button>
+                            <button class="btn-buy">MUA NGAY</button>
                         </div>
                     </div>
                 </li>
@@ -254,7 +269,7 @@
                                 <img src="Image/h2_files/GCGQMJ5.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
                                 <img src="Image/h2_files/GCGQMJ6.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
                                 <img src="Image/h2_files/GCGQMJ7.webp" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
-                                <span class="hang-moi">Hàng Mới</span>
+                                <span class="hang-moi">MUA NGAY</span>
                         </div>
                         <div class="product-detail">
                             <p class="pro-name">Giày Cao Gót Quai Mary Jane</p>
@@ -297,7 +312,7 @@
                                 <img src="Image/h2_files/BBHO.webp" alt="Màu sắc 1" class="color-option">
                                 <img src="Image/h2_files/BBHB.webp" alt="Màu sắc 2" class="color-option">
                             </div>
-                            <button class="btn-buy">Mua Ngay</button>
+                            <button class="btn-buy">MUA NGAY</button>
                         </div>
                     </div>
                 </li>
@@ -325,7 +340,7 @@
                                 <img src="Image/h2_files/TXNTTKW.webp" alt="Màu sắc 2" class="color-option">
                                 <img src="Image/h2_files/TXNTTKB.webp" alt="Màu sắc 3" class="color-option">
                             </div>
-                            <button class="btn-buy">Mua Ngay</button>
+                            <button class="btn-buy">MUA NGAY</button>
                         </div>
                     </div>
                 </li>
@@ -385,8 +400,8 @@
                             <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="✨ SHAKE IT UP!! KHUẤY ĐỘNG NHỊP ĐIỆU THỜI TRANG ✨ SPECIAL COLLECTION 2022" width="100%" height="360" src="https://www.youtube.com/embed/sD5dcuu70JA?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=sD5dcuu70JA&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=1" data-gtm-yt-inspected-16="true"></iframe>
                         </div>
                         <div class="video_information">
-                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">SHAKE IT UP</p>
-                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                            <p id="video_information1">SHAKE IT UP</p>
+                            <P style="white-space: pre-line" id="video_information2">
                                 Nguồn cảm hứng rực rỡ, sống động từ Bữa tiệc được tái hiện hoàn hảo trên từng chi tiết giày
                                 túi và trang phục thời trang của bộ sưu tập Shake It Up! Cổ vũ cho mỗi cô gái hãy khuấy
                                 động giai điệu thời trang của chính mình mỗi ngày. Shake It Up!
@@ -398,8 +413,8 @@
                             <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture " width="100%" height="360" src="https://www.youtube.com/embed/M5sXSeqD9xU?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=M5sXSeqD9xU&enablejsapi=1&origin=https%3A%2F%2Fjuno.vn&widgetid=2" data-gtm-yt-inspected-16="true"></iframe>
                         </div> 
                         <div class="video_information">
-                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">SUMMER TASTE</p>
-                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                            <p id="video_information1">SUMMER TASTE</p>
+                            <P style="white-space: pre-line" id="video_information2">
                                 Những chiếc túi kem thời trang, đầy cảm hứng từ nhiều sắc màu ngọt ngào và xu hướng thời
                                 trang hè 2021, SUMMER TASTE COLLECTION là sự kết hợp mới nhất của JUNO & Miu Lê để
                                 mang đến thông điệp: Hãy gạt đi những bận rộn, tận hưởng những trải nghiệm & hương vị
@@ -411,8 +426,8 @@
                         <div class="video">
                             <iframe id="video" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="MV REMAKE &quot;TRÊN TÌNH BẠN - DƯỚI TÌNH YÊU&quot; PHIÊN BẢN THẢ THÍNH BẰNG DÂY GIÀY SNEAKERS" width="100%" height="360" src="https://www.youtube.com/embed/S7mWot0hgpU?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=S7mWot0hgpU&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=3" data-gtm-yt-inspected-6="true"></iframe>                        </div>
                         <div class="video_information">
-                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">Juno Sneakers Thả Thính Tình Yêu</p>
-                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                            <p id="video_information1">Juno Sneakers Thả Thính Tình Yêu</p>
+                            <P style="white-space: pre-line" id="video_information2">
                                 5 nút thắt độc đáo, bắt điểm nhìn trên đôi JUNO Sneakers như một ngôn ngữ thả thính mới:
                                 giúp nàng khoe khéo status tình cảm, như nút thắt #SelfLove dành cho cô nàng thích cuộc
                                 sống độc thân tự do!
@@ -424,8 +439,8 @@
                             <iframe frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; " width="100%" height="360" src="https://www.youtube.com/embed/kWSux5Nw_LI?autoplay=1&mute=1&controls=0&showinfo=0&loop=1&playlist=kWSux5Nw_LI&enablejsapi=1&origin=https%3A%2F%2Fjuno.vn&widgetid=4S" data-gtm-yt-inspected-16="true"></iframe>
                         </div>
                         <div class="video_information">
-                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">IMPERFECT PERFECTION</p>
-                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                            <p id="video_information1">IMPERFECT PERFECTION</p>
+                            <P style="white-space: pre-line" id="video_information2">
                                 Một năm 2020 không hoàn hảo, với thật nhiều thử thách, vụn vỡ cuối cùng đã sắp qua đi. Đã
                                 đến lúc nàng được nâng ly chúc mừng cho tinh thần mạnh mẽ, lạc quan của bản thân
                             </P>
@@ -435,8 +450,8 @@
                         <div class="video">
                             <iframe id="video" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="JUNO | Bộ sưu tập THE FOLD - Nếp gấp xu hướng thể hiện nét riêng | Mùa Thu Đông 2020" width="100%" height="360" src="https://www.youtube.com/embed/9-4i8ROafNk?autoplay=1&amp;mute=1&amp;controls=0&amp;showinfo=0&amp;loop=1&amp;playlist=9-4i8ROafNk&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjuno.vn&amp;widgetid=5" data-gtm-yt-inspected-6="true"></iframe>                        </div>
                         <div class="video_information">
-                            <p style="font-weight: bold; font-size: 20px;" id="video_information1">THE FOLD</p>
-                            <P style="font-size: 18px;white-space: pre-line" id="video_information2">
+                            <p  id="video_information1">THE FOLD</p>
+                            <P style="white-space: pre-line" id="video_information2">
                                 THE FOLD Nếp gấp xu hướng thể hiện nét riêng Bộ sưu tập độc quyền mùa Thu Đông chính
                                 thức ra mắt ngày 25.09.2020 dựa trên cảm hứng về cô nàng tự gấp nên hình dáng mới thể hiện
                                 chính mình thật tự tin và bản lĩnh.
@@ -446,7 +461,6 @@
                     </div>
                     <div class="khamphangay">
                         <a href="./" >KHÁM PHÁ NGAY</a>
-                        <hr>
                     </div>
                     <div class="custom-pagination">
                         <span class="custom-bullet"></span>
@@ -459,6 +473,7 @@
                 </div>
             </section>
         </div>
+        <script src="javaScript.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <!-- Nhúng iframe chỉ cho phần .h5 -->
         <iframe src="h5_content.html" width="100%" height="800px" frameborder="0" scrolling="no"></iframe>
@@ -476,7 +491,7 @@
                 </li>
                 <li>
                     <div class="h6_title_list">
-                        <h3>INSTAGRAM</h3>
+                        <h3 style="font-family: MuliDisplayVN; font-size: 20px; font-weight: bold;">INSTAGRAM</h3>
                         <p>@juno.vn</p>
                     </div>
                 </li>
@@ -504,28 +519,28 @@
             <ul>
                 <li>
                     <div class="h7_1">
-                        <p class="h7_11", style="font-size: 13px;">GỌI MUA HÀNG ONLINE (08:00 - 21: 00 mỗi ngày)</p>
+                        <p class="h7_11", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">GỌI MUA HÀNG ONLINE (08:00 - 21: 00 mỗi ngày)</p>
                         <span>
-                            <p style="font-size: 20px;" class="h7_11">1800 1162</p>
-                            <p style="font-size: 13px;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
+                            <p style="font-size: 24px;font-family:MuliDisplayVN;" class="h7_11">1800 1162</p>
+                            <p style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 300;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
                         </span>
-                        <p class="h7_12", style="font-size: 13px;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
+                        <p class="h7_12", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
                         <span>
-                            <p style="font-size: 20px;" class="h7_11">1800 1160</p>
-                            <p style="font-size: 13px;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
+                            <p style="font-size: 24px;font-family:MuliDisplayVN;" class="h7_11">1800 1160</p>
+                            <p style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 300;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
                         </span>
                     </div>
                 </li>
                 <li>
                     <div class="h7_2">
-                        <p class="h7_22", style="font-size: 14px;">HỆ THỐNG SHOWROOM</p>
+                        <p class="h7_22", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">HỆ THỐNG SHOWROOM</p>
                         <a a href="./"><img src="./Image/h7_files/hethongshowroom.webp" alt=""></a>
-                        <a href="./showroom/showroom.html"><p class="h7_22_information"><u>Xem địa chỉ hệ thống 54 showroom</u><i class="fa-solid fa-play"></i></p></a>
+                        <a href="./showroom/showroom.html"><p class="h7_22_information"><u>Xem địa chỉ hệ thống 53 showroom</u><i class="fa-solid fa-play"></i></p></a>
                     </div>
                 </li>
                 <li>
                     <div class="h7_3">
-                        <p class="h7_33", style="font-size: 13px;">FANPAGE CỦA CHÚNG TÔI</p>
+                        <p class="h7_33", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">FANPAGE CỦA CHÚNG TÔI</p>
                         <a a href="./"><img src="./Image/h7_files/fanpagecuachungtoi.webp" alt=""></a>
                         <ul class="h7_33_information" style="margin-left: 110px;">
                             <li>
@@ -560,13 +575,13 @@
                                 <a data-eventlabel="youtube" class="link-social" href="https://www.youtube.com/user/JunoShoesVn" target="_blank" rel="nofollow">
                                 <img src="./Image/h7_files/z6021100165804_b2094f11b1bbc44e36cc72bc0be7bbf2.jpg" 
                                 data-src-hover="./Image/h7_files/z6021100159458_caf5a41ba06126c799fe89fff47da6a2.jpg" 
-                                class="hover-switch" alt="Logo Youtube" style="width: 40px; height: 40+px; margin-left: -10px; margin-top: -10px;" /> 
+                                class="hover-switch" alt="Logo Youtube" style="width: 37px; height: auto; margin-left: -12px; margin-top: -7px;" /> 
                             </li>
                             <li>
                                 <a data-eventlabel="zalo" class="link-social" href="https://zalo.me/giayjuno" target="_blank" rel="nofollow">
                                 <img src="https://file.hstatic.net/1000003969/file/logo_zalo_vector_black_min_432cfad5ff584769a4b9d4f44d24b3d4.png" 
                                      data-src-hover="https://file.hstatic.net/1000360430/file/logo-zalo-vector.png" 
-                                     class="hover-switch" alt="Logo Zalo" style="width: 20px; height: 25=0px; margin-left: -10px;" />
+                                     class="hover-switch" alt="Logo Zalo" style="width: 20px; height: auto; margin-left: -12px; margin-top: 1px;" />
                             </li>
                             
                             <script>
@@ -587,7 +602,7 @@
                                                                            
                             <li>
                                 <a data-eventlabel="tiktok" class="link-social" href="https://www.tiktok.com/@junoofficial" target="_blank" rel="nofollow">
-                                <i class="fa" style="margin-left: -7px">
+                                <i class="fa" style="margin-left: -10px">
                                     <svg style="width: 20px; height: 20px;" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g>
                                         <g fill="#f00044">
                                             <path d="m182.1 265.4c-40.6 0-73.4 32.8-72.8 73 .4 25.8 14.6 48.2 35.5 60.7-7.1-10.9-11.3-23.8-11.5-37.7-.6-40.2 32.2-73 72.8-73 8 0 15.7 1.3 22.9 3.6v-80.5c-7.5-1.1-15.2-1.7-22.9-1.7-.4 0-.7 0-1.1 0v59.2c-7.2-2.3-14.9-3.6-22.9-3.6z"></path>
@@ -635,7 +650,7 @@
             </div>
         </div>
     </div>
-    <script src="javaScript.js"></script>
+    
     <!-- <div class="shopping">
         <p>GIỎ HÀNG</p>
         <p>Bạn đang có 0 sản phẩm trong giỏ hàng.</p>
@@ -649,80 +664,81 @@
         <button><a href="./">XEM GIỎ HÀNG</a></button>
     </div> -->
 
-<div class="return" onclick="scrollToTop()">
-    <p>Về đầu trang</p>
-    <i class="bi bi-chevron-up"></i>
-    <div class="vertical-line"></div> <!-- Dấu gạch dọc -->
-</div>
-
-<script>
-    $(window).scroll(function() {
-    var scrollPosition = $(window).scrollTop();  // Lấy vị trí cuộn của trang
-
-    // Nếu cuộn xuống trang (không phải ở đầu trang)
-    if (scrollPosition > 0) {
-        $('.return').css({
-            'opacity': 1,
-            'visibility': 'visible' // Hiển thị khi cuộn xuống
-        });
-    } else {
-        // Nếu ở đầu trang
-        $('.return').css({
-            'opacity': 0,
-            'visibility': 'hidden' // Ẩn khi ở đầu trang
-        });
-    }
-});
-
-function scrollToTop() {
-    $('html, body').animate({ scrollTop: 0 }, 'slow');
-}
-</script>
-<div class="user">
-    <h4 class="giohang">GIỎ HÀNG</h4>
-    <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
-    <hr>
-    <p class="giohang_status">Hiện chưa có sản phẩm</p>
-    <hr>
-    <div class="totalprice">
-        <p class="totalprice_1" style="font-weight: 600; color: #000000;">TỔNG TIỀN TẠM TÍNH:</p>
-        <p class="totalprice_2">0<u>đ</u></p>
+    <div class="return" onclick="scrollToTop()">
+        <img src="../Image/return-removebg-preview.png" alt="Về đầu trang" class="return-text">
     </div>
-    <div class="link">
-        <a href="./">XEM GIỎ HÀNG</a>
-    </div>
-    <i class="fa-regular fa-circle-xmark fa-shake"></i>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $(".user").hide(); // Ẩn giỏ hàng ban đầu
-
-// Khi nhấn vào biểu tượng giỏ hàng
-        $("#shoppingcart").click(function(){
-            $(".user").show(); // Hiển thị giỏ hàng
-             $("body").addClass("moved");
-    $(".content").animate({
-        opacity: '0.8' // Di chuyển giỏ hàng từ phải vào
-    }, 300);
-});
-    $(".user i").click(function(){
-            $("body").removeClass("moved"); // Khôi phục trạng thái của trang
-            $(".content").animate({
-                opacity: '1' // Khôi phục độ mờ của các phần tử khác
-            }, 300);
-
-            // Ẩn giỏ hàng và dịch chuyển ra ngoài
-            $(".user").animate({
-                right: '-1000px', // Đưa giỏ hàng ra ngoài
-                opacity: 0 // Làm mờ giỏ hàng khi đóng
-            }, 300, function() {
-                $(".user").hide(); // Ẩn giỏ hàng khi animation xong
+        $(window).scroll(function() {
+        var scrollPosition = $(window).scrollTop();  // Lấy vị trí cuộn của trang
+    
+        // Nếu cuộn xuống trang (không phải ở đầu trang)
+        if (scrollPosition > 0) {
+            $('.return').css({
+                'opacity': 1,
+                'visibility': 'visible' // Hiển thị khi cuộn xuống
             });
-        });
+        } else {
+            // Nếu ở đầu trang
+            $('.return').css({
+                'opacity': 0,
+                'visibility': 'hidden' // Ẩn khi ở đầu trang
+            });
+        }
     });
     
-
-
+    function scrollToTop() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    }
     </script>
+
+<!--
+    <div class="user">
+        <h4 class="giohang">GIỎ HÀNG</h4>
+        <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
+        <hr>
+        <p class="giohang_status">Hiện chưa có sản phẩm</p>
+        <hr>
+        <div class="totalprice">
+            <p class="totalprice_1" style="font-weight: 600; color: #000000;">TỔNG TIỀN TẠM TÍNH:</p>
+            <p class="totalprice_2">0<u>đ</u></p>
+        </div>
+        <div class="link">
+            <a href="./">XEM GIỎ HÀNG</a>
+        </div>
+        <i class="fa-regular fa-circle-xmark fa-shake"></i>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".user").hide(); // Ẩn giỏ hàng ban đầu
+    
+    // Khi nhấn vào biểu tượng giỏ hàng
+            $("#shoppingcart").click(function(){
+                $(".user").show(); // Hiển thị giỏ hàng
+                 $("body").addClass("moved");
+        $(".content").animate({
+            opacity: '0.8' // Di chuyển giỏ hàng từ phải vào
+        }, 300);
+    });
+        $(".user i").click(function(){
+                $("body").removeClass("moved"); // Khôi phục trạng thái của trang
+                $(".content").animate({
+                    opacity: '1' // Khôi phục độ mờ của các phần tử khác
+                }, 300);
+    
+                // Ẩn giỏ hàng và dịch chuyển ra ngoài
+                $(".user").animate({
+                    right: '-1000px', // Đưa giỏ hàng ra ngoài
+                    opacity: 0 // Làm mờ giỏ hàng khi đóng
+                }, 300, function() {
+                    $(".user").hide(); // Ẩn giỏ hàng khi animation xong
+                });
+            });
+        });
+        
+    
+    
+        </script>
+
+    -->
 </div>
 </html>
