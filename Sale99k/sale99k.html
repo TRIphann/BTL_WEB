@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bạn đang xem tất cả Sản phẩm</title> 
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://file.hstatic.net/1000003969/file/favicon-juno_8afc5c05a55941aa88438ce9264f03f3.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".sanpham_list_").hide();
+            $(".sanpham_list_information").hide();
+            
+            $(".sanpham, .sanpham_list_").mouseenter(function(){
+                $(".sanpham_list_").show();
+                $(".sanpham_list_information").show();
+            });
+    
+            $(".sanpham, .sanpham_list_").mouseleave(function(){
+                $(".sanpham_list_").hide();
+                $(".sanpham_list_information").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="1" style="width: 100%;">
+        <div class="top-bar">
+            <img src="../Image/header-red.webp" alt="Top Bar Image">
+        </div>
+        <nav class="navbar">
+            <ul class="navbar_img">
+                <a href="../index.html"><img src="../Image/logo-svg.svg" alt="" ></a>
+            </ul>
+            <ul class="navbar_list">
+                <li class="navbar_list_">
+                    <a style="color: #252A2B;">HÀNG MỚI</a>
+                </li>
+                <li class="navbar_list_">
+                    <a class="sanpham" style="color: #252A2B;">SẢN PHẨM</a>
+                    <div class="sanpham_list">
+                        <div class="sanpham_list_">
+                            <ul>
+                                <li>
+                                    <a href="./">GIÀY</a>
+                                </li>
+                                <li>
+                                    <a href="./">Giày xăng đan</a>
+                                </li>
+                                <li>
+                                    <a href="./"> Giày cao gót</a>
+                                </li>
+                                <li>
+                                    <a href="./">Giày Sneakers</a>
+                                </li>
+                                <li>
+                                    <a href="./">Giày búp bê</a>
+                                </li>
+                                <li>
+                                    <a href="./">Dép guốc</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">TÚI</a>
+                                </li>
+                                <li>
+                                    <a href="./">Túi cỡ nhỏ</a>
+                                </li>
+                                <li>
+                                    <a href="./">Túi cỡ trung</a>
+                                </li>
+                                <li>
+                                    <a href="./">Túi cỡ lớn</a>
+                                </li>
+                                <li>
+                                    <a href="./">Balo</a>
+                                </li>
+                                <li>
+                                    <a href="./">Ví - Clutch</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">PHỤ KIỆN</a>
+                                </li>
+                                <li>
+                                    <a href="./">Mắt kính</a>
+                                </li>
+                                <li>
+                                    <a href="./">Vớ</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">QUẦN ÁO</a>
+                                </li>
+                                <li>
+                                    <a href="./">Đầm & Jumpsuit</a>
+                                </li>
+                                <li>
+                                    <a href="./">Áo</a>
+                                </li>
+                                <li>
+                                    <a href="./">Quần</a>
+                                </li>
+                                <li>
+                                    <a href="./">Váy</a>
+                                </li>
+                                <li>
+                                    <a href="./">Khoác</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="./">BỘ SƯU TẬP</a>
+                                </li>
+                                <li>
+                                    <a href="./">Moda Feminia</a>
+                                </li>
+                                <li>
+                                    <a href="./">Golden Hour</a>
+                                </li>
+                                <li>
+                                    <a href="./">Autumn Knit</a>
+                                </li>
+                                <li>
+                                    <a href="./">Back To Cool</a>
+                                </li>
+                                <li>
+                                    <a href="./">Parisian Chic</a>
+                                </li>
+                                <li>
+                                    <a href="./">Summer Ombré</a>
+                                </li>
+                                <li>
+                                    <a href="./">Summer Play</a>
+                                </li>
+                                <li>
+                                    <a href="./">Sunshine Retreat</a>
+                                </li>
+                                <li>
+                                    <a href="./">The Raw MySelf</a>
+                                </li>
+                                <li>
+                                    <a href="./">Love Is In The Air</a>
+                                </li>
+                                <li>
+                                    <a href="./">Em Là Hoa</a>
+                                </li>
+                                <li>
+                                    <a href="./">X-mas</a>
+                                </li>
+                                <li>
+                                    <a href="./">Magic Snow</a>
+                                </li>
+                                <li>
+                                    <a href="./">Panorama</a>
+                                </li>
+                                <li>
+                                    <a href="./">Diamond</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar_list_ red-border">
+                    <a href="../Sale/sale.html" class=navbar_list_a style="color: #F40000;">SALE</a>
+                </li>
+                <li class="navbar_list_ red-border">
+                    <a class=navbar_list_a  style="color: #F40000;">SALE QUẦN ÁO TỪ 99K</a>
+                </li>
+                <li class="navbar_list_">
+                    <a href="../showroom/showroom.html" class="showroom" style="color: #252A2B;">SHOWROOM</a>
+                </li>
+            </ul>
+            <ul class="navbar_input">
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Tìm kiếm">
+                    <div class="search-icon">
+                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3457 5.49982C11.3457 8.26112 9.10717 10.4996 6.34572 10.4996C3.58427 10.4996 1.3457 8.26112 1.3457 5.49982C1.3457 2.73851 3.58427 0.5 6.34572 0.5C9.10717 0.5 11.3457 2.73851 11.3457 5.49982Z" stroke="#2D2D2D"></path>
+                            <line y1="-0.5" x2="4.94967" y2="-0.5" transform="matrix(0.70712 0.707094 -0.70712 0.707094 9.3457 9.5)" stroke="#2D2D2D" stroke-linejoin="round"></line>
+                        </svg>
+                    </div>
+                </div>
+            </ul>
+            <ul class="navbar_user" style="margin-right: 20px;">    
+                <a href="../dangnhap/dangnhap.html">
+                    <svg id="dangnhap" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.99952 8C4.79727 8 2.98828 6.19608 2.98828 4C2.98828 1.80392 4.79727 0 6.99952 0C9.20176 0 11.0108 1.80392 11.0108 4C11.0108 6.19608 9.20176 8 6.99952 8ZM6.99952 1.01961C5.34783 1.01961 4.01075 2.35294 4.01075 4C4.01075 5.64706 5.34783 6.98039 6.99952 6.98039C8.6512 6.98039 9.98828 5.64706 9.98828 4C9.98828 2.35294 8.6512 1.01961 6.99952 1.01961Z" fill="#2D2D2D"></path>
+						<path d="M13.5281 15.9998H0.47191C0.157303 15.9998 0 15.7645 0 15.5292V12.0782C0 11.5292 0.235955 11.0586 0.707865 10.8233C4.48315 8.47036 9.59551 8.47036 13.3708 10.8233C13.764 11.0586 14.0787 11.6076 14.0787 12.0782V15.5292C14 15.7645 13.764 15.9998 13.5281 15.9998ZM1.02247 14.9802H13.0562V12.0782C13.0562 11.9213 12.9775 11.7645 12.8202 11.686C9.35955 9.5684 4.7191 9.5684 1.25843 11.686C1.10112 11.7645 1.02247 11.9213 1.02247 12.0782V14.9802Z" fill="#2D2D2D"></path>
+					</svg>                
+                </a>
+                <svg id="shoppingcart" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 16H0V5H15V16ZM0.789474 15.1665H14.1228V5.84209H0.789474V15.1665Z" fill="#2D2D2D"></path>
+                    <path d="M11.1586 7.25279H10.4849V3.78071C10.4849 2.08325 9.13752 0.694416 7.49074 0.694416C5.84395 0.694416 4.49658 2.08325 4.49658 3.78071V7.17563H3.74805V3.78071C3.74805 1.69746 5.39483 0 7.49074 0C9.58664 0 11.2334 1.69746 11.2334 3.78071V7.25279H11.1586Z" fill="#2D2D2D"></path>
+                    <path d="M5.09591 6.48145H3V7.25302H5.09591V6.48145Z" fill="#2D2D2D"></path>
+                    <path d="M11.8322 6.48145H9.73633V7.25302H11.8322V6.48145Z" fill="#2D2D2D"></path>
+                </svg>            
+            </ul>
+        </nav>
+        <div class="h1">
+            <img src="./image/h13.webp" alt="">
+        </div>
+        <div class="text_1">
+            <p>Bạn đang xem tất cả sản phẩm Quần Áo Sale</p>
+        </div>
+        <div class="container">
+            <button class="sale-button">Tất Cả Quần Áo Sale</button>
+            <a href="#" class="sale-link">Quần Áo Sale từ 99K</a>
+            <a href="#" class="sale-link">Quần Áo Sale từ 199K</a>
+            <a href="#" class="sale-link">Quần Áo Sale từ 299K</a>
+        </div>
+
+          <div class="choice">
+            <span class="boloc">
+                <p>Bộ lọc</p>
+                <span>
+                    <img src="./image/down_1c848d6224514fddb82fcdd24bed41a1.webp" alt="">
+                </span>
+            </span>
+            <p>Sắp xếp theo:</p>
+            <select class="selection">
+                <option value="all">Tùy chọn</option>
+                <option value="giatangdan">Giá: Tăng dần</option>
+                <option value="giagiamdan">Giá: Giảm dần</option>
+                <option value="moinhat">Mới nhất</option>
+                <option value="banchaynhat">Bán chạy nhất</option>
+            </select>
+        </div>
+        <div class="h2">
+            <ul class="h2_image">
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="image/do_txn748_1_20231016101521_9d720103e85a415e81349240ee6633ff_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="image/do_txn748_2_20231025180531_e8450ab638a54e1cbb213d1ad5441938_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="image/do_txn748_1_20231016101521_9d720103e85a415e81349240ee6633ff_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="image/den_txn748_17_20231016125245_8758a02184354f988b5c7ef13d22a39d_master.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="image/den_txn748_22_20231025180531_350bddaeb2df457fbffd5b086f5b2ce6_master.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Túi Xách Nhỏ Top Handle Phối Tweed</p>
+                            <p class="pro-price"><b style="color: #F40000;">349,000<u>đ</u> </b><b style="text-decoration: line-through;font-weight: normal;">899,000<u>đ</u></b></p>
+                        </div
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="image/color_do_txn748_25_20231016101522_a88ac47fc1944c3aa3868c93f405bcb1_thumb.jpeg" alt="Màu sắc 1" class="color-option">
+                                <img src="image/color_den_txn748_27_20231016101522_9ef0280e370f42c2b8cf38ec06ab7575_thumb.webp" alt="Màu sắc 2" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                                <img src="./image/xanh_txn745_1_20231106093534_d16c3c3df3074cd0b0435bb3eb0eeff0_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                                <img src="./image/xanh_txn745_2_20231107164238_6a59e0c36f8c4e918c0897a59aa3a05d_master.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                                <img src="./image/xanh_txn745_1_20231106093534_d16c3c3df3074cd0b0435bb3eb0eeff0_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">        
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Túi Xách Nhỏ Đeo Chéo Khoá Trang Trí...</p>
+                            <p class="pro-price"><b style="color: #F40000;">349,000<u>đ</u> </b><b style="text-decoration: line-through;font-weight: normal;">699,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/color_xanh_txn745_25_20231102210649_3cc0f7dcf0bb4dbb9efe1b2a1fef1f84_thumb (1).webp" alt="Màu sắc 1" class="color-option">
+                            </div>               
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="image/den_sd11019_1_20231009085420_60319e70eee7484686df5f0fb1d61d6d_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="image/den_sd11019_12_20231011101552_f56a309108b44cb48f9f81098e0380db_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="image/den_sd11019_1_20231009085420_60319e70eee7484686df5f0fb1d61d6d_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="image/kem_sd11019_9_20231009085420_debb9a39715842778a2e7411598f0f5d_master.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="image/kem_sd11019_2_20231011101551_58218858d2f34826a5b3cfea6a78175f_master.jpeg" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <img src="image/dong_sd11019_17_20231009085420_fdefd7a9fa0448a8afb5b2cedaf71a6a_master.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                            <img src="image/dong_sd11019_22_20231011101552_686183238dab4ef28eff4b8bfc772d1f_master.jpeg" alt="Ảnh 5" class="img-hover img-hover-6" style="display: none;">
+
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Giày Sandanl Xuồng Bọc Cói</p>
+                            <p class="pro-price"><b style="color: #F40000;">249,000<u>đ</u> </b><b style="text-decoration: line-through;font-weight: normal;">599,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/color_den_sd11019_25_20231009085421_6e9baa471d3c4c64bd7d8ea42e3d63bd_thumb.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="./image/color_dong_sd11019_27_20231009085421_7113de234fd14211ac5c433622183a1f_thumb.webp" alt="Màu sắc 2" class="color-option">
+                                <img src="./image/color_dong_sd11019_27_20231009085421_7113de234fd14211ac5c433622183a1f_thumb.webp" alt="Màu sắc 3" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block" style="margin-right: 0;">
+                        <div class="product-img">
+                            <img src="./image/hong_mk102_1_20220711143248_8e0ac5535359421f98575da_29c2f72748b141b8af63d93b21a44136_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="./image/hong_mk102_2_20221025152404_d8baaec4e3874f399e1b891_7afdbad3238548d89aa5f23936f976cb_master.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="./image/hong_mk102_1_20220711143248_8e0ac5535359421f98575da_29c2f72748b141b8af63d93b21a44136_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="./image/den_mk102_4_20220711143248_ea950d152f94437c8202e7bb_65ddd73eeb944a779451a0d19c717b57_master.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="./image/den_mk102_7_20221025152404_e109571a20364ad9be10ba79_ec147016b05643d99647fb221ba75461_master.jpeg" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <img src="./image/xanh_mk102_7_20220711143249_b1cb985d87724ac690a595f_a8dec9ece1ac4fedadc2aae379ebaae7_master.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                            <img src="./image/xanh_mk102_12_20221025152405_69a6351bf05449f1a02e7f_796ba02a56c24f76990f2da75ff4197a_master.jpeg" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Mắt Kính Round Plannet</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u> </b><b style="text-decoration: line-through;font-weight: normal;">455,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/color_hong_mk102_10_20220711143249_fe3adf8af6944bc1_7fcf53b01a3c4551a5b66e2a03954170_thumb.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="./image/color_den_mk102_11_20220711143249_79de6bf6342e4f3b8_f55ce869ec1841fabd9ab93c4b4ef84b_thumb.webp" alt="Màu sắc 2" class="color-option">
+                                <img src="./image/color_xanh_mk102_12_20220711143249_aff1d47cc74e4ae1_96c9b10305c44021a9ba97db46866638_thumb.webp" alt="Màu sắc 3" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="h2_image">
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="image/xanh_mk103_1_20220711144139_c223be0e9d89430caae8542_0fe6264e8db5484abd51e63cc6b94ad2_master.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="image/xanh_mk103_2_20221025152726_f2a7362e60e74550b562b27_48b6a134d2b943c1a5d9191997279419_master.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="image/xanh_mk103_1_20220711144139_c223be0e9d89430caae8542_0fe6264e8db5484abd51e63cc6b94ad2_master.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="image/xam-tim_mk103_4_20220711144139_94177ed421eb4690bde0_1598a7f3f2dc42539113df18436f0946_master.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="image/xam-tim_mk103_7_20221025152726_18e9d2d391fb4afaa4ed_8f4f17b2ea0a4f25ab26e97447baae83_master.webp" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">                            
+                            <img src="image/nau_mk103_7_20220713105004_a6c306c1e3bf407b937e9eb8_77edef0dafaf4835aee7292d99907feb_master.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                            <img src="image/nau_mk103_12_20221025152726_9bc6a0b9bd744cb392bd670_b3185a75002f4ee08d5f12bade093d18_master.webp" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Mắt Kính Rhombus Watery Eyes</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u> </b><b style="text-decoration: line-through;font-weight: normal;">495,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="image/color_xanh_mk103_10_20220711144139_b92e6153520249b9_e92dc086209d42d1ac06a58b459d3e2d.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="image/color_xam-tim_mk103_11_20220711144139_0ced538fdc174_a6a623921f1140a88b5f079f0b9f0723.webp" alt="Màu sắc 2" class="color-option">                              
+                                <img src="image/color_nau_mk103_12_20220711144139_8dd07f2a03714e47a_9d69e13ca66d42e0b18784c6b7168d0f.webp" alt="Màu sắc 3" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                                <img src="./image/H2.1.webp" alt="Ảnh 1" class="img-loop img-default">
+                                <img src="./image/H2.2.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                                <img src="./image/H2.1.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                               
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Túi Xách Nhỏ Dập Hoạ Tiết Phối Khoá</p>
+                            <p class="pro-price"><b style="color: #F40000;">349,000<u>đ</u> </b><b style="text-decoration: line-through;font-weight: normal;">759,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.3.webp" alt="Màu sắc 1" class="color-option">
+                            </div>               
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="image/H2.4.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="image/H2.5.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="image/H2.4.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="image/H2.6.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="image//H2.7.jpeg" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            <img src="image/H2.8.webp" alt="Ảnh 6" class="img-hover img-hover-5" style="display: none;">
+                            <img src="image/H2.9.webp" alt="Ảnh 7" class="img-hover img-hover-6" style="display: none;">
+                            
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Mắt Kính MK083</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u> </b> <b style="text-decoration: line-through;font-weight: normal;">495,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.10.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="./image/H2.11.webp" alt="Màu sắc 2" class="color-option">
+                                <img src="./image/H2.12.webp" alt="Màu sắc 3" class="color-option">
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block" style="margin-right: 0;">
+                        <div class="product-img">
+                            <img src="./image/H2.13.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="./image/H2.14.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="./image/H2.13.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Mắt Kính Square Fashion...</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u></b> <b style="text-decoration: line-through;font-weight: normal;">455,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.15.webp" alt="Màu sắc 1" class="color-option">
+                               
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="h2_image">
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/H2.16.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="./image/H2.17.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="./image/H2.16.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            <img src="./image/H2.18.webp" alt="Ảnh 4" class="img-hover img-hover-3" style="display: none;">
+                            <img src="./image/H2.19.jpeg" alt="Ảnh 5" class="img-hover img-hover-4" style="display: none;">
+                            
+                        </div>
+                        <div class="product-detail" >
+                            <p class="pro-name">Mắt Kính Polygon Oversize</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u> </b> <b style="text-decoration: line-through;font-weight: normal;">455,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.20.webp" alt="Màu sắc 1" class="color-option">
+                                <img src="./image/H2.21.webp" alt="Màu sắc 2" class="color-option">                              
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                                <img src="./image/H2.22.webp" alt="Ảnh 1" class="img-loop img-default">
+                                <img src="./image/H2.23.webp" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                                <img src="./image/H2.22.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                               
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Dép Kẹp Trang Trí Khoá Cách Điệu</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u></b> <b style="text-decoration: line-through;font-weight: normal;">399,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.24.webp" alt="Màu sắc 1" class="color-option">
+                            </div>               
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block">
+                        <div class="product-img">
+                            <img src="./image/H2.25.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="image/H2.26.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            <img src="./image/H2.25.webp" alt="Ảnh 3" class="img-hover img-hover-2" style="display: none;">
+                            
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Giày Cao Gót Mũi Nhọn....</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u></b> <b style="text-decoration: line-through;font-weight: normal;">599,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.27.webp" alt="Màu sắc 1" class="color-option">
+                                
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-block" style="display: none;">
+                        <div class="product-img">
+                            <img src="./image/H2.25.webp" alt="Ảnh 1" class="img-loop img-default">
+                            <img src="image/H2.26.jpeg" alt="Ảnh 2" class="img-hover img-hover-1" style="display: none;">
+                            
+                        </div>
+                        <div class="product-detail">
+                            <p class="pro-name">Giày Cao Gót Mũi Nhọn....</p>
+                            <p class="pro-price"><b style="color: #F40000;">149,000<u>đ</u></b> <b style="text-decoration: line-through;font-weight: normal;">599,000<u>đ</u></b></p>
+                        </div>
+                        <div class="pro-options">
+                            <div class="pro-colors">
+                                <img src="./image/H2.27.webp" alt="Màu sắc 1" class="color-option">
+                                
+                            </div>
+                            <button class="btn-buy">Mua Ngay</button>
+                        </div>
+                    </div>
+                </li>
+                
+                
+            </ul>
+
+            
+        <script>
+            document.querySelectorAll('.color-option').forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                // Loại bỏ lớp active khỏi tất cả các ô màu khác
+                document.querySelectorAll('.color-option').forEach(option => {
+                    option.classList.remove('active');
+                });
+
+                // Thêm lớp active cho ô màu hiện tại
+                item.classList.add('active');
+
+                // Hiển thị phần sizes khi di chuột vào ô màu
+                document.querySelector('.product-sizes').classList.add('visible');
+            });
+        });
+
+        document.querySelectorAll('.size-option').forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                // Thêm lớp selected cho kích thước hiện tại
+                item.classList.add('selected');
+
+                // Loại bỏ lớp selected khỏi các kích thước khác
+                document.querySelectorAll('.size-option').forEach(option => {
+                    option.classList.remove('selected');
+                });
+            });
+        });
+        </script>
+        <script src="salejavaScript.js"></script>
+        <hr class="hr6">
+        <div class="h7">
+            <ul>
+                <li>
+                    <div class="h7_1">
+                        <p class="h7_11", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">GỌI MUA HÀNG ONLINE (08:00 - 21: 00 mỗi ngày)</p>
+                        <span>
+                            <p style="font-size: 24px;font-family:MuliDisplayVN;" class="h7_11">1800 1162</p>
+                            <p style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 300;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
+                        </span>
+                        <p class="h7_12", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</p>
+                        <span>
+                             <p style="font-size: 24px;font-family:MuliDisplayVN;" class="h7_11">1800 1160</p>
+                            <p style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 300;" class="h7_11">Tất cả các ngày trong tuần ( Trừ tết Âm Lịch)</p>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div class="h7_2">
+                        <p class="h7_22", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">HỆ THỐNG SHOWROOM</p>
+                        <a a href="./"><img src="./image/hethongshowroom.webp" alt=""></a>
+                        <a href="../showroom/showroom.html"><p class="h7_22_information"><u>Xem địa chỉ hệ thống 53 showroom</u><i class="fa-solid fa-play"></i></p></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="h7_3">
+                        <p class="h7_33", style="font-size: 13px;font-family:MuliDisplayVN;font-weight: 500;">FANPAGE CỦA CHÚNG TÔI</p>
+                        <a a href="./"><img src="./image/fanpagecuachungtoi.webp" alt=""></a>
+                        <ul class="h7_33_information" style="margin-left: 110px;">
+                            <li>
+                                <a data-eventlabel="facebook" class="link-social" href="https://www.facebook.com/giayjuno" target="_blank" rel="nofollow"></a>                                                                
+                                <i class="fa-brands fa-facebook-f icon-hover"></i>
+                            </li>
+                            <script>
+                                const icon = document.querySelector('.icon-hover');
+                                icon.addEventListener('mouseover', function() {
+                                    this.style.color = '#3b5998';
+                                });
+                                icon.addEventListener('mouseout', function() {
+                                    this.style.color = '#000000';
+                                });
+
+                            </script>                            
+                            <li>
+                                <a data-eventlabel="instagram" class="link-social" href="https://www.instagram.com/juno.vn/" target="_blank" rel="nofollow"></a>                                                                
+                                <i class="fa-brands fa-instagram icon-instagram"></i>
+                            </li>
+                            <script>
+                                const iconInstagram = document.querySelector('.icon-instagram');
+                                iconInstagram.addEventListener('mouseover', function() {
+                                    this.style.color = '#A15C2B'; // Màu cam Instagram khi hover
+                                });
+                                iconInstagram.addEventListener('mouseout', function() {
+                                    this.style.color = '#000000'; // Màu đen khi không hover
+                                });
+
+                            </script>
+                            <li>
+                                <a data-eventlabel="youtube" class="link-social" href="https://www.youtube.com/user/JunoShoesVn" target="_blank" rel="nofollow">
+                                <img src="./image/z6021100165804_b2094f11b1bbc44e36cc72bc0be7bbf2.jpg" 
+                                data-src-hover="./image/z6021100159458_caf5a41ba06126c799fe89fff47da6a2.jpg" 
+                                class="hover-switch" alt="Logo Youtube" style="width: 46px; height: auto; margin-left: -10px; margin-top: -7px;" /> 
+                            </li>
+                            <li>
+                                <a data-eventlabel="zalo" class="link-social" href="https://zalo.me/giayjuno" target="_blank" rel="nofollow">
+                                <img src="https://file.hstatic.net/1000003969/file/logo_zalo_vector_black_min_432cfad5ff584769a4b9d4f44d24b3d4.png" 
+                                     data-src-hover="https://file.hstatic.net/1000360430/file/logo-zalo-vector.png" 
+                                     class="hover-switch" alt="Logo Zalo" style="width: 40px; height: auto; margin-left: -20px;margin-top: 3px;"/>
+                            </li>
+                            
+                            <script>
+                                // Lấy tất cả các phần tử có class hover-switch
+                                const hoverImages = document.querySelectorAll('.hover-switch');
+                                
+                                hoverImages.forEach(function(img) {
+                                    img.addEventListener('mouseover', function() {
+                                        this.dataset.originalSrc = this.src; // Lưu ảnh gốc
+                                        this.src = this.dataset.srcHover; // Đổi sang ảnh 2
+                                    });
+                            
+                                    img.addEventListener('mouseout', function() {
+                                        this.src = this.dataset.originalSrc; // Trả lại ảnh gốc
+                                    });
+                                });
+                            </script>
+                                                                           
+                            <li>
+                                <a data-eventlabel="tiktok" class="link-social" href="https://www.tiktok.com/@junoofficial" target="_blank" rel="nofollow">
+                                <i class="fa" style="margin-left: -25px">
+                                    <svg style="width: 20px; height: 20px; " enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g>
+                                        <g fill="#f00044">
+                                            <path d="m182.1 265.4c-40.6 0-73.4 32.8-72.8 73 .4 25.8 14.6 48.2 35.5 60.7-7.1-10.9-11.3-23.8-11.5-37.7-.6-40.2 32.2-73 72.8-73 8 0 15.7 1.3 22.9 3.6v-80.5c-7.5-1.1-15.2-1.7-22.9-1.7-.4 0-.7 0-1.1 0v59.2c-7.2-2.3-14.9-3.6-22.9-3.6z"></path>
+                                            <path d="m357.6 24h-.6-20.8c6 30.1 22.9 56.3 46.5 74.1-15.5-20.5-24.9-46.1-25.1-74.1z"></path>
+                                            <path d="m480 146.5c-7.9 0-15.5-.8-23-2.2v57.7c-27.2 0-53.6-5.3-78.4-15.9-16-6.8-30.9-15.5-44.6-26l.4 177.9c-.2 40-16 77.5-44.6 105.8-23.3 23-52.8 37.7-84.8 42.4-7.5 1.1-15.2 1.7-22.9 1.7-34.2 0-66.8-11.1-93.3-31.6 3 3.6 6.2 7.1 9.7 10.5 28.8 28.4 67 44.1 107.7 44.1 7.7 0 15.4-.6 22.9-1.7 32-4.7 61.5-19.4 84.8-42.4 28.6-28.3 44.4-65.8 44.6-105.8l-1.5-177.9c13.6 10.5 28.5 19.3 44.6 26 24.9 10.5 51.3 15.9 78.4 15.9"></path>
+                                        </g>
+                                            <path d="m98.2 254.1c28.5-28.3 66.4-44 106.8-44.3v-21.3c-7.5-1.1-15.2-1.7-22.9-1.7-40.8 0-79.1 15.7-107.9 44.3-28.3 28.1-44.5 66.5-44.4 106.4 0 40.2 15.9 77.9 44.6 106.4 4.6 4.5 9.3 8.7 14.3 12.5-22.6-26.9-34.9-60.5-35-95.9.1-39.9 16.2-78.3 44.5-106.4z" fill="#08fff9"></path>
+                                            <path d="m457 144.3v-21.4h-.2c-27.8 0-53.4-9.2-74-24.8 17.9 23.6 44.1 40.4 74.2 46.2z" fill="#08fff9"></path>
+                                            <path d="m202 432.2c9.5.5 18.6-.8 27-3.5 29-9.5 49.9-36.5 49.9-68.3l.1-119v-217.4h57.2c-1.5-7.5-2.3-15.1-2.4-23h-78.8v217.3l-.1 119c0 31.8-20.9 58.8-49.9 68.3-8.4 2.8-17.5 4.1-27 3.5-12.1-.7-23.4-4.3-33.2-10.1 12.3 19 33.3 31.9 57.2 33.2z" fill="#08fff9"></path>
+                                            <path d="m205 486.2c32-4.7 61.5-19.4 84.8-42.4 28.6-28.3 44.4-65.8 44.6-105.8l-.4-177.9c13.6 10.5 28.5 19.3 44.6 26 24.9 10.5 51.3 15.9 78.4 15.9v-57.7c-30.1-5.8-56.3-22.6-74.2-46.2-23.6-17.8-40.6-44-46.5-74.1h-57.3v217.3l-.1 119c0 31.8-20.9 58.8-49.9 68.3-8.4 2.8-17.5 4.1-27 3.5-24-1.3-44.9-14.2-57.2-33.1-20.9-12.4-35.1-34.9-35.5-60.7-.6-40.2 32.2-73 72.8-73 8 0 15.7 1.3 22.9 3.6v-59.2c-40.4.3-78.3 16-106.8 44.3-28.3 28.1-44.5 66.5-44.4 106.3 0 35.4 12.3 69 35 95.9 26.6 20.5 59.1 31.6 93.3 31.6 7.7.1 15.4-.5 22.9-1.6z"></path>
+                                        </g>
+                                    </svg>
+                                </i>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="h8">
+            <div class="h8_1" style="width: 100%;">
+                <ul>
+                    <li>
+                        <div class="h8_1_1">
+                            <p>HỖ TRỢ KHÁCH HÀNG</p>
+                            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="h8_1_2">
+                            <p>VỀ JUNO</p>
+                            <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>                  
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="h8_2" >
+                <div class="h8_2_1">
+                    <p>© Công ty Cổ phần Seedcom Fashion Group</p>
+                </div>
+                <div class="h8_2_2">
+                    <a href="./"><img src="./image/Dathongbao.webp" alt=""></a>
+                    <p>Powered by Haravan Enterprise.</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.onscroll = function() { scrollFunction() };
+
+            var navbar = document.querySelector('.navbar');
+            var stickyNavbarBottom = navbar.offsetTop + navbar.offsetHeight;  // Viền dưới của navbar
+
+            var container = document.querySelector('.container');
+            var stickyContainerTop = container.offsetTop;  // Viền trên của container
+
+            function scrollFunction() {
+                // Xử lý navbar cố định
+                if (window.pageYOffset > stickyNavbarBottom) {
+                    navbar.classList.add('fixed');
+                    navbar.classList.add('show');
+                } else {
+                    navbar.classList.remove('fixed');
+                    navbar.classList.remove('show');
+                }
+
+                // Xử lý container cố định khi viền dưới của navbar và viền trên của container chạm nhau
+                if (window.pageYOffset >= stickyContainerTop - navbar.offsetHeight) {
+                    container.classList.add('fixed-container');
+                } else {
+                    container.classList.remove('fixed-container');
+                }
+            }
+
+        </script>
+    </div>
+    <div class="return" onclick="scrollToTop()">
+        <img src="../Image/return-removebg-preview.png" alt="Về đầu trang" class="return-text">
+    </div>
+    <script>
+        $(window).scroll(function() {
+        var scrollPosition = $(window).scrollTop();  // Lấy vị trí cuộn của trang
+    
+        // Nếu cuộn xuống trang (không phải ở đầu trang)
+        if (scrollPosition > 0) {
+            $('.return').css({
+                'opacity': 1,
+                'visibility': 'visible' // Hiển thị khi cuộn xuống
+            });
+        } else {
+            // Nếu ở đầu trang
+            $('.return').css({
+                'opacity': 0,
+                'visibility': 'hidden' // Ẩn khi ở đầu trang
+            });
+        }
+    });
+    
+    function scrollToTop() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+    }
+    </script>
+    
+        <div class="user">
+            <h4 class="giohang">GIỎ HÀNG</h4>
+            <p class="giohang_information">Bạn đang có <b>0</b> sản phẩm trong giỏ hàng.</p>
+            <hr>
+            <p class="giohang_status">Hiện chưa có sản phẩm</p>
+            <hr>
+            <div class="totalprice">
+                <p class="totalprice_1">TỔNG TIỀN TẠM TÍNH:</p>
+                <p class="totalprice_2">0<u>đ</u></p>
+            </div>
+            <div class="link">
+                <a href="./">XEM GIỎ HÀNG</a>
+            </div>
+            <i class="fa-regular fa-circle-xmark fa-shake"></i>
+            <script>
+                $(document).ready(function(){
+                    $(".user").hide();
+                    $("#shoppingcart").click(function(){
+                        $(".user").show();
+                        $(".user").animate({
+                            right : '350px',
+                            top : '200px' ,
+                            height : '350px'
+                        });
+                        $(".1").animate({
+                            opacity : '0.3'
+                        })
+                    });
+                    $(".user i").click(function(){
+                        $(".user").hide();
+                        $(".1").animate({
+                            opacity : '1'
+                        })
+                    });
+                });
+            </script>
+        </div>
+</body>
+
+</html>
