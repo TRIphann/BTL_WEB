@@ -1,0 +1,482 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 400;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Regular.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 500;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-SemiBold.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 700;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Bold.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 800;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraBold.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 900;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Black.ttf?v=2326')
+}
+
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 300;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Light.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 200;
+	font-style: normal;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraLight.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 400;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-Italic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 500;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-SemiBoldItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 700;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-BoldItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 800;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraBoldItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 900;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-BlackItalic.ttf?v=2326')
+}
+
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 300;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-LightItalic.ttf?v=2326')
+}
+@font-face {
+	font-family: MuliDisplayVN;
+	font-weight: 200;
+	font-style: italic;
+	src: url('//theme.hstatic.net/1000003969/1001234388/14/MuliDisplayVN-ExtraLightItalic.ttf?v=2326')
+}
+body
+{
+    background-color: #FFFFFF;
+    font-family: 'MuliDisplayVN', sans-serif;
+    text-decoration: color(black black black black);
+    display: flex;
+    justify-content: space-around;
+}
+/* Thanh màu đỏ */
+.top-bar{
+    background-color: #c32a2e;
+    width: 100%;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+}
+.top-bar img{
+    margin-left: 0;
+    height: 31.5px;
+
+}
+
+/* Thanh chứa logo, hàng mới, sản phảm... */
+.navbar 
+{
+    position: absolute;
+    top: 88px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px ;
+    padding-left: 60px;
+    padding-right: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: 56.5px;
+    z-index: 998;
+    background-color: #ffffff;
+    transition: transform 0s ease, opacity 0s ease; /* Hiệu ứng chuyển động */
+    transform: translateY(-100%); 
+    opacity: 1; 
+}
+/* Logo */
+.navbar_img
+{
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Dịch chuyển qua phải */
+}
+.navbar_img img {
+    width: 85px;
+    height: 100px;
+    padding-bottom: 13.5px;
+}
+/* Mục hàng mới, sản phảm,... */
+.navbar_list {
+    display: flex;
+    flex-grow: 1;
+    justify-content:center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 41px;
+}
+
+.navbar_list_ {
+    font-family: MuliDisplayVN;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #000;
+    margin:  0 20px;
+    margin-top: -18px;
+    position: relative; /* Thêm để định vị gạch chân chính xác */
+}
+.navbar_list_a{
+    font-weight: bold;
+}
+
+.navbar_list_ a {
+    text-decoration: none;
+}
+.navbar .navbar_list .navbar_list_ {
+    position: relative; /* Để pseudo-element được căn cứ theo phần tử này */
+}
+.navbar {
+    overflow: visible; /* Cho phép phần tử con của navbar hiển thị ra ngoài */
+}
+
+.navbar .navbar_list .navbar_list_:hover::before {
+    content: "";
+    position: fixed; /* Đặt vị trí cố định cho toàn màn hình */
+    top: 56px; /* Khoảng cách từ trên xuống để căn dưới navbar */
+    left: 0; /* Căn bên trái của màn hình */
+    width: 98.9vw; /* Độ rộng khớp với chiều ngang của màn hình */
+    height: 3px;
+    background-color: #ffffff;
+    z-index: -1;
+}
+
+.navbar .navbar_list .navbar_list_:hover::after {
+    content: "";
+    position: absolute;
+    left: 50%; /* Đặt ở giữa phần tử */
+    transform: translateX(-50%); /* Căn giữa pseudo-element */
+    width: 120%; /* Gạch chân khớp với độ rộng của mục */
+    top: 37px;
+    height: 0.1px;
+    background-color: rgb(0, 0, 0); /* Màu sắc của border */
+}
+.navbar .navbar_list .red-border:hover::after {
+    background-color: red; /* Màu đỏ */
+}
+/* Các mục còn lại có border màu đen khi hover */
+.navbar .navbar_list .navbar_list_:not(.red-border):hover::after {
+    background-color: rgb(0, 0, 0); /* Màu đen */
+}
+.sanpham_list_
+{
+    position: fixed;  /* Giữ sanpham_list_ ở vị trí cố định */
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 36px;
+    left: 0;
+    right: 0;
+    width: 1519.5px;
+    height: 100vh;
+    letter-spacing: 0.5px;
+    background-color: #ffffff;
+    padding-left: 150px;
+    padding-top: 15px;
+    padding-right: 400px;
+    z-index: 999;
+}
+
+.sanpham_list_ li 
+{
+    list-style: none;
+    line-height: 43px;
+    padding: -20px;
+}
+.sanpham_list_ a 
+{
+    color: black;
+    text-transform: capitalize;/*chữ cái đầu viết hoa còn lại viết thường*/
+}
+
+.sanpham_list
+{
+    display: flex;
+    flex-direction: column; 
+}
+.sanpham_list_{
+    font-family:MuliDisplayVN;
+    font-size: 14px;
+}
+
+.sanpham_list_information
+{
+    position: absolute;
+    margin-top: 670px;
+    display: none;
+}
+
+.sanpham_list_ a:hover
+{
+    text-decoration: underline;
+}
+/* Đảm bảo không có phần tử nào che mất sanpham_list_ */
+.sanpham_list_:hover {
+    z-index: 10000; /* Khi hover lên sanpham_list_, đưa nó lên trên mọi phần tử */
+}
+
+.navbar_input {
+    position: relative;
+    display: inline-block;
+    margin-top: -42px;
+    margin-right: 53px;
+}
+
+.input-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px; /* Kích thước ban đầu */
+    overflow: hidden;
+    border-bottom: 1px solid transparent; /* Viền dưới ban đầu */
+    transition: width 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.input-wrapper:hover {
+    width: 130px; /* Kích thước khi hover */
+    border-color: black; /* Viền hiện lên khi hover */
+}
+
+.navbar_input input {
+    font-size: 13px;
+    border: none;
+    height: 20px;
+    width: 100%; /* Để input lấp đầy wrapper */
+    padding: 5px;
+    outline: none;
+    transition: width 0.3s ease-in-out, padding 0.3s ease-in-out; /* Chuyển đổi padding và width */
+}
+
+.input-wrapper:hover input {
+    width: 130px; /* Mở rộng input khi hover */
+    padding: 0 15px; /* Thêm padding khi hover để làm thanh tìm kiếm rộng hơn */
+}
+
+.navbar_input input::placeholder {
+    transition: color 0.3s ease-in-out;
+}
+
+.input-wrapper:hover input::placeholder {
+    color: transparent; /* Ẩn placeholder khi hover */
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Vị trí ban đầu */
+    transform: translateY(-50%);
+    transition: right 0.3s ease-in-out; /* Di chuyển mượt mà khi hover */
+}
+.input-wrapper:hover .search-icon {
+    right: 5px; /* Di chuyển icon sang bên phải khi hover */
+}
+
+
+.navbar_user #shoppingcart
+{
+    cursor: pointer;
+    margin-bottom: 23px;
+    font-size: 13px;
+    margin-right: 20px;
+}
+.navbar_user #dangnhap{
+    margin-bottom: 23px;
+    margin-right: 10px;
+}
+a {
+    text-decoration: none; /* Loại bỏ gạch dưới */
+    color: inherit; /* Thừa kế màu sắc từ phần tử cha (nếu muốn giữ màu sắc ban đầu) */
+}
+
+a:focus, a:active {
+    outline: none;  /* Loại bỏ outline */
+    border: none;   /* Loại bỏ border */
+    cursor: pointer; /* Đảm bảo con trỏ vẫn là pointer khi hover */
+}
+
+.h1{
+    width: 1519px;
+    height: 850px;
+    margin-top: 25px;
+
+}
+.h1 img 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 388px;
+    width: 100%;
+    display: block; /* Ngăn ngừa khoảng trống dưới ảnh */
+    align-items: center;
+}
+.text_1 p{
+    font-family: MuliDisplayVN;
+    font-weight: 500;
+    text-align: center;
+    margin-top: -425px;
+    font-size: 24px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    height: 70px;
+  }
+.container a{
+    font-family:MuliDisplayVN;
+    font-size: 16px;
+    font-weight: bold;
+}
+.container {
+    position: relative;
+}
+
+.fixed-container {
+    position: fixed;
+    top: 36px; /* Đặt dưới navbar */
+    left: 0;
+    width: 100%;
+    z-index: 998;
+    background-color: white;
+}
+
+.sale-button {
+    font-family: MuliDisplayVN;
+    background-color: orangered; /* Màu đỏ tươi */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.sale-link {
+    font-family:MuliDisplayVN;
+    color: orangered; /* Màu đỏ tươi */
+    text-decoration: underline;
+    padding: 10px 27px;
+    margin: 10px;
+}
+  
+.sale-link:hover {
+    background-color: rgb(220, 38, 38);
+    color: white;
+    cursor: pointer;
+}
+.sale-button, .sale-link {
+    margin: 2px; /* Giảm margin xuống còn 2px */
+}
+.choice
+{
+    /* float: right; */
+    padding-left: 1150px;
+    display: flex;
+    margin-top: 50px;
+    margin: 50px 0 0 0;
+    padding-right: 10px;
+    margin-bottom: 40px;
+}
+
+.choice .boloc
+{
+    font-family:MuliDisplayVN;
+    margin-right: 35px;
+    display: flex;
+    cursor: pointer;
+    font-size: 14px;
+}
+.choice .boloc img
+{
+    height: 7px;
+    margin-left: 20px;
+    padding-bottom: 2px;
+}
+.choice p{
+    font-family:MuliDisplayVN;
+    font-size: 14px;
+}
+
+.choice select
+{
+    margin-right: 80px;
+    margin-left: 10px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    
+}
+.selection{
+    font-family:MuliDisplayVN;
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+.option{
+    display: none;
+    top:100%;
+}
+.selection:focus  .options {
+    display: block;
+}
+.container a, .sale-button, .sale-link, .choice .boloc, .choice p, .choice select {
+    white-space: nowrap;
+}
