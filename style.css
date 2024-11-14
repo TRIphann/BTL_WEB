@@ -359,7 +359,7 @@ a:focus, a:active {
   
 .arrow {
     position: absolute;
-    top: 50%;
+    top: 48%;
     width: 100%;
     display: flex; /* Sử dụng flexbox để căn chỉnh */
     justify-content: space-between; /* Căn đều hai nút sang hai bên */
@@ -368,25 +368,25 @@ a:focus, a:active {
     cursor: pointer; /* Thay đổi con trỏ chuột khi hover */
 }
 .left {
-    margin-left: 70px;
+    margin-left: 30px;
     background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/leftt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
     background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
     background-repeat: no-repeat;
     background-position: center;
-    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
-    height: 36px;
+    width: 25px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 45px;
     color: transparent;          /* Ẩn màu của mũi tên mặc định */
 }
 
 .right {
-    margin-right: 70px;
     background-image: url('https://theme.hstatic.net/1000003969/1001234388/14/rightt.png?v=2318'); /* Đường dẫn tới hình ảnh mũi tên */
     background-size: 50% 80%;  /* Điều chỉnh kích thước ảnh (50% chiều rộng và 50% chiều cao của nút) */
     background-repeat: no-repeat;
     background-position: center;
-    width: 14px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
-    height: 36px;
-    color: transparent;          /* Ẩn màu của mũi tên mặc định */
+    width: 25px;                 /* Đặt kích thước của nút theo kích thước mong muốn */
+    height: 45px;
+    color: transparent;
+    right: 30px;
 }
 
 
